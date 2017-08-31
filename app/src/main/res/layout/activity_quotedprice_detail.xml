@@ -1,0 +1,547 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+	xmlns:android="http://schemas.android.com/apk/res/android"
+	android:layout_width="fill_parent"
+	android:layout_height="fill_parent"
+	android:orientation="vertical"
+	android:clipToPadding="true"
+    android:fitsSystemWindows="true"
+    
+    android:background="@color/bg_title_white">
+
+	<include layout="@layout/view_def_head" />
+
+	<ScrollView
+		android:layout_width="match_parent"
+		android:layout_height="match_parent"
+		android:background="@color/bg"
+		android:orientation="vertical">
+
+		<RelativeLayout
+			android:layout_width="match_parent"
+			android:layout_height="514dp"
+			android:gravity="top">
+
+			<LinearLayout
+				android:id="@+id/linearLayout1"
+				android:layout_width="match_parent"
+				android:layout_height="wrap_content"
+				android:layout_centerHorizontal="true"
+				android:layout_marginBottom="20dp"
+				android:layout_marginTop="20dp"
+				android:focusable="true"
+				android:focusableInTouchMode="true"
+				android:gravity="top"
+				android:orientation="vertical">
+
+				<LinearLayout
+					android:layout_width="match_parent"
+					android:layout_height="wrap_content"
+					android:layout_margin="10dp"
+					android:background="@drawable/shape_border_top"
+					android:gravity="center"
+					android:orientation="vertical">
+					<RelativeLayout
+
+						android:layout_width="match_parent"
+						android:layout_height="@dimen/details_item_height"
+						android:background="@color/bg_main"
+						android:paddingLeft="15dp"
+						android:paddingRight="15dp" >
+
+						<LinearLayout
+							android:layout_width="wrap_content"
+							android:layout_height="wrap_content"
+							android:layout_centerVertical="true"
+							android:gravity="center_vertical"
+							android:orientation="horizontal" >
+
+							<TextView
+								style="@style/tv_other2"
+								android:layout_marginLeft="10dp"
+								android:text="报价人" />
+						</LinearLayout>
+
+						<LinearLayout
+							android:layout_width="wrap_content"
+							android:layout_height="wrap_content"
+							android:layout_alignParentRight="true"
+							android:layout_centerVertical="true"
+							android:gravity="center_vertical"
+							android:orientation="horizontal" >
+
+							<TextView
+								android:id="@+id/baojia_tv_content"
+								android:layout_width="wrap_content"
+								android:layout_height="wrap_content"
+								android:layout_marginRight="2dp"
+								android:gravity="right|center_vertical"
+								android:singleLine="true"
+								android:textColor="@color/text_details" />
+
+
+						</LinearLayout>
+
+						<View
+							android:layout_width="fill_parent"
+							android:layout_height="1px"
+							android:layout_alignParentBottom="true"
+							android:background="@color/cutting_line" />
+					</RelativeLayout>
+
+					<RelativeLayout
+
+						android:layout_width="match_parent"
+						android:layout_height="@dimen/details_item_height"
+						android:background="@color/bg_main"
+						android:paddingLeft="15dp"
+						android:paddingRight="15dp" >
+
+						<LinearLayout
+							android:layout_width="wrap_content"
+							android:layout_height="wrap_content"
+							android:layout_centerVertical="true"
+							android:gravity="center_vertical"
+							android:orientation="horizontal" >
+
+							<TextView
+								style="@style/tv_other2"
+								android:layout_marginLeft="10dp"
+								android:text="品种" />
+						</LinearLayout>
+
+						<LinearLayout
+							android:layout_width="wrap_content"
+							android:layout_height="wrap_content"
+							android:layout_alignParentRight="true"
+							android:layout_centerVertical="true"
+							android:gravity="center_vertical"
+							android:orientation="horizontal" >
+
+							<TextView
+								android:id="@+id/pinzhong_tv_content"
+								android:layout_width="wrap_content"
+								android:layout_height="wrap_content"
+								android:layout_marginRight="2dp"
+								android:gravity="right|center_vertical"
+								android:singleLine="true"
+								android:textColor="@color/text_details" />
+
+
+						</LinearLayout>
+
+						<View
+							android:layout_width="fill_parent"
+							android:layout_height="1px"
+							android:layout_alignParentBottom="true"
+							android:background="@color/cutting_line" />
+					</RelativeLayout>
+
+					<RelativeLayout
+						android:id="@+id/weight_layout1"
+						android:layout_width="match_parent"
+						android:layout_height="@dimen/details_item_height"
+						android:background="@color/bg_main"
+						android:paddingLeft="15dp"
+						android:paddingRight="15dp" >
+
+						<LinearLayout
+							android:layout_width="wrap_content"
+							android:layout_height="wrap_content"
+							android:layout_centerVertical="true"
+							android:gravity="center_vertical"
+							android:orientation="horizontal" >
+
+							<TextView
+								android:id="@+id/price_tv"
+								style="@style/tv_other2"
+								android:layout_marginLeft="10dp"
+								android:text="出售价" />
+						</LinearLayout>
+
+						<LinearLayout
+							android:layout_width="wrap_content"
+							android:layout_height="wrap_content"
+							android:layout_alignParentRight="true"
+							android:layout_centerVertical="true"
+							android:gravity="center_vertical"
+							android:orientation="horizontal" >
+
+							<TextView
+								android:id="@+id/et_price"
+								android:layout_width="wrap_content"
+								android:layout_height="wrap_content"
+								android:layout_marginRight="2dp"
+								android:gravity="right|center_vertical"
+								android:singleLine="true"
+								android:textColor="@color/red" />
+
+							<TextView
+								android:layout_width="wrap_content"
+								android:layout_height="wrap_content"
+								android:text="元/公斤"
+								android:textColor="@color/red" />
+						</LinearLayout>
+
+						<View
+							android:layout_width="fill_parent"
+							android:layout_height="1px"
+							android:layout_alignParentBottom="true"
+							android:background="@color/cutting_line" />
+					</RelativeLayout>
+					<RelativeLayout
+						android:id="@+id/jiesuanjia_layout"
+						android:layout_width="match_parent"
+						android:layout_height="@dimen/details_item_height"
+						android:background="@color/bg_main"
+						android:paddingLeft="15dp"
+						android:paddingRight="15dp"
+						android:visibility="gone">
+
+						<LinearLayout
+							android:layout_width="wrap_content"
+							android:layout_height="wrap_content"
+							android:layout_centerVertical="true"
+							android:gravity="center_vertical"
+							android:orientation="horizontal" >
+
+							<TextView
+								android:id="@+id/finalprice_tv"
+								style="@style/tv_other2"
+								android:layout_marginLeft="10dp"
+								android:text="结算价" />
+						</LinearLayout>
+
+						<LinearLayout
+							android:layout_width="wrap_content"
+							android:layout_height="wrap_content"
+							android:layout_alignParentRight="true"
+							android:layout_centerVertical="true"
+							android:gravity="center_vertical"
+							android:orientation="horizontal" >
+
+							<TextView
+								android:id="@+id/et_finalprice"
+								android:layout_width="wrap_content"
+								android:layout_height="wrap_content"
+								android:layout_marginRight="2dp"
+								android:gravity="right|center_vertical"
+								android:singleLine="true"
+								android:textColor="@color/text_details" />
+
+							<TextView
+								android:layout_width="wrap_content"
+								android:layout_height="wrap_content"
+								android:text="元/公斤"
+								android:textColor="@color/text_details" />
+						</LinearLayout>
+
+						<View
+							android:layout_width="fill_parent"
+							android:layout_height="1px"
+							android:layout_alignParentBottom="true"
+							android:background="@color/cutting_line" />
+					</RelativeLayout>
+
+					<RelativeLayout
+
+						android:layout_width="match_parent"
+						android:layout_height="@dimen/details_item_height"
+						android:background="@color/bg_main"
+						android:paddingLeft="15dp"
+						android:paddingRight="15dp" >
+
+						<LinearLayout
+							android:layout_width="wrap_content"
+							android:layout_height="wrap_content"
+							android:layout_centerVertical="true"
+							android:gravity="center_vertical"
+							android:orientation="horizontal" >
+
+							<TextView
+								android:id="@+id/time_tv"
+								style="@style/tv_other2"
+								android:layout_marginLeft="10dp"
+								android:text="出栏时间" />
+						</LinearLayout>
+
+						<LinearLayout
+							android:layout_width="wrap_content"
+							android:layout_height="wrap_content"
+							android:layout_alignParentRight="true"
+							android:layout_centerVertical="true"
+							android:gravity="center_vertical"
+							android:orientation="horizontal" >
+
+							<TextView
+								android:id="@+id/leave_start_timebox_tv_content"
+								android:layout_width="wrap_content"
+								android:layout_height="wrap_content"
+								android:layout_marginRight="2dp"
+								android:gravity="right|center_vertical"
+								android:singleLine="true"
+								android:textColor="@color/text_details" />
+
+							<TextView
+								android:layout_width="wrap_content"
+								android:layout_height="wrap_content"
+								android:textColor="@color/text_details" />
+						</LinearLayout>
+
+						<View
+							android:layout_width="fill_parent"
+							android:layout_height="1px"
+							android:layout_alignParentBottom="true"
+							android:background="@color/cutting_line" />
+					</RelativeLayout>
+
+					<RelativeLayout
+						android:layout_width="match_parent"
+						android:layout_height="@dimen/details_item_height"
+						android:background="@color/bg_main"
+						android:paddingLeft="15dp"
+						android:paddingRight="15dp" >
+
+						<LinearLayout
+							android:layout_width="wrap_content"
+							android:layout_height="wrap_content"
+							android:layout_centerVertical="true"
+							android:gravity="center_vertical"
+							android:orientation="horizontal" >
+
+							<TextView
+								android:id="@+id/count_tv"
+								style="@style/tv_other2"
+								android:layout_marginLeft="10dp"
+								android:text="出栏数量" />
+						</LinearLayout>
+
+						<LinearLayout
+							android:layout_width="wrap_content"
+							android:layout_height="wrap_content"
+							android:layout_alignParentRight="true"
+							android:layout_centerVertical="true"
+							android:gravity="center_vertical"
+							android:orientation="horizontal" >
+
+							<TextView
+								android:id="@+id/et_count"
+								android:layout_width="wrap_content"
+								android:layout_height="wrap_content"
+								android:layout_marginRight="2dp"
+								android:gravity="right|center_vertical"
+								android:singleLine="true"
+								android:textColor="@color/text_details" />
+
+							<TextView
+								android:layout_width="wrap_content"
+								android:layout_height="wrap_content"
+								android:text="头"
+								android:textColor="@color/text_details" />
+						</LinearLayout>
+
+						<View
+							android:layout_width="fill_parent"
+							android:layout_height="1px"
+							android:layout_alignParentBottom="true"
+							android:background="@color/cutting_line" />
+					</RelativeLayout>
+
+					<RelativeLayout
+						android:layout_width="match_parent"
+						android:layout_height="@dimen/details_item_height"
+						android:background="@color/bg_main"
+						android:paddingLeft="15dp"
+						android:paddingRight="15dp" >
+
+						<LinearLayout
+							android:layout_width="wrap_content"
+							android:layout_height="wrap_content"
+							android:layout_centerVertical="true"
+							android:gravity="center_vertical"
+							android:orientation="horizontal" >
+
+							<TextView
+								android:id="@+id/weight_tv"
+								style="@style/tv_other2"
+								android:layout_marginLeft="10dp"
+								android:text="体重范围" />
+						</LinearLayout>
+
+						<LinearLayout
+							android:layout_width="wrap_content"
+							android:layout_height="wrap_content"
+							android:layout_alignParentRight="true"
+							android:layout_centerVertical="true"
+							android:gravity="center_vertical"
+							android:orientation="horizontal" >
+
+							<TextView
+								android:id="@+id/et_weight"
+								android:layout_width="wrap_content"
+								android:layout_height="wrap_content"
+								android:layout_marginRight="2dp"
+								android:gravity="right|center_vertical"
+								android:singleLine="true"
+								android:textColor="@color/text_details" />
+
+							<TextView
+								android:layout_width="wrap_content"
+								android:layout_height="wrap_content"
+								android:text="公斤/头"
+								android:textColor="@color/text_details" />
+						</LinearLayout>
+
+						<View
+							android:layout_width="fill_parent"
+							android:layout_height="1px"
+							android:layout_alignParentBottom="true"
+							android:background="@color/cutting_line" />
+					</RelativeLayout>
+					<RelativeLayout
+						android:layout_width="match_parent"
+						android:layout_height="@dimen/details_item_height"
+						android:background="@color/bg_main"
+						android:paddingLeft="15dp"
+						android:paddingRight="15dp" >
+
+						<LinearLayout
+							android:layout_width="wrap_content"
+							android:layout_height="wrap_content"
+							android:layout_centerVertical="true"
+							android:gravity="center_vertical"
+							android:orientation="horizontal" >
+
+							<TextView
+								android:id="@+id/shouzhuquyu_tv"
+								style="@style/tv_other2"
+								android:layout_marginLeft="10dp"
+								android:text="出售区域" />
+						</LinearLayout>
+
+						<LinearLayout
+							android:layout_width="wrap_content"
+							android:layout_height="wrap_content"
+							android:layout_alignParentRight="true"
+							android:layout_centerVertical="true"
+							android:gravity="center_vertical"
+							android:orientation="horizontal" >
+
+							<TextView
+								android:id="@+id/province_city_tv_content"
+								android:layout_width="wrap_content"
+								android:layout_height="wrap_content"
+								android:layout_marginRight="2dp"
+								android:gravity="right|center_vertical"
+								android:singleLine="true"
+								android:textColor="@color/text_details" />
+
+
+						</LinearLayout>
+
+						<View
+							android:layout_width="fill_parent"
+							android:layout_height="1px"
+							android:layout_alignParentBottom="true"
+							android:background="@color/cutting_line" />
+					</RelativeLayout>
+					<RelativeLayout
+						android:id="@+id/zhuangzhutailayout"
+						android:layout_width="match_parent"
+						android:layout_height="@dimen/details_item_height"
+						android:background="@color/bg_main"
+						android:paddingLeft="15dp"
+						android:paddingRight="15dp"
+						android:visibility="gone">
+
+						<LinearLayout
+							android:layout_width="wrap_content"
+							android:layout_height="wrap_content"
+							android:layout_centerVertical="true"
+							android:gravity="center_vertical"
+							android:orientation="horizontal" >
+
+							<TextView
+								style="@style/tv_other2"
+								android:layout_marginLeft="10dp"
+								android:text="有无装猪台" />
+						</LinearLayout>
+
+						<LinearLayout
+							android:layout_width="wrap_content"
+							android:layout_height="wrap_content"
+							android:layout_alignParentRight="true"
+							android:layout_centerVertical="true"
+							android:gravity="center_vertical"
+							android:orientation="horizontal" >
+
+							<TextView
+								android:id="@+id/iszhuangzhutai"
+								android:layout_width="wrap_content"
+								android:layout_height="wrap_content"
+								android:layout_marginRight="2dp"
+								android:gravity="right|center_vertical"
+								android:singleLine="true"
+								android:textColor="@color/text_details" />
+
+
+						</LinearLayout>
+
+						<View
+							android:layout_width="fill_parent"
+							android:layout_height="1px"
+							android:layout_alignParentBottom="true"
+							android:background="@color/cutting_line" />
+					</RelativeLayout>
+					<RelativeLayout
+						android:layout_width="match_parent"
+						android:layout_height="@dimen/details_item_height"
+						android:background="@color/bg_main"
+						android:paddingLeft="15dp"
+						android:paddingRight="15dp" >
+
+						<LinearLayout
+							android:layout_width="wrap_content"
+							android:layout_height="wrap_content"
+							android:layout_centerVertical="true"
+							android:gravity="center_vertical"
+							android:orientation="horizontal" >
+
+							<TextView
+								style="@style/tv_other2"
+								android:layout_marginLeft="10dp"
+								android:text="备注" />
+						</LinearLayout>
+
+						<LinearLayout
+							android:layout_width="wrap_content"
+							android:layout_height="wrap_content"
+							android:layout_alignParentRight="true"
+							android:layout_centerVertical="true"
+							android:gravity="center_vertical"
+							android:orientation="horizontal" >
+
+							<TextView
+								android:id="@+id/et_remark"
+								android:layout_width="wrap_content"
+								android:layout_height="wrap_content"
+								android:layout_marginRight="2dp"
+								android:gravity="right|center_vertical"
+								android:singleLine="true"
+								android:textColor="@color/text_details" />
+
+
+						</LinearLayout>
+
+						<View
+							android:layout_width="fill_parent"
+							android:layout_height="1px"
+							android:layout_alignParentBottom="true"
+							android:background="@color/cutting_line" />
+					</RelativeLayout>
+				</LinearLayout>
+			</LinearLayout>
+		</RelativeLayout>
+	</ScrollView>
+
+</LinearLayout>

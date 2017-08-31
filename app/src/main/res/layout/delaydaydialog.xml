@@ -1,0 +1,216 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:layout_margin="10dp"
+    android:background="@color/bg"
+    android:orientation="vertical" >
+
+    <LinearLayout
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="@dimen/second_right"
+        android:layout_marginRight="@dimen/second_right"
+        android:layout_marginTop="5.0dip"
+        android:orientation="vertical" >
+
+        <TextView
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:text="请选择下单数量:"
+            android:textSize="@dimen/text_size" />
+
+        <RadioGroup
+            android:id="@+id/rg_status"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center_vertical"
+            android:orientation="horizontal"
+            android:layout_marginTop="8dip"
+            android:layout_marginBottom="8dip" >
+
+            <RadioButton
+                android:id="@+id/radio_all"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:checked="true"
+                android:text="全部" />
+
+            <RadioButton
+                android:id="@+id/radio_other"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="30.0dip"
+                android:text="部分" />
+        </RadioGroup>
+    </LinearLayout>
+    <LinearLayout
+        android:id="@+id/llnumlayout"
+				android:orientation="horizontal"
+				android:layout_width="fill_parent"
+				android:layout_height="wrap_content"
+				android:layout_margin="5.0dip"
+				android:layout_marginBottom="8dip"
+				android:visibility="gone">
+				<TextView
+					android:textSize="@dimen/text_size"
+					android:textColor="@color/black"
+					android:gravity="center_vertical"
+					android:layout_width="wrap_content"
+					android:layout_height="wrap_content"
+					android:text="下单头数"
+					android:drawableRight="@drawable/star" />
+				<EditText
+					android:textSize="@dimen/text_size"
+					android:textColor="@color/edit_bg"
+					android:gravity="center_vertical"
+					android:id="@+id/etCunNum"
+					android:background="@drawable/edit_search"
+					android:paddingLeft="10.0dip"
+					android:paddingRight="10.0dip"
+					android:layout_width="fill_parent"
+					android:layout_height="wrap_content"
+					android:layout_marginLeft="5.0dip"
+					android:singleLine="true"
+					android:inputType="number" 
+					android:digits="0123456789"
+					android:hint="请输入"/>
+				<TextView
+					android:textSize="@dimen/text_size"
+					android:textColor="@color/edit_bg"
+					android:gravity="right"
+					android:layout_width="100.0dip"
+					android:layout_height="wrap_content"
+					android:layout_marginLeft="-110.0dip"
+					android:text="头" />
+			</LinearLayout>
+<LinearLayout
+        
+				android:orientation="horizontal"
+				android:layout_width="fill_parent"
+				android:layout_height="wrap_content"
+				android:layout_margin="5.0dip">
+				<TextView
+					android:textSize="@dimen/text_size"
+					android:textColor="@color/black"
+					android:gravity="center_vertical"
+					android:layout_width="wrap_content"
+					android:layout_height="wrap_content"
+					android:text="最终单价"
+					android:drawableRight="@drawable/star" />
+				<EditText
+					android:textSize="@dimen/text_size"
+					android:textColor="@color/edit_bg"
+					android:gravity="center_vertical"
+					android:id="@+id/et_price"
+					android:background="@drawable/edit_search"
+					android:paddingLeft="10.0dip"
+					android:paddingRight="10.0dip"
+					android:layout_width="fill_parent"
+					android:layout_height="wrap_content"
+					android:layout_marginLeft="5.0dip"
+					android:singleLine="true"
+					android:inputType="numberDecimal" 
+					android:digits="0123456789."
+					android:hint="请输入"/>
+				<TextView
+					android:textSize="@dimen/text_size"
+					android:textColor="@color/edit_bg"
+					android:gravity="right"
+					android:layout_width="100.0dip"
+					android:layout_height="wrap_content"
+					android:layout_marginLeft="-110.0dip"
+					android:text="元" />
+			</LinearLayout>
+    <LinearLayout
+        
+				android:orientation="horizontal"
+				android:layout_width="fill_parent"
+				android:layout_height="wrap_content"
+				android:layout_margin="5.0dip">
+				<TextView
+					android:textSize="@dimen/text_size"
+					android:textColor="@color/black"
+					android:gravity="center_vertical"
+					android:layout_width="wrap_content"
+					android:layout_height="wrap_content"
+					android:text="最终总价"
+					android:drawableRight="@drawable/star" />
+				<EditText
+					android:textSize="@dimen/text_size"
+					android:textColor="@color/edit_bg"
+					android:gravity="center_vertical"
+					android:id="@+id/etprice"
+					android:background="@drawable/edit_search"
+					android:paddingLeft="10.0dip"
+					android:paddingRight="10.0dip"
+					android:layout_width="fill_parent"
+					android:layout_height="wrap_content"
+					android:layout_marginLeft="5.0dip"
+					android:singleLine="true"
+					android:inputType="numberDecimal" 
+					android:digits="0123456789."
+					android:hint="请输入"/>
+				<TextView
+					android:textSize="@dimen/text_size"
+					android:textColor="@color/edit_bg"
+					android:gravity="right"
+					android:layout_width="100.0dip"
+					android:layout_height="wrap_content"
+					android:layout_marginLeft="-110.0dip"
+					android:text="元" />
+			</LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/lltiplayout"
+        android:layout_width="fill_parent"
+        android:layout_height="42.0dip"
+        android:layout_marginLeft="@dimen/second_right"
+        android:layout_marginRight="@dimen/second_right"
+        android:layout_marginTop="10.0dip"
+        android:gravity="center_vertical"
+        android:orientation="horizontal"
+        android:visibility="gone" >
+
+        <TextView
+            android:id="@+id/tiptext"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="15sp"
+            android:layout_marginRight="15sp"
+            android:text=""
+            android:textColor="@color/red" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="10dp"
+        android:layout_marginLeft="@dimen/second_right"
+        android:layout_marginRight="@dimen/second_right"
+        android:layout_marginTop="10.0dip"
+        android:gravity="center"
+        android:orientation="horizontal" >
+
+
+
+        <Button
+            android:id="@+id/exit_btn"
+            android:layout_width="100dp"
+            android:layout_height="fill_parent"
+
+            android:background="@drawable/shape_btn_selector"
+            android:text="取  消"
+            android:textColor="@color/white" />
+		<Button
+			android:id="@+id/ok_btn"
+			android:layout_width="100dp"
+			android:layout_height="fill_parent"
+			android:layout_marginLeft="50dp"
+			android:background="@drawable/shape_btn_selector"
+			android:text="提  交"
+			android:textColor="@color/white" />
+
+    </LinearLayout>
+
+</LinearLayout>

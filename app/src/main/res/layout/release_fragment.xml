@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical" >
+    
+    
+    <include layout="@layout/view_def_head"/>
+    
+     <com.szmy.pigapp.widget.PagerSlidingTabStrip
+        android:id="@+id/viewpager_strip"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/online_hot_pagertab_height"
+        android:textSize="@dimen/hot_header_Text"
+        android:layout_marginBottom="2dip"
+        />
+    
+    <android.support.v4.view.ViewPager
+        android:id="@+id/viewPager"
+        android:layout_width="match_parent"
+        android:layout_height="0dip"
+        android:layout_weight="1"/>
+
+</LinearLayout>

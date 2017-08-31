@@ -1,0 +1,299 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:materialdesign="http://schemas.android.com/apk/res-auto"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:background="@drawable/icon_pig_disease"
+    android:clipToPadding="true"
+    android:fitsSystemWindows="true"
+    android:orientation="vertical"
+    android:id="@+id/zbzd_layout">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="50dp" >
+
+        <LinearLayout
+            android:id="@+id/def_head_back1"
+            android:layout_width="wrap_content"
+            android:layout_height="50dp"
+            android:layout_gravity="top|left"
+            android:gravity="center_vertical"
+            >
+            <com.gc.materialdesign.views.ButtonIcon
+
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginRight="2dp"
+                android:background="@color/click_ripple_view"
+                materialdesign:iconDrawable="@drawable/ic_back_black"
+                android:onClick="back"/>
+        </LinearLayout>
+
+        <TextView
+            android:id="@+id/title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:text="诊断DIY"
+            android:textColor="@color/text_title"
+            android:textSize="20sp" />
+    </RelativeLayout>
+
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:layout_marginLeft="15dp"
+        android:layout_marginRight="15dp"
+        android:background="#e2e2e2" />
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@null"
+        android:orientation="vertical">
+
+        <LinearLayout
+            android:id="@+id/linearLayout1"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:focusable="true"
+            android:focusableInTouchMode="true"
+            android:gravity="top"
+            android:orientation="vertical"
+            >
+
+            <LinearLayout
+                android:id="@+id/layout_type"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:paddingLeft="15dp"
+                android:paddingRight="15dp"
+                android:layout_marginTop="20dp"
+                android:visibility="visible">
+                <RelativeLayout
+
+                    android:layout_width="match_parent"
+                    android:layout_height="35dp"
+                    android:orientation="vertical">
+                    <TextView
+
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center_vertical"
+                        android:drawableLeft="@drawable/zhengzhuang"
+                        android:gravity="center"
+                        android:text="  请选择病猪阶段"
+                        android:textSize="18sp"
+                        android:textColor="#888" />
+                </RelativeLayout>
+                <ListView
+                    android:layout_marginTop="15dp"
+                    android:id="@+id/listView"
+                    android:layout_width="fill_parent"
+                    android:divider="#ffffff"
+                    android:dividerHeight="10dp"
+                    android:layout_height="fill_parent"
+                    android:cacheColorHint="#00000000"
+                    android:drawSelectorOnTop="false"
+                    android:fastScrollEnabled="true"
+                    android:background="@null"
+                    android:focusable="false"
+                    android:listSelector="#00000000"
+                    android:footerDividersEnabled="false"
+                    android:scrollbars="none" />
+
+            </LinearLayout>
+
+
+            <LinearLayout
+                android:id="@+id/layout_single"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="vertical"
+                android:paddingLeft="15dp"
+                android:paddingRight="15dp"
+                android:visibility="gone"
+                >
+                <RelativeLayout
+                    android:id="@+id/zb_name_layout"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:layout_marginTop="20dp">
+                    <TextView
+                        android:id="@+id/zb_name"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+
+                        android:layout_gravity="center_vertical"
+                        android:drawableLeft="@drawable/zhengzhuang"
+                        android:gravity="center"
+                        android:textSize="16sp"
+                        android:text=""
+                        android:textColor="#888" />
+                </RelativeLayout>
+
+                <Button
+                    android:id="@+id/yes_btn"
+                    android:layout_width="match_parent"
+                    android:layout_height="50dp"
+                    android:layout_marginTop="18dp"
+                    android:background="@drawable/shape_btn_selector2"
+                    android:text=""
+                    android:gravity="left|center_vertical"
+                    android:textColor="@drawable/zb_text" />
+                <Button
+                    android:id="@+id/no_btn"
+                    android:layout_width="match_parent"
+                    android:layout_height="50dp"
+                    android:layout_marginTop="18dp"
+                    android:background="@drawable/shape_btn_selector2"
+                    android:text=""
+                    android:gravity="left|center_vertical"
+                    android:textColor="@drawable/zb_text" />
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="bottom"
+                    android:orientation="vertical"
+                    android:layout_weight="0.1"
+                    android:visibility="gone">
+                    <ImageView
+                        android:layout_width="273dp"
+                        android:layout_height="261dp"
+                        android:background="@drawable/pig_disease"
+                        android:gravity="bottom"
+                        />
+                </LinearLayout>
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/layout_more"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:paddingLeft="15dp"
+                android:paddingRight="15dp"
+                android:layout_marginTop="20dp"
+                android:visibility="gone">
+                <RelativeLayout
+                    android:id="@+id/rl_point"
+                    android:layout_width="match_parent"
+                    android:layout_height="35dp"
+                    android:orientation="vertical">
+                    <TextView
+                        android:id="@+id/name"
+                        android:layout_width="wrap_content"
+                        android:layout_height="30dp"
+
+                        android:layout_gravity="center_vertical"
+                        android:drawableLeft="@drawable/zhengzhuang"
+                        android:gravity="center"
+                        android:textSize="16sp"
+                        android:text="  请选择是否有以下症状（多选）"
+                        android:textColor="#888" />
+                </RelativeLayout>
+
+                <ListView
+                    android:layout_marginTop="15dp"
+                    android:id="@+id/listView1"
+                    android:layout_width="fill_parent"
+                    android:divider="#ffffff"
+                    android:dividerHeight="10dp"
+                    android:layout_height="fill_parent"
+                    android:cacheColorHint="#00000000"
+                    android:drawSelectorOnTop="false"
+                    android:fastScrollEnabled="true"
+                    android:background="@null"
+                    android:focusable="false"
+                    android:listSelector="#00000000"
+                    android:footerDividersEnabled="false"
+                    android:scrollbars="none" />
+                <Button
+                    android:id="@+id/btn_submit"
+                    android:layout_width="200dp"
+                    android:layout_height="40dip"
+                    android:layout_gravity="center_horizontal"
+                    android:layout_margin="15dip"
+                    android:background="@drawable/shape_btn_selector"
+                    android:gravity="center"
+                    android:padding="2.0dip"
+                    android:text="@string/submit_tx"
+                    android:textColor="@color/white"
+                    android:textSize="18.0sp" />
+            </LinearLayout>
+            <LinearLayout
+                android:id="@+id/layout_answer"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="vertical"
+                android:paddingLeft="15dp"
+                android:paddingRight="15dp"
+                android:visibility="gone"
+                >
+                <RelativeLayout
+
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:layout_marginTop="10dp">
+                    <TextView
+
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center_vertical"
+                        android:layout_marginTop="10dp"
+                        android:gravity="center"
+                        android:textSize="16sp"
+                        android:text="根据您的选择,系统初步诊断为："
+                        android:textColor="#888" />
+
+                </RelativeLayout>
+                <ListView
+                    android:layout_marginTop="15dp"
+                    android:id="@+id/listView2"
+                    android:layout_width="fill_parent"
+                    android:divider="#ffffff"
+                    android:dividerHeight="10dp"
+                    android:layout_height="wrap_content"
+                    android:cacheColorHint="#00000000"
+                    android:drawSelectorOnTop="false"
+                    android:fastScrollEnabled="true"
+                    android:background="@null"
+                    android:focusable="false"
+                    android:listSelector="#00000000"
+                    android:footerDividersEnabled="false"
+                    android:scrollbars="none" />
+                <TextView
+                    android:id="@+id/view1"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_vertical"
+                    android:gravity="left"
+                    android:textSize="14sp"
+                    android:text="(温馨提示：本自动诊断结果仅供参考，并不作为生产指导依据，据此操作所造成的后果及责任，本站概不负责，请操作者酌情处理。)"
+                    android:textColor="#888"
+                    android:background="@color/gray_bg_color"
+                    />
+                <Button
+                    android:id="@+id/btn_again"
+                    android:layout_width="200dp"
+                    android:layout_height="40dip"
+                    android:layout_gravity="center_horizontal"
+                    android:layout_margin="15dip"
+                    android:background="@drawable/shape_btn_selector"
+                    android:gravity="center"
+                    android:padding="2.0dip"
+                    android:text="再来一次"
+                    android:textColor="@color/white"
+                    android:textSize="18.0sp" />
+            </LinearLayout>
+            </LinearLayout>
+    </ScrollView>
+
+
+
+</LinearLayout>

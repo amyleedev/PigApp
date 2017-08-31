@@ -1,0 +1,191 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:layout_gravity="center_vertical"
+    android:background="@color/transparent" >
+
+    <LinearLayout
+        android:id="@+id/ll_share"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:layout_gravity="center"
+        android:layout_marginLeft="20dp"
+        android:layout_marginRight="20dp"
+        android:background="@color/white"
+        android:orientation="vertical" >
+
+        <RelativeLayout 
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:padding="10.0dip"
+            android:layout_gravity="center_horizontal|center_vertical">
+             <TextView
+                 android:id="@+id/text1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentLeft="true"
+            android:text="分享给好友"
+            android:textColor="@color/black"
+            android:textSize="20.0sp" />
+             <TextView 
+                 android:id="@+id/copy"
+                 android:layout_width="wrap_content"
+                 android:layout_height="wrap_content"
+                 android:layout_alignParentRight="true"
+                 android:text="复制链接"
+                 android:textColor="@color/red"
+                 android:background="@drawable/def_selector"
+                 android:textSize="18.0sp"/>
+             
+        </RelativeLayout>
+       
+
+        <View
+            android:layout_width="fill_parent"
+            android:layout_height="0.5dip"
+            android:layout_marginBottom="10.0dip"
+            android:background="@color/gray" />
+
+        <ImageView
+            android:id="@+id/codeimg"
+            android:layout_width="180dp"
+            android:layout_height="180dp"
+            android:layout_gravity="center"
+            android:scaleType="centerCrop"
+            android:src="@null" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:padding="10.0dip"
+            android:text="扫描二维码，立即下载"
+            android:textColor="@color/black"
+            android:textSize="11.0sp" />
+
+        <View
+            android:layout_width="fill_parent"
+            android:layout_height="0.5dip"
+            android:background="@color/gray" />
+
+        <LinearLayout
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="10.0dip"
+            android:layout_marginTop="10.0dip"
+            android:gravity="center_horizontal"
+            android:orientation="horizontal" >
+
+            <LinearLayout
+                android:id="@+id/ll_wechat"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:clickable="true"
+                android:gravity="center_horizontal"
+                android:orientation="vertical" >
+
+                <ImageButton
+                    android:layout_width="40.0dip"
+                    android:layout_height="40.0dip"
+                    android:background="@drawable/logo_wechat"
+                    android:clickable="false"
+                    android:focusable="false"
+                    android:scaleType="fitXY" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:clickable="false"
+                    android:focusable="false"
+                    android:text="微信分享"
+                    android:textColor="@color/black"
+                    android:textSize="11.0sp" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/ll_wechatmoments"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="20.0dip"
+                android:clickable="true"
+                android:gravity="center_horizontal"
+                android:orientation="vertical" >
+
+                <ImageButton
+                    android:layout_width="40.0dip"
+                    android:layout_height="40.0dip"
+                    android:background="@drawable/logo_wechatmoments"
+                    android:clickable="false"
+                    android:focusable="false"
+                    android:scaleType="fitXY" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:clickable="false"
+                    android:focusable="false"
+                    android:text="朋友圈分享"
+                    android:textColor="@color/black"
+                    android:textSize="11.0sp" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/ll_qq"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="20.0dip"
+                android:clickable="true"
+                android:gravity="center_horizontal"
+                android:orientation="vertical" >
+
+                <ImageButton
+                    android:layout_width="40.0dip"
+                    android:layout_height="40.0dip"
+                    android:background="@drawable/logo_qq"
+                    android:clickable="false"
+                    android:focusable="false"
+                    android:scaleType="fitXY" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:clickable="false"
+                    android:focusable="false"
+                    android:text="QQ分享"
+                    android:textColor="@color/black"
+                    android:textSize="11.0sp" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/ll_qzone"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="20.0dip"
+                android:clickable="true"
+                android:gravity="center_horizontal"
+                android:orientation="vertical" >
+
+                <ImageButton
+                    android:layout_width="40.0dip"
+                    android:layout_height="40.0dip"
+                    android:background="@drawable/logo_qzone"
+                    android:clickable="false"
+                    android:focusable="false"
+                    android:scaleType="fitXY" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:clickable="false"
+                    android:focusable="false"
+                    android:text="空间分享"
+                    android:textColor="@color/black"
+                    android:textSize="11.0sp" />
+            </LinearLayout>
+        </LinearLayout>
+    </LinearLayout>
+
+</FrameLayout>

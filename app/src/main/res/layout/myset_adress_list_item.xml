@@ -1,0 +1,114 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#ffffff"
+    android:orientation="vertical" 
+    android:gravity="center_vertical">
+
+    <RelativeLayout
+        android:id="@+id/card_layout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="10dp"
+        android:background="@color/white"
+        android:orientation="horizontal" >
+
+        <TextView
+            android:id="@+id/myset_address_phone"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:text="15890110907"
+            android:textColor="@color/text_details"
+            android:textSize="15sp" />
+
+        <TextView
+            android:id="@+id/myset_address_item_name"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:text="姓名"
+            android:textColor="@color/text_title"
+            android:textSize="15sp" />
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/layout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="10dp"
+        android:layout_marginLeft="10dp"
+        android:layout_marginRight="20dp"
+        android:background="@color/white"
+        android:orientation="horizontal" >
+
+        <TextView
+            android:id="@+id/myset_address_item_provinces"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:text="河南省郑州市金水区经三路与晨旭路交叉口神殿老旧大楼一楼西"
+            android:textColor="@color/text_details"
+            android:textSize="15sp" />
+    </RelativeLayout>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1px"
+        android:background="@color/umeng_fb_gray" 
+        android:layout_marginLeft="8dp"
+        android:layout_marginRight="8dp"/>
+
+    <RelativeLayout
+        android:id="@+id/layout3"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/white"
+        android:orientation="horizontal"
+        android:layout_marginLeft="10dp"
+        android:layout_marginRight="10dp" >
+
+        <CheckBox
+            android:id="@+id/loading_checkbox"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:button="@drawable/checkbox"
+            android:focusable="false"
+            android:text="默认地址" 
+            android:textColor="@color/text_details"
+             android:paddingLeft="6.0dp"/>
+
+        <Button
+            android:id="@+id/btn_upp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_toLeftOf="@+id/btn_del"
+            android:background="@null"
+            android:drawableLeft="@drawable/icon_upp"
+            android:text="编辑"
+            android:textColor="@color/text_details"
+            android:textSize="13sp" />
+
+        <Button
+            android:id="@+id/btn_del"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"           
+            android:background="@null"
+            android:drawableLeft="@drawable/icon_del"
+            android:text="删除"
+            android:textColor="@color/text_details"
+            android:textSize="13sp" />
+    </RelativeLayout>
+<View
+        android:layout_width="match_parent"
+        android:layout_height="10dp"
+        android:background="@color/bg" 
+/>
+
+</LinearLayout>

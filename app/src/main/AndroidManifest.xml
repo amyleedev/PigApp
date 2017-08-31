@@ -1,0 +1,751 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.szmy.pigapp"
+    android:installLocation="auto">
+
+    <supports-screens
+        android:anyDensity="true"
+        android:largeScreens="true"
+        android:normalScreens="true"
+        android:resizeable="true"
+        android:smallScreens="true"
+        android:xlargeScreens="true" />
+
+    <uses-permission android:name="android.permission.RECEIVE_BOOT_COMPLETED" />
+    <uses-permission android:name="android.permission.WRITE_SETTINGS" />
+    <uses-permission android:name="android.permission.WAKE_LOCK" />
+    <uses-permission android:name="android.permission.CHANGE_NETWORK_STATE" />
+    <!-- 这个权限用于进行网络定位 -->
+    <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" >
+    </uses-permission>
+    <!-- 这个权限用于访问GPS定位 -->
+    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" >
+    </uses-permission>
+    <!-- 用于访问wifi网络信息，wifi信息会用于进行网络定位 -->
+    <uses-permission android:name="android.permission.ACCESS_WIFI_STATE" >
+    </uses-permission>
+    <!-- 获取运营商信息，用于支持提供运营商信息相关的接口 -->
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" >
+    </uses-permission>
+    <!-- 这个权限用于获取wifi的获取权限，wifi信息会用来进行网络定位 -->
+    <uses-permission android:name="android.permission.CHANGE_WIFI_STATE" >
+    </uses-permission>
+    <!-- 用于读取手机当前的状态 -->
+    <uses-permission android:name="android.permission.READ_PHONE_STATE" >
+    </uses-permission>
+    <!-- 写入扩展存储，向扩展卡写入数据，用于写入离线定位数据 -->
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" >
+    </uses-permission>
+    <!-- 访问网络，网络定位需要上网 -->
+    <uses-permission android:name="android.permission.INTERNET" />
+    <!-- SD卡读取权限，用户写入离线定位数据 -->
+    <uses-permission android:name="android.permission.MOUNT_UNMOUNT_FILESYSTEMS" >
+    </uses-permission>
+    <uses-permission android:name="android.permission.CAMERA" />
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
+    <uses-permission android:name="com.android.launcher.permission.READ_SETTINGS" />
+    <uses-permission android:name="android.permission.CALL_PHONE" />
+    <uses-permission android:name="android.permission.WRITE_CONTACTS" />
+    <uses-permission android:name="android.permission.GET_TASKS" />
+
+    <uses-permission android:name="android.permission.GET_ACCOUNTS" />
+    <uses-permission android:name="android.permission.USE_CREDENTIALS" />
+    <uses-permission android:name="android.permission.MANAGE_ACCOUNTS" />
+    <!-- 创建桌面快捷方式的权限 -->
+    <uses-permission android:name="com.android.launcher.permission.INSTALL_SHORTCUT" />
+    <uses-permission android:name="android.permission.CAMERA" />
+
+    <uses-feature android:name="android.hardware.camera" />
+    <uses-feature android:name="android.hardware.camera.autofocus" />
+    <!-- 震动权限 -->
+    <uses-permission android:name="android.permission.VIBRATE" />
+    <uses-permission android:name="android.permission.READ_LOGS" /><!--保存资源到SD卡-->
+    <application
+        android:name=".activity.PigTradeApp"
+        android:allowBackup="true"
+        android:icon="@drawable/ic_launcher"
+        android:label="@string/app_name"
+        android:screenOrientation="portrait"
+        android:theme="@style/AppBaseTheme" >
+        <activity
+            android:name=".activity.ActivityLead"
+            android:theme="@android:style/Theme.NoTitleBar.Fullscreen" >
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+
+            </intent-filter>
+        </activity>
+        <activity android:name=".activity.LineChartActivity" android:screenOrientation="portrait"></activity>
+        <activity android:name=".activity.LineDemo" android:screenOrientation="portrait"></activity>
+        <activity android:name=".distributor.JoinDistributorActivity" android:screenOrientation="portrait"/>
+        <activity android:name=".distributor.DistributorMapActivity" android:screenOrientation="portrait"/>
+        <activity android:name=".distributor.DistributorIntegralActivity" android:screenOrientation="portrait"/>
+        <activity android:name=".quotedprice.NewQuotedPriceActivity" android:screenOrientation="portrait"/>
+        <activity android:name=".quotedprice.LookOrNewPriceActivity" android:screenOrientation="portrait"/>
+        <activity android:name=".quotedprice.QuotedPriceDetailActivity" android:screenOrientation="portrait"/>
+        <activity android:name=".zheshang.NewAgreementsigningActivity" android:screenOrientation="portrait"/>
+        <activity android:name=".zheshang.NewElectronicAccountsActivity" android:screenOrientation="portrait"/>
+        <activity android:name=".zheshang.KaihuhangChoose" android:screenOrientation="portrait"/>
+        <activity android:name=".mynotices.MyNoticeListActivity" android:screenOrientation="portrait"/>
+        <activity android:name=".activity.SlaughterListActivity2" android:screenOrientation="portrait"/>
+
+        <activity
+            android:name="com.umeng.socialize.editorpage.ShareActivity"
+            android:theme="@style/Theme.UMDefault"
+            android:excludeFromRecents="true"/>
+
+        <activity android:name="com.umeng.fb.ConversationActivity" />
+        <activity
+            android:name=".activity.ServiceCenterActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".activity.RegisterProtocolActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".activity.ActivityTickling"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".activity.ActivityGuide"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".comment.NewsCommentActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".comment.CommentListActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".activity.ActivityScanResultText"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".activity.ActivityScanResult"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".activity.ActivityScanResultXieyi"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".activity.ActivityDisclaimer"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".activity.ActivityAbout"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".activity.ActivityTransportProtocol"
+            android:screenOrientation="portrait" >
+        </activity>
+        <activity
+            android:name=".activity.LocationMapActivity"
+            android:screenOrientation="portrait" >
+        </activity>
+        <activity
+            android:name=".activity.PigMapActivity"
+            android:screenOrientation="portrait" >
+        </activity>
+        <activity
+            android:name=".activity.RegisterActivity"
+            android:screenOrientation="portrait" >
+        </activity>
+        <activity
+            android:name=".activity.LoginActivity"
+            android:screenOrientation="portrait" >
+        </activity>
+        <activity
+            android:name=".activity.NewInfoActivity"
+            android:screenOrientation="portrait" >
+        </activity>
+        <activity
+            android:name=".activity.InfoBuyDetailActivity"
+            android:screenOrientation="portrait" >
+        </activity>
+        <activity
+            android:name=".activity.InfoSellDetailActivity"
+            android:screenOrientation="portrait" >
+        </activity>
+        <activity
+            android:name=".activity.UserInfoActivity"
+            android:screenOrientation="portrait" >
+        </activity>
+
+
+        <activity
+            android:name=".activity.ShowImgActivity"
+            android:screenOrientation="portrait" >
+        </activity>
+        <activity
+            android:name=".activity.MyVehicleActivity"
+            android:screenOrientation="portrait" >
+        </activity>
+        <activity
+            android:name=".activity.TestPicActivity"
+            android:screenOrientation="portrait" >
+        </activity>
+        <activity
+            android:name=".activity.MyOrderActivity"
+            android:screenOrientation="portrait" >
+        </activity>
+        <activity
+            android:name=".activity.ActivityMain"
+            android:screenOrientation="portrait" >
+        </activity>
+        <activity
+            android:name=".activity.PayActivity"
+            android:screenOrientation="portrait" >
+        </activity>
+        <activity
+            android:name=".activity.ChoseProvinceActivity"
+            android:screenOrientation="portrait" >
+        </activity>
+        <activity
+            android:name=".activity.ChoseProvinceCityActivity"
+            android:screenOrientation="portrait" >
+        </activity>
+        <activity
+            android:name=".activity.ChoseTypeActivity"
+            android:screenOrientation="portrait" >
+        </activity>
+        <activity
+            android:name=".activity.ChoseDealTypeActivity"
+            android:screenOrientation="portrait" >
+        </activity>
+        <activity
+            android:name=".activity.ChoseOrderByActivity"
+            android:screenOrientation="portrait" >
+        </activity>
+        <activity
+            android:name=".activity.UpdatePwdActivity"
+            android:screenOrientation="portrait" >
+        </activity>
+        <activity
+            android:name=".activity.SetActivity"
+            android:screenOrientation="portrait" >
+        </activity>
+        <activity
+            android:name=".activity.ZhuChangRenZhengActivity"
+            android:configChanges="orientation|screenSize|keyboardHidden|keyboard"
+            android:screenOrientation="portrait" >
+        </activity>
+        <activity
+            android:name=".agent.AgentRenZhengActivity"
+            android:configChanges="orientation|screenSize|keyboardHidden|keyboard"
+            android:screenOrientation="portrait" >
+        </activity>
+        <activity
+            android:name=".activity.SlaughterhouseRenZhengActivity"
+            android:screenOrientation="portrait" >
+        </activity>
+        <activity
+            android:name=".activity.ChosePigFarmTypeActivity"
+            android:screenOrientation="portrait" >
+        </activity>
+        <activity
+            android:name=".activity.IndustryActivity"
+            android:screenOrientation="portrait" >
+        </activity>
+        <activity
+            android:name=".distributor.JoinEnterpriseActivity"
+            android:screenOrientation="portrait" >
+        </activity>
+        <activity android:name=".daijinquan.DaijinquanListActivity" android:screenOrientation="portrait"/>
+        <activity
+            android:name=".myshop.WebActivity"
+            android:screenOrientation="portrait" >
+        </activity>
+        <activity android:name=".liulanliang.LiuLanListActivity"
+            android:screenOrientation="portrait"></activity>
+        <activity android:name=".myshop.ShopMainActivity"
+            android:screenOrientation="portrait"></activity>
+        <activity android:name=".comment.MyNewsListActivity"
+            android:screenOrientation="portrait"/>
+        <activity
+            android:name="cn.sharesdk.framework.ShareSDKUIShell"
+            android:configChanges="keyboardHidden|orientation|screenSize"
+            android:screenOrientation="portrait"
+            android:theme="@android:style/Theme.Translucent.NoTitleBar"
+            android:windowSoftInputMode="stateHidden|adjustResize" />
+        <!-- 微信分享回调 -->
+        <!--
+             <activity
+            android:name=".wxapi.WXEntryActivity"
+            android:configChanges="keyboardHidden|orientation|screenSize"
+            android:exported="true"
+            android:theme="@android:style/Theme.Translucent.NoTitleBar" />
+        -->
+        <activity
+            android:name="com.umeng.soexample.wxapi.WXEntryActivity"
+            android:configChanges="keyboardHidden|orientation|screenSize"
+            android:exported="true"
+            android:theme="@android:style/Theme.Translucent.NoTitleBar" />
+
+
+
+        <activity
+            android:name=".activity.ActivityDetails"
+            android:screenOrientation="portrait" >
+        </activity>
+
+        <meta-data
+            android:name="APP_KEY"
+            android:value="@string/app_key" >
+        </meta-data>
+        <meta-data
+            android:name="UMENG_APPKEY"
+            android:value="560f6b5367e58e324f0021b5" >
+        </meta-data>
+        <meta-data
+            android:name="UMENG_MESSAGE_SECRET"
+            android:value="8268d9f09ed56e2612e06f23e95b2ec5" >
+        </meta-data>
+        <meta-data
+            android:name="UMENG_CHANNEL"
+            android:value="Umeng" >
+        </meta-data>
+
+        <activity
+            android:name="com.umeng.update.UpdateDialogActivity"
+            android:theme="@android:style/Theme.Translucent.NoTitleBar" >
+        </activity>
+
+        <service
+            android:name="com.umeng.update.net.DownloadingService"
+            android:process=":DownloadingService" >
+        </service>
+        <service android:name=".updateservice.UpdateServcie" >
+        </service>
+        <activity
+            android:name=".activity.DevelopingActivity"
+            android:screenOrientation="portrait" >
+        </activity>
+        <activity
+            android:name=".activity.MyAddress"
+            android:screenOrientation="portrait" >
+        </activity>
+        <activity
+            android:name=".activity.AddressChoose"
+            android:screenOrientation="portrait" >
+        </activity>
+        <activity
+            android:name=".activity.PigFarmListActivity"
+            android:screenOrientation="portrait" >
+        </activity>
+        <activity
+            android:name=".activity.SlaughterListActivity"
+            android:screenOrientation="portrait" >
+        </activity>
+        <activity
+            android:name=".activity.SearchPigActivity"
+            android:screenOrientation="portrait" >
+        </activity>
+        <activity
+            android:name=".agent.AgentListActivity"
+            android:screenOrientation="portrait" >
+        </activity>
+        <activity
+            android:name=".activity.NewsListActivity"
+            android:screenOrientation="portrait" >
+        </activity>
+        <activity
+            android:name=".activity.SearchConditionActivity"
+            android:screenOrientation="portrait" >
+        </activity>
+        <activity
+            android:name=".activity.ChoseOrderTypeActivity"
+            android:screenOrientation="portrait" >
+        </activity>
+        <activity
+            android:name=".vehicle.LogisticsMapActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".vehicle.VehicleCompanyActivity"
+            android:screenOrientation="portrait" >
+        </activity>
+        <activity
+            android:name=".vehicle.VehicleCompanyAuthActivity"
+            android:screenOrientation="portrait" >
+        </activity>
+        <activity
+            android:name=".vehicle.ChoseVehicleCompanyType"
+            android:screenOrientation="portrait" >
+        </activity>
+        <activity
+            android:name=".vehicle.NewVehicleActivity"
+            android:screenOrientation="portrait" >
+        </activity>
+        <activity
+            android:name=".vehicle.VehicleDetailActivity"
+            android:screenOrientation="portrait" >
+        </activity>
+        <activity
+            android:name=".vehicle.VehicleListActivity"
+            android:screenOrientation="portrait" >
+        </activity>
+        <activity
+            android:name=".vehicle.MyVehicleOrderActivity"
+            android:screenOrientation="portrait" >
+        </activity>
+        <activity
+            android:name=".vehicle.ChosePriceActivity"
+            android:screenOrientation="portrait" >
+        </activity>
+
+        <service
+            android:name="com.baidu.location.f"
+            android:enabled="true"
+            android:process=":remote" >
+        </service>
+        <!-- 正式：YRcVhVvM1qk9Hq6KNZI4j1O5 -->
+        <!-- 测试：L4KYM9UffmYUZSAkijo125k0 -->
+        <meta-data
+            android:name="com.baidu.lbsapi.API_KEY"
+            android:value="YRcVhVvM1qk9Hq6KNZI4j1O5" />
+
+        <activity
+            android:name=".activity.ScanActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".zxing.activity.CaptureActivity"
+            android:configChanges="orientation|keyboardHidden"
+            android:screenOrientation="portrait"
+            android:theme="@android:style/Theme.NoTitleBar"
+            android:windowSoftInputMode="stateAlwaysHidden" />
+        <activity
+            android:name=".activity.ActivityForgotPassword"
+            android:screenOrientation="portrait" >
+        </activity>
+
+        <service
+            android:name=".service.BackstageService"
+            android:enabled="true" />
+
+        <activity
+            android:name=".activity.ChosePigColorActivity"
+            android:screenOrientation="portrait" >
+        </activity>
+        <activity
+            android:name=".activity.EcaluateActivity"
+            android:screenOrientation="portrait" >
+        </activity>
+        <activity
+            android:name=".activity.IntegralActivity"
+            android:screenOrientation="portrait" >
+        </activity>
+        <activity
+            android:name=".activity.IntegralListActivity"
+            android:screenOrientation="portrait" >
+        </activity>
+        <activity
+            android:name=".activity.ActivityIntegralProtocol"
+            android:screenOrientation="portrait" >
+        </activity>
+        <activity
+            android:name=".activity.NewsActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/StyledIndicators" >
+        </activity>
+        <activity
+            android:name=".natural.NaturalAuthActivity"
+            android:screenOrientation="portrait" >
+        </activity>
+        <activity
+            android:name=".activity.MyTuiGuangActivity"
+            android:screenOrientation="portrait" >
+        </activity>
+        <activity
+            android:name=".pigactivity.PigOrMapActivity"
+            android:screenOrientation="portrait" >
+        </activity>
+        <activity
+            android:name=".sign.SignActivity"
+            android:screenOrientation="portrait" >
+        </activity>
+        <activity
+            android:name=".pigactivity.PigPriceListActivity"
+            android:screenOrientation="portrait" >
+        </activity>
+        <activity
+            android:name=".pigactivity.NewPigPriceActivity"
+            android:screenOrientation="portrait" >
+        </activity>
+        <activity
+            android:name=".pigactivity.PigPriceFragment"
+            android:screenOrientation="portrait"
+            android:theme="@style/Theme.PageIndicatorDefaults" >
+        </activity>
+        <activity
+            android:name=".activity.HealthAuthActivity"
+            android:screenOrientation="portrait" >
+        </activity>
+        <activity
+            android:name=".pds.PDSPigFarmListActivity"
+            android:screenOrientation="portrait" >
+        </activity>
+        <activity
+            android:name=".tixian.ActivityWithdrawals"
+            android:screenOrientation="portrait"
+            >
+        </activity>
+        <activity
+            android:name=".tixian.ActivityWithdrawals"
+            android:screenOrientation="portrait"
+            >
+        </activity>
+        <activity
+            android:name=".tixian.WithdrawalsListActivity"
+            android:screenOrientation="portrait" >
+        </activity>
+        <activity
+            android:name=".tixian.IntegraltocashActivity"
+            android:screenOrientation="portrait" >
+        </activity>
+
+        <activity
+            android:name=".mycare.MyCareListActivity"
+            android:screenOrientation="portrait" >
+        </activity>
+        <activity
+            android:name=".agent.AgentMoreActivity"
+            android:screenOrientation="portrait" >
+        </activity>
+        <activity
+            android:name=".activity.SlaughterMoreActivity"
+            android:screenOrientation="portrait" >
+        </activity>
+        <activity
+            android:name=".activity.PigFarmMoreActivity"
+            android:screenOrientation="portrait" >
+        </activity>
+        <activity
+            android:name=".activity.NewAddress"
+            android:screenOrientation="portrait" >
+        </activity>
+        <activity
+            android:name=".pds.NewJYSBActivity"
+            android:screenOrientation="portrait" >
+        </activity>
+        <activity
+            android:name=".pds.ChoseErBiao"
+            android:screenOrientation="portrait" >
+        </activity>
+        <activity
+            android:name=".activity.PigFarmMapActivity"
+            android:screenOrientation="portrait" >
+        </activity>
+        <activity
+            android:name=".agent.AgentMapActivity"
+            android:screenOrientation="portrait" >
+        </activity>
+        <activity
+            android:name=".activity.SlaughterMapActivity"
+            android:screenOrientation="portrait" >
+        </activity>
+        <activity
+            android:name=".activity.NewsDetailsActivity"
+            android:screenOrientation="portrait" >
+        </activity>
+
+        <activity
+            android:name=".image.ImageChooseActivity"
+            android:screenOrientation="portrait" >
+        </activity>
+        <activity
+            android:name=".image.ImageZoomActivity"
+            android:screenOrientation="portrait" >
+        </activity>
+        <activity
+            android:name=".activity.ActivitySetPayPassword"
+            android:screenOrientation="portrait" >
+        </activity>
+        <activity
+            android:name=".weather.WeatherActivity"
+            android:screenOrientation="portrait" >
+        </activity>
+        <activity android:name="com.szmy.pigapp.tongji.StatisticsAdminActivity"
+            android:screenOrientation="portrait"/>
+        <activity android:name="com.szmy.pigapp.tongji.StatisticsUserActivity"
+            android:screenOrientation="portrait"></activity>
+        <activity android:name=".pigdiagnosis.ZhenDuanActivity"
+            android:screenOrientation="portrait"/>
+
+
+        <!-- Bugly升级SDK配置开始  -->
+        <!--<activity-->
+            <!--android:name="com.tencent.bugly.beta.ui.BetaActivity"-->
+            <!--android:configChanges="keyboardHidden|orientation|screenSize|locale"-->
+            <!--android:theme="@android:style/Theme.Translucent"/>-->
+
+
+        <!--API 24以上配置-->
+        <!--<provider-->
+            <!--android:name="android.support.v4.content.FileProvider"-->
+            <!--android:authorities="com.tencent.bugly.hotfix.fileProvider"-->
+            <!--android:exported="false"-->
+            <!--android:grantUriPermissions="true">-->
+            <!--<meta-data-->
+                <!--android:name="android.support.FILE_PROVIDER_PATHS"-->
+                <!--android:resource="@xml/provider_paths"/>-->
+        <!--</provider>-->
+
+        <!-- Bugly升级SDK配置结束-->
+        <!-- 监听通知点击或者忽略处理的广播 -->
+        <receiver
+            android:name="com.umeng.message.NotificationProxyBroadcastReceiver"
+            android:exported="false" >
+        </receiver>
+
+        <!-- 监听开机运行、网络连接变化、卸载的广播 -->
+        <receiver
+            android:name="com.umeng.message.SystemReceiver"
+            android:process=":push" >
+            <intent-filter>
+                <action android:name="android.intent.action.BOOT_COMPLETED" />
+            </intent-filter>
+            <intent-filter>
+                <action android:name="android.net.conn.CONNECTIVITY_CHANGE" />
+            </intent-filter>
+            <intent-filter>
+                <action android:name="android.intent.action.PACKAGE_REMOVED" />
+
+                <data android:scheme="package" />
+            </intent-filter>
+        </receiver>
+
+        <!-- 监听消息到达的广播 -->
+        <receiver
+            android:name="com.umeng.message.MessageReceiver"
+            android:exported="false"
+            android:process=":push" >
+            <intent-filter>
+                <action android:name="org.agoo.android.intent.action.RECEIVE" />
+            </intent-filter>
+        </receiver>
+
+        <!-- 监听宿主选举的广播 -->
+        <receiver
+            android:name="com.umeng.message.ElectionReceiver"
+            android:process=":push" >
+            <intent-filter>
+                <action android:name="org.agoo.android.intent.action.ELECTION_RESULT_V4" />
+
+                <category android:name="umeng" />
+            </intent-filter>
+        </receiver>
+
+        <!-- 监听注册的广播 -->
+        <!-- 【应用包名】字符串需要替换成本应用的应用包名 -->
+        <receiver
+            android:name="com.umeng.message.RegistrationReceiver"
+            android:exported="false" >
+            <intent-filter>
+                <action android:name="com.szmy.pigapp.intent.action.COMMAND" />
+            </intent-filter>
+        </receiver>
+        <receiver android:name="com.umeng.message.UmengMessageBootReceiver" >
+            <intent-filter>
+                <action android:name="android.intent.action.BOOT_COMPLETED" />
+            </intent-filter>
+        </receiver>
+        <!-- Umeng的长连服务，用来建立推送的长连接的 -->
+        <!-- 【应用包名】字符串需要替换成本应用的应用包名 -->
+        <service
+            android:name="com.umeng.message.UmengService"
+            android:exported="true"
+            android:label="PushService"
+            android:process=":push" >
+            <intent-filter>
+                <action android:name="com.szmy.pigapp.intent.action.START" />
+            </intent-filter>
+            <intent-filter>
+                <action android:name="com.szmy.pigapp.intent.action.COCKROACH" />
+            </intent-filter>
+            <intent-filter>
+                <action android:name="org.agoo.android.intent.action.PING_V4" />
+
+                <category android:name="umeng" />
+            </intent-filter>
+        </service>
+
+        <!-- Umeng的消息接收服务 -->
+        <service
+            android:name="com.umeng.message.UmengIntentService"
+            android:process=":push" />
+
+        <!-- Umeng的消息路由服务 -->
+        <service
+            android:name="com.umeng.message.UmengMessageIntentReceiverService"
+            android:exported="true"
+            android:process=":push" >
+            <intent-filter>
+                <action android:name="org.android.agoo.client.MessageReceiverService" />
+            </intent-filter>
+            <intent-filter>
+                <action android:name="org.android.agoo.client.ElectionReceiverService" />
+            </intent-filter>
+        </service>
+
+        <!-- v2.4.1添加的Service，Umeng的消息接收后的处理服务 -->
+        <service
+            android:name="com.umeng.message.UmengMessageCallbackHandlerService"
+            android:exported="false" >
+            <intent-filter>
+                <action android:name="com.umeng.messge.registercallback.action" />
+            </intent-filter>
+            <intent-filter>
+                <action android:name="com.umeng.message.unregistercallback.action" />
+            </intent-filter>
+            <intent-filter>
+                <action android:name="com.umeng.message.message.handler.action" />
+            </intent-filter>
+            <intent-filter>
+                <action android:name="com.umeng.message.autoupdate.handler.action" />
+            </intent-filter>
+        </service>
+
+        <!-- V1.3.0添加的service，负责下载通知的资源 -->
+        <service android:name="com.umeng.message.UmengDownloadResourceService" />
+
+        <!-- V2.5.0添加的Service，用于本地通知 -->
+        <!-- 如果不使用本地通知，可以注释掉本地通知服务的配置 -->
+        <service
+            android:name="com.umeng.message.local.UmengLocalNotificationService"
+            android:exported="false" />
+
+        <!-- ##################分享相关#################### -->
+
+
+        <!-- ############ QQ空间和QQ SSO授权的Activity注册 ############ -->
+        <activity
+            android:name="com.tencent.tauth.AuthActivity"
+            android:launchMode="singleTask"
+            android:noHistory="true" >
+            <intent-filter>
+                <action android:name="android.intent.action.VIEW" />
+
+                <category android:name="android.intent.category.DEFAULT" />
+                <category android:name="android.intent.category.BROWSABLE" />
+                <!-- 100424468，如果你使用的公用账号，则不需要修改；否则修改成你在QQ开放平台申请的 APP ID -->
+                <data android:scheme="tencent1104820529" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name="com.tencent.connect.common.AssistActivity"
+            android:screenOrientation="portrait"
+            android:theme="@android:style/Theme.Translucent.NoTitleBar" >
+        </activity>
+
+        <meta-data
+            android:name="com.amap.api.v2.apikey"
+            android:value="6ad18da3c3ffefaa9efb6f0a2ecedbbd" />
+        <!-- 使用完全自定义消息来开启应用的服务进程的示例服务配置 -->
+        <!-- 不是必需的服务，可以根据开发者的需求进行设置 -->
+        <service android:name=".service.NotificationService" />
+        <!-- 请填写实际的类名，下面仅是示例代码 -->
+        <service
+            android:name=".service.MyPushIntentService"
+            android:process=":push" />
+
+
+        <!--bugly配置-->
+
+    </application>
+
+</manifest>

@@ -1,0 +1,463 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:background="@color/bg_title_white"
+    android:clipToPadding="true"
+    android:fitsSystemWindows="true"
+    android:orientation="vertical" >
+
+    <include layout="@layout/view_def_head" />
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/bg"
+        android:orientation="vertical" >
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="514dp"
+            android:gravity="top" >
+
+            <LinearLayout
+                android:id="@+id/linearLayout1"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_centerHorizontal="true"
+                android:layout_marginBottom="20dp"
+                android:layout_marginTop="10dp"
+                android:focusable="true"
+                android:focusableInTouchMode="true"
+                android:gravity="top"
+                android:orientation="vertical" >
+
+                <TextView
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="10dip"
+                    android:gravity="left"
+                    android:text="只需两步，轻松搞定！"
+                    android:textColor="@color/orange"
+                    android:textSize="17sp"
+                    android:textStyle="bold" />
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="1px"
+                    android:background="@color/cutting_line" />
+
+                <LinearLayout
+                    android:id="@+id/layoutone"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="10dp"
+                    android:background="@drawable/shape_border_top"
+                    android:gravity="center"
+                    android:orientation="vertical"
+                    android:visibility="visible" >
+
+                    <TextView
+                        android:layout_width="fill_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginBottom="10dip"
+                        android:layout_marginTop="10dip"
+                        android:drawableLeft="@drawable/icon1"
+                        android:gravity="left"
+                        android:text="  第一步:填写基本信息"
+                        android:textColor="@color/orange" />
+
+                    <View
+                        android:layout_width="match_parent"
+                        android:layout_height="1px"
+                        android:layout_alignParentTop="true"
+                        android:background="@color/cutting_line" />
+
+                    <LinearLayout
+				android:orientation="horizontal"
+				android:layout_width="fill_parent"
+				android:layout_height="wrap_content"
+				android:layout_margin="5.0dip">
+				<TextView
+					android:textSize="@dimen/text_size"
+					android:textColor="@color/black"
+					android:gravity="center_vertical"
+					android:layout_width="90.0dip"
+					android:layout_height="wrap_content"
+					android:text="企业名称"
+					android:drawableRight="@drawable/star"
+					 />
+				<EditText
+					android:textSize="@dimen/text_size"
+					android:textColor="@color/edit_bg"
+					android:gravity="center_vertical"
+					android:id="@+id/etCompanyName"
+					android:background="@drawable/edit_search"
+					android:paddingLeft="10.0dip"
+					android:paddingRight="10.0dip"
+					android:layout_width="fill_parent"
+					android:layout_height="wrap_content"
+					android:layout_marginLeft="5.0dip"
+					android:singleLine="true" />
+			</LinearLayout>
+			
+			<LinearLayout
+				android:orientation="horizontal"
+				android:layout_width="fill_parent"
+				android:layout_height="wrap_content"
+				android:layout_margin="5.0dip">
+				<TextView
+					android:textSize="@dimen/text_size"
+					android:textColor="@color/black"
+					android:gravity="center_vertical"
+					android:layout_width="90.0dip"
+					android:layout_height="wrap_content"
+					android:text="企业类型"
+					android:drawableRight="@drawable/star" />
+				<TextView
+					android:textSize="@dimen/text_size"
+					android:textColor="@color/edit_bg"
+					android:gravity="center_vertical"
+					android:id="@+id/tvCompanyType"
+					android:background="@drawable/edit_search"
+					android:paddingLeft="10.0dip"
+					android:paddingRight="10.0dip"
+					android:clickable="true"
+					android:layout_width="fill_parent"
+					android:layout_height="wrap_content"
+					android:layout_marginLeft="5.0dip"
+					android:hint="@string/hint_tx"
+					android:singleLine="true"
+					android:drawableRight="@drawable/arrow_right"
+					android:onClick="onClick" />
+			</LinearLayout>
+			<LinearLayout
+				android:orientation="horizontal"
+				android:layout_width="fill_parent"
+				android:layout_height="wrap_content"
+				android:layout_margin="5.0dip">
+				<TextView
+					android:textSize="@dimen/text_size"
+					android:textColor="@color/black"
+					android:gravity="center_vertical"
+					android:layout_width="90.0dip"
+					android:layout_height="wrap_content"
+					android:text="车辆类型"
+					android:drawableRight="@drawable/star" />
+				<EditText
+					android:textSize="@dimen/text_size"
+					android:textColor="@color/edit_bg"
+					android:gravity="center_vertical"
+					android:id="@+id/etVehicleType"
+					android:background="@drawable/edit_search"
+					android:paddingLeft="10.0dip"
+					android:paddingRight="10.0dip"
+					android:layout_width="fill_parent"
+					android:layout_height="wrap_content"
+					android:layout_marginLeft="5.0dip"
+					android:singleLine="true"
+					android:inputType="text" />				
+			</LinearLayout>
+			<LinearLayout
+				android:orientation="horizontal"
+				android:layout_width="fill_parent"
+				android:layout_height="wrap_content"
+				android:layout_margin="5.0dip">
+				<TextView
+					android:textSize="@dimen/text_size"
+					android:textColor="@color/black"
+					android:gravity="center_vertical"
+					android:layout_width="90.0dip"
+					android:layout_height="wrap_content"
+					android:text="车辆数量"
+					android:drawableRight="@drawable/star" />
+				<EditText
+					android:textSize="@dimen/text_size"
+					android:textColor="@color/edit_bg"
+					android:gravity="center_vertical"
+					android:id="@+id/etVehicleCount"
+					android:background="@drawable/edit_search"
+					android:paddingLeft="10.0dip"
+					android:paddingRight="10.0dip"
+					android:layout_width="fill_parent"
+					android:layout_height="wrap_content"
+					android:layout_marginLeft="5.0dip"
+					android:singleLine="true"
+					android:inputType="number" />
+				<TextView
+					android:textSize="@dimen/text_size"
+					android:textColor="@color/edit_bg"
+					android:gravity="right"
+					android:layout_width="100.0dip"
+					android:layout_height="wrap_content"
+					android:layout_marginLeft="-110.0dip"
+					android:text="辆" />
+			</LinearLayout>
+			<LinearLayout
+				android:orientation="horizontal"
+				android:layout_width="fill_parent"
+				android:layout_height="wrap_content"
+				android:layout_margin="5.0dip">
+				<TextView
+					android:textSize="@dimen/text_size"
+					android:textColor="@color/black"
+					android:gravity="center_vertical"
+					android:layout_width="90.0dip"
+					android:layout_height="wrap_content"
+					android:text="所在地区"
+					android:drawableRight="@drawable/star" />
+				<TextView
+					android:textSize="@dimen/text_size"
+					android:textColor="@color/edit_bg"
+					android:gravity="center_vertical"
+					android:id="@+id/tvAreaP"
+					android:background="@drawable/edit_search"
+					android:paddingLeft="10.0dip"
+					android:paddingRight="10.0dip"
+					android:clickable="true"
+					android:layout_width="fill_parent"
+					android:layout_height="wrap_content"
+					android:layout_marginLeft="5.0dip"
+					android:hint="@string/hint_tx"
+					android:singleLine="true"
+					android:drawableRight="@drawable/arrow_right"
+					android:onClick="onClick" />
+			</LinearLayout>
+			<LinearLayout
+				android:orientation="horizontal"
+				android:layout_width="fill_parent"
+				android:layout_height="wrap_content"
+				android:layout_margin="5.0dip">
+				<TextView
+					android:textSize="@dimen/text_size"
+					android:textColor="@color/black"
+					android:gravity="center_vertical"
+					android:layout_width="90.0dip"
+					android:layout_height="wrap_content"
+					android:text="详细地址"
+					android:drawableRight="@drawable/star" />
+				<EditText
+					android:textSize="@dimen/text_size"
+					android:textColor="@color/edit_bg"
+					android:gravity="center_vertical"
+					android:id="@+id/etAddressP"
+					android:background="@drawable/edit_search"
+					android:paddingLeft="10.0dip"
+					android:paddingRight="10.0dip"
+					android:layout_width="0dip"
+					android:layout_height="wrap_content"
+					android:layout_marginLeft="5.0dip"
+					android:singleLine="true" 
+					android:layout_weight="1"/>
+				<ImageButton
+						    android:id="@+id/locationBtn"
+						    android:layout_width="wrap_content"
+						    android:layout_height="match_parent"
+						    android:layout_marginLeft="5.0dip"
+						    android:background="@null"
+						    android:gravity="center_vertical"
+						    android:paddingRight="10.0dip"
+						    android:src="@drawable/dw_icon"
+						    android:scaleType="centerCrop"
+						    android:onClick="onClick" 
+        					/>
+				
+			</LinearLayout>
+
+                    <Button
+                        android:id="@+id/btn_next"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_margin="10dp"
+                        android:background="@drawable/shape_btn_selector"
+                        android:text="下一步"
+                        android:textColor="@color/white" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/layouttwo"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="10dp"
+                    android:background="@drawable/shape_border_top"
+                    android:orientation="vertical"
+                    android:visibility="gone" >
+
+                    <TextView
+                        android:layout_width="fill_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginBottom="10dip"
+                        android:layout_marginLeft="10dip"
+                        android:layout_marginTop="10dip"
+                        android:drawableLeft="@drawable/icon2"
+                        android:gravity="left"
+                        android:text="  第二步:附加信息"
+                        android:textColor="@color/orange" />
+
+                    <View
+                        android:layout_width="match_parent"
+                        android:layout_height="1px"
+                        android:layout_alignParentTop="true"
+                        android:background="@color/cutting_line" />
+
+                    <LinearLayout
+				android:orientation="horizontal"
+				android:layout_width="fill_parent"
+				android:layout_height="wrap_content"
+				android:layout_margin="5.0dip">
+				<TextView
+					android:textSize="@dimen/text_size"
+					android:textColor="@color/black"
+					android:gravity="center_vertical"
+					android:layout_width="90.0dip"
+					android:layout_height="wrap_content"
+					android:text="联系电话"
+					android:drawableRight="@drawable/star" />
+				<EditText
+					android:textSize="@dimen/text_size"
+					android:textColor="@color/edit_bg"
+					android:gravity="center_vertical"
+					android:id="@+id/etPhoneP"
+					android:background="@drawable/edit_search"
+					android:paddingLeft="10.0dip"
+					android:paddingRight="10.0dip"
+					android:layout_width="fill_parent"
+					android:layout_height="wrap_content"
+					android:layout_marginLeft="5.0dip"
+					android:singleLine="true"
+					android:inputType="phone" />
+			</LinearLayout>
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			<LinearLayout
+				android:orientation="horizontal"
+				android:layout_width="fill_parent"
+				android:layout_height="wrap_content"
+				android:layout_margin="5.0dip">
+				<TextView
+					android:textSize="@dimen/text_size"
+					android:textColor="@color/black"
+					android:gravity="center_vertical"
+					android:layout_width="90.0dip"
+					android:layout_height="wrap_content"
+					android:text="备  注"
+					 />
+				<EditText
+					android:textSize="@dimen/text_size"
+					android:textColor="@color/edit_bg"
+					android:gravity="center_vertical"
+					android:id="@+id/etRemark"
+					android:background="@drawable/edit_search"
+					android:paddingLeft="10.0dip"
+					android:paddingRight="10.0dip"
+					android:layout_width="fill_parent"
+					android:layout_height="wrap_content"
+					android:layout_marginLeft="5.0dip"
+					android:singleLine="false" />
+			</LinearLayout>
+			
+			<LinearLayout
+				android:orientation="horizontal"
+				android:id="@+id/upload_img"
+				android:layout_width="fill_parent"
+				android:layout_height="wrap_content"
+				android:layout_margin="5.0dip"
+				android:onClick="onClick">
+				<TextView
+					android:textSize="@dimen/text_size"
+					android:textColor="@color/black"
+					android:paddingRight="3.0dip"
+					android:layout_width="80.0dip"
+					android:layout_height="wrap_content"
+					android:text="上传营业执照" 
+					android:drawableRight="@drawable/star"
+					android:id="@+id/paperstv"/>
+				<ImageView
+					android:id="@+id/iv_identity"
+					android:background="@drawable/addfile"
+					android:layout_width="50.0dip"
+					android:layout_height="50.0dip"
+					android:layout_marginLeft="5.0dip"
+					android:scaleType="centerCrop"
+					android:onClick="onClick" />
+				<ImageView
+					android:id="@+id/iv_camera"
+					android:layout_width="wrap_content"
+					android:layout_height="wrap_content"
+					android:layout_marginLeft="-15.0dip"
+					android:layout_marginTop="35.0dip"
+					android:src="@drawable/camera" />
+			</LinearLayout>
+			
+
+                    <LinearLayout
+				android:layout_gravity="center_horizontal"
+				android:layout_width="fill_parent"
+				android:layout_height="wrap_content">
+				<TextView
+					android:textColor="@color/gray"
+					android:gravity="center_horizontal"
+					android:id="@+id/tv_stateP"
+					android:layout_width="fill_parent"
+					android:layout_height="wrap_content"
+					android:text="此处显示认证状态" />
+			</LinearLayout>
+			<LinearLayout
+				android:layout_gravity="center"
+				android:orientation="vertical"
+				android:layout_width="fill_parent"
+				android:layout_height="wrap_content"
+				android:layout_marginTop="10.0dip"
+				android:layout_marginBottom="30.0dip">
+				<Button
+					android:textSize="18.0sp"
+					android:textColor="@color/white"
+					android:layout_gravity="center_horizontal"
+					android:id="@+id/btn_submitP"
+					android:background="@drawable/shape_btn_selector"
+					android:visibility="visible"
+					android:layout_width="200.0dip"
+					android:layout_height="42.0dip"
+					android:text="认证物流"
+					android:onClick="onClick" />
+				<Button
+					android:textSize="18.0sp"
+					android:textColor="@color/white"
+					android:layout_gravity="center_horizontal"
+					android:id="@+id/btn_modifyP"
+					android:background="@drawable/shape_btn_selector"
+					android:visibility="gone"
+					android:layout_width="200.0dip"
+					android:layout_height="42.0dip"
+					android:text="修改"
+					android:onClick="onClick" />
+			</LinearLayout>
+
+                    <Button
+                        android:id="@+id/btn_goback"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_margin="10dp"
+                        android:background="@color/gray"
+                        android:text="返回上一步"
+                        android:textColor="@color/white" />
+                </LinearLayout>
+            </LinearLayout>
+        </RelativeLayout>
+    </ScrollView>
+
+</LinearLayout>

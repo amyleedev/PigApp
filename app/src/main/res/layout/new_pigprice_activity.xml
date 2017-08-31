@@ -1,0 +1,302 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:background="@color/bg_title_white"
+    android:clipToPadding="true"
+    android:fitsSystemWindows="true"
+    android:orientation="vertical" >
+
+    <include layout="@layout/view_def_head" />
+
+    <View
+        android:layout_width="fill_parent"
+        android:layout_height="1px"
+        android:background="@color/line_title" />
+
+    <ScrollView
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:background="@color/bg"
+        android:scrollbars="none" >
+
+        <LinearLayout
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="10.0dip"
+            android:layout_marginRight="10.0dip"
+            android:layout_marginTop="10.0dip"
+            android:orientation="vertical" >
+
+            <LinearLayout
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="5.0dip"
+                android:orientation="horizontal" >
+
+                <TextView
+                    android:layout_width="90.0dip"
+                    android:layout_height="wrap_content"
+                    android:drawableRight="@drawable/star"
+                    android:gravity="center_vertical"
+                    android:text="报价区域"
+                    android:textColor="@color/black"
+                    android:textSize="@dimen/text_size" />
+
+                <TextView
+                    android:id="@+id/tv_address"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="5.0dip"
+                    android:background="@drawable/edit_search"
+                    android:clickable="true"
+                    android:drawableRight="@drawable/arrow_right"
+                    android:gravity="center_vertical"
+                    android:hint="@string/hint_tx"
+                    android:paddingLeft="10.0dip"
+                    android:paddingRight="10.0dip"
+                    android:singleLine="true"
+                    android:textColor="@color/edit_bg"
+                    android:textSize="@dimen/text_size" />
+            </LinearLayout>
+
+            <TextView
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="5dp"
+                android:gravity="center_horizontal"
+                android:text="生     猪"
+                android:textColor="@color/black"
+                android:textSize="@dimen/text_size" />
+
+            <LinearLayout
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="5.0dip"
+                android:orientation="horizontal" >
+
+                <TextView
+                    android:layout_width="90.0dip"
+                    android:layout_height="wrap_content"
+                    android:gravity="center_vertical"
+                    android:text="内 三 元"
+                    android:textColor="@color/black"
+                    android:textSize="@dimen/text_size" />
+
+                <EditText
+                    android:id="@+id/et_nsy"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="5.0dip"
+                    android:background="@drawable/edit_search"
+                    android:gravity="center_vertical"
+                    android:inputType="numberDecimal"
+                    android:paddingLeft="10.0dip"
+                    android:paddingRight="10.0dip"
+                    android:singleLine="true"
+                    android:textColor="@color/edit_bg"
+                    android:textSize="@dimen/text_size" />
+
+                <TextView
+                    android:layout_width="100.0dip"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="-110.0dip"
+                    android:gravity="right"
+                    android:text="(元/公斤)"
+                    android:textColor="@color/edit_bg"
+                    android:textSize="@dimen/text_size" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="5.0dip"
+                android:orientation="horizontal" >
+
+                <TextView
+                    android:layout_width="90.0dip"
+                    android:layout_height="wrap_content"
+                    android:gravity="center_vertical"
+                    android:text="外 三 元"
+                    android:textColor="@color/black"
+                    android:textSize="@dimen/text_size" />
+
+                <EditText
+                    android:id="@+id/et_wsy"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="5.0dip"
+                    android:background="@drawable/edit_search"
+                    android:gravity="center_vertical"
+                    android:inputType="numberDecimal"
+                    android:paddingLeft="10.0dip"
+                    android:paddingRight="10.0dip"
+                    android:singleLine="true"
+                    android:textColor="@color/edit_bg"
+                    android:textSize="@dimen/text_size" />
+
+                <TextView
+                    android:layout_width="100.0dip"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="-110.0dip"
+                    android:gravity="right"
+                    android:text="(元/公斤)"
+                    android:textColor="@color/edit_bg"
+                    android:textSize="@dimen/text_size" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="5.0dip"
+                android:orientation="horizontal" >
+
+                <TextView
+                    android:layout_width="90.0dip"
+                    android:layout_height="wrap_content"
+                    android:gravity="center_vertical"
+                    android:text="土 杂 猪"
+                    android:textColor="@color/black"
+                    android:textSize="@dimen/text_size" />
+
+                <EditText
+                    android:id="@+id/et_tzz"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="5.0dip"
+                    android:background="@drawable/edit_search"
+                    android:gravity="center_vertical"
+                    android:inputType="numberDecimal"
+                    android:paddingLeft="10.0dip"
+                    android:paddingRight="10.0dip"
+                    android:singleLine="true"
+                    android:textColor="@color/edit_bg"
+                    android:textSize="@dimen/text_size" />
+
+                <TextView
+                    android:layout_width="100.0dip"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="-110.0dip"
+                    android:gravity="right"
+                    android:text="(元/公斤)"
+                    android:textColor="@color/edit_bg"
+                    android:textSize="@dimen/text_size" />
+            </LinearLayout>
+
+            <TextView
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="5dp"
+                android:gravity="center_horizontal"
+                android:text="玉     米"
+                android:textColor="@color/black"
+                android:textSize="@dimen/text_size" />
+
+            <LinearLayout
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="5.0dip"
+                android:orientation="horizontal" >
+
+                <TextView
+                    android:layout_width="90.0dip"
+                    android:layout_height="wrap_content"
+                    android:gravity="center_vertical"
+                    android:text="玉    米"
+                    android:textColor="@color/black"
+                    android:textSize="@dimen/text_size" />
+
+                <EditText
+                    android:id="@+id/et_ym"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="5.0dip"
+                    android:background="@drawable/edit_search"
+                    android:gravity="center_vertical"
+                    android:inputType="numberDecimal"
+                    android:paddingLeft="10.0dip"
+                    android:paddingRight="10.0dip"
+                    android:singleLine="true"
+                    android:textColor="@color/edit_bg"
+                    android:textSize="@dimen/text_size" />
+
+                <TextView
+                    android:layout_width="100.0dip"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="-110.0dip"
+                    android:gravity="right"
+                    android:text="(元/吨)"
+                    android:textColor="@color/edit_bg"
+                    android:textSize="@dimen/text_size" />
+            </LinearLayout>
+
+            <TextView
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="5dp"
+                android:gravity="center_horizontal"
+                android:text="豆     粕"
+                android:textColor="@color/black"
+                android:textSize="@dimen/text_size" />
+
+            <LinearLayout
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="5.0dip"
+                android:orientation="horizontal" >
+
+                <TextView
+                    android:layout_width="90.0dip"
+                    android:layout_height="wrap_content"
+                    android:gravity="center_vertical"
+                    android:text="豆    粕"
+                    android:textColor="@color/black"
+                    android:textSize="@dimen/text_size" />
+
+                <EditText
+                    android:id="@+id/et_dp"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="5.0dip"
+                    android:background="@drawable/edit_search"
+                    android:gravity="center_vertical"
+                    android:inputType="numberDecimal"
+                    android:paddingLeft="10.0dip"
+                    android:paddingRight="10.0dip"
+                    android:singleLine="true"
+                    android:textColor="@color/edit_bg"
+                    android:textSize="@dimen/text_size" />
+
+                <TextView
+                    android:layout_width="100.0dip"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="-110.0dip"
+                    android:gravity="right"
+                    android:text="(元/吨)"
+                    android:textColor="@color/edit_bg"
+                    android:textSize="@dimen/text_size" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_marginBottom="30.0dip"
+                android:layout_marginTop="10.0dip"
+                android:orientation="vertical" >
+
+                <Button
+                    android:id="@+id/btn_submitP"
+                    android:layout_width="200.0dip"
+                    android:layout_height="42.0dip"
+                    android:layout_gravity="center_horizontal"
+                    android:background="@drawable/shape_btn_selector"
+                    android:text="我要报价"
+                    android:textColor="@color/white"
+                    android:textSize="18.0sp"
+                    android:visibility="visible" />
+            </LinearLayout>
+        </LinearLayout>
+    </ScrollView>
+
+</LinearLayout>

@@ -1,0 +1,771 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:background="@color/bg_title_white"
+    android:clipToPadding="true"
+    android:fitsSystemWindows="true"
+    android:orientation="vertical" >
+
+    <include layout="@layout/view_def_head" />
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/bg"
+        android:orientation="vertical" >
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="514dp"
+            android:gravity="top" >
+
+            <LinearLayout
+                android:id="@+id/linearLayout1"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_centerHorizontal="true"
+                android:layout_marginBottom="20dp"
+                android:layout_marginTop="10dp"
+                android:focusable="true"
+                android:focusableInTouchMode="true"
+                android:gravity="top"
+                android:orientation="vertical" >
+
+                <TextView
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="10dip"
+                    android:gravity="left"
+                    android:text="只需两步，轻松搞定！"
+                    android:textColor="@color/orange"
+                    android:textSize="17sp"
+                    android:textStyle="bold" />
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="1px"
+                    android:background="@color/cutting_line" />
+
+                <LinearLayout
+                    android:id="@+id/layoutone"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="10dp"
+                    android:background="@drawable/shape_border_top"
+                    android:gravity="center"
+                    android:orientation="vertical"
+                    android:visibility="visible" >
+
+                    <TextView
+                        android:layout_width="fill_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginBottom="10dip"
+                        android:layout_marginTop="10dip"
+                        android:drawableLeft="@drawable/icon1"
+                        android:gravity="left"
+                        android:text="  第一步:填写基本信息"
+                        android:textColor="@color/orange" />
+
+                    <View
+                        android:layout_width="match_parent"
+                        android:layout_height="1px"
+                        android:layout_alignParentTop="true"
+                        android:background="@color/cutting_line" />
+
+                    <LinearLayout
+                        android:layout_width="fill_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_margin="5.0dip"
+                        android:orientation="horizontal" >
+
+                        <TextView
+                            android:layout_width="90.0dip"
+                            android:layout_height="wrap_content"
+                            android:drawableRight="@drawable/star"
+                            android:gravity="center_vertical"
+                            android:text="猪场类型"
+                            android:textColor="@color/black"
+                            android:textSize="@dimen/text_size" />
+
+                        <TextView
+                            android:id="@+id/tvIndustryP"
+                            android:layout_width="fill_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="5.0dip"
+                            android:background="@drawable/edit_search"
+                            android:clickable="true"
+                            android:drawableRight="@drawable/arrow_right"
+                            android:gravity="center_vertical"
+                            android:hint="@string/hint_tx"
+                            android:onClick="onClick"
+                            android:paddingLeft="10.0dip"
+                            android:paddingRight="10.0dip"
+                            android:singleLine="true"
+                            android:textColor="@color/edit_bg"
+                            android:textSize="@dimen/text_size" />
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="fill_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_margin="5.0dip"
+                        android:orientation="horizontal" >
+
+                        <TextView
+                            android:layout_width="90.0dip"
+                            android:layout_height="wrap_content"
+                            android:gravity="center_vertical"
+                            android:text="猪场名字"
+                            android:textColor="@color/black"
+                            android:textSize="@dimen/text_size" />
+
+                        <EditText
+                            android:id="@+id/etCompanyP"
+                            android:layout_width="fill_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="5.0dip"
+                            android:background="@drawable/edit_search"
+                            android:gravity="center_vertical"
+                            android:paddingLeft="10.0dip"
+                            android:paddingRight="10.0dip"
+                            android:singleLine="true"
+                            android:textColor="@color/edit_bg"
+                            android:textSize="@dimen/text_size" />
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="fill_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_margin="5.0dip"
+                        android:orientation="horizontal" >
+
+                        <TextView
+                            android:layout_width="90.0dip"
+                            android:layout_height="wrap_content"
+                            android:drawableRight="@drawable/star"
+                            android:gravity="center_vertical"
+                            android:text="存栏母猪"
+                            android:textColor="@color/black"
+                            android:textSize="@dimen/text_size" />
+
+                        <EditText
+                            android:id="@+id/etCunNum"
+                            android:layout_width="fill_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="5.0dip"
+                            android:background="@drawable/edit_search"
+                            android:gravity="center_vertical"
+                            android:inputType="number"
+                            android:paddingLeft="10.0dip"
+                            android:paddingRight="10.0dip"
+                            android:singleLine="true"
+                            android:textColor="@color/edit_bg"
+                            android:textSize="@dimen/text_size" />
+
+                        <TextView
+                            android:layout_width="100.0dip"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="-110.0dip"
+                            android:gravity="right"
+                            android:text="头"
+                            android:textColor="@color/edit_bg"
+                            android:textSize="@dimen/text_size" />
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="fill_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_margin="5.0dip"
+                        android:orientation="horizontal" >
+
+                        <TextView
+                            android:layout_width="90.0dip"
+                            android:layout_height="wrap_content"
+                            android:drawableRight="@drawable/star"
+                            android:gravity="center_vertical"
+                            android:text="年出栏量"
+                            android:textColor="@color/black"
+                            android:textSize="@dimen/text_size" />
+
+                        <EditText
+                            android:id="@+id/etYearNum"
+                            android:layout_width="fill_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="5.0dip"
+                            android:background="@drawable/edit_search"
+                            android:gravity="center_vertical"
+                            android:inputType="number"
+                            android:paddingLeft="10.0dip"
+                            android:paddingRight="10.0dip"
+                            android:singleLine="true"
+                            android:textColor="@color/edit_bg"
+                            android:textSize="@dimen/text_size" />
+
+                        <TextView
+                            android:layout_width="100.0dip"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="-110.0dip"
+                            android:gravity="right"
+                            android:text="头"
+                            android:textColor="@color/edit_bg"
+                            android:textSize="@dimen/text_size" />
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="fill_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_margin="5.0dip"
+                        android:orientation="horizontal" >
+
+                        <TextView
+                            android:layout_width="90.0dip"
+                            android:layout_height="wrap_content"
+                            android:drawableRight="@drawable/star"
+                            android:gravity="center_vertical"
+                            android:text="养殖品种"
+                            android:textColor="@color/black"
+                            android:textSize="@dimen/text_size" />
+
+                        <TextView
+                            android:id="@+id/tvBreed"
+                            android:layout_width="fill_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="5.0dip"
+                            android:background="@drawable/edit_search"
+                            android:clickable="true"
+                            android:drawableRight="@drawable/arrow_right"
+                            android:gravity="center_vertical"
+                            android:hint="@string/hint_tx"
+                            android:onClick="onClick"
+                            android:paddingLeft="10.0dip"
+                            android:paddingRight="10.0dip"
+                            android:singleLine="true"
+                            android:textColor="@color/edit_bg"
+                            android:textSize="@dimen/text_size" />
+                    </LinearLayout>
+                    <LinearLayout
+                        android:id="@+id/addresslayout"
+                        android:layout_width="fill_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_margin="5.0dip"
+                        android:orientation="horizontal" >
+
+                        <TextView
+                            android:layout_width="90.0dip"
+                            android:layout_height="wrap_content"
+                            android:drawableRight="@drawable/star"
+                            android:gravity="center_vertical"
+                            android:text="所在地区"
+                            android:textColor="@color/black"
+                            android:textSize="@dimen/text_size" />
+
+                        <TextView
+                            android:id="@+id/tvAreaP"
+                            android:layout_width="fill_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="5.0dip"
+                            android:background="@drawable/edit_search"
+                            android:clickable="true"
+                            android:drawableRight="@drawable/arrow_right"
+                            android:gravity="center_vertical"
+                            android:hint="@string/hint_tx"
+                            android:onClick="onClick"
+                            android:paddingLeft="10.0dip"
+                            android:paddingRight="10.0dip"
+                            android:singleLine="true"
+                            android:textColor="@color/edit_bg"
+                            android:textSize="@dimen/text_size" />
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="fill_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_margin="5.0dip"
+                        android:orientation="horizontal" >
+
+                        <TextView
+                            android:layout_width="90.0dip"
+                            android:layout_height="wrap_content"
+                            android:drawableRight="@drawable/star"
+                            android:gravity="center_vertical"
+                            android:text="猪场地址"
+                            android:textColor="@color/black"
+                            android:textSize="@dimen/text_size" />
+
+                        <EditText
+                            android:id="@+id/etAddressP"
+                            android:layout_width="0dip"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="5.0dip"
+                            android:layout_weight="1"
+                            android:background="@drawable/edit_search"
+                            android:gravity="center_vertical"
+                            android:paddingLeft="10.0dip"
+                            android:paddingRight="10.0dip"
+                            android:singleLine="true"
+                            android:textColor="@color/edit_bg"
+                            android:textSize="@dimen/text_size" />
+
+                        <ImageButton
+                            android:id="@+id/locationBtn"
+                            android:layout_width="wrap_content"
+                            android:layout_height="match_parent"
+                            android:layout_marginLeft="5.0dip"
+                            android:background="@null"
+                            android:gravity="center_vertical"
+                            android:onClick="onClick"
+                            android:paddingRight="10.0dip"
+                            android:scaleType="centerCrop"
+                            android:src="@drawable/dw_icon" />
+                    </LinearLayout>
+                    <LinearLayout
+                        android:layout_width="fill_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_margin="5.0dip"
+                        android:orientation="horizontal" >
+
+                        <TextView
+                            android:layout_width="90.0dip"
+                            android:layout_height="wrap_content"
+                            android:drawableRight="@drawable/star"
+                            android:gravity="center_vertical"
+                            android:text="负 责 人"
+                            android:textColor="@color/black"
+                            android:textSize="@dimen/text_size" />
+
+                        <EditText
+                            android:id="@+id/etPeopleP"
+                            android:layout_width="fill_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="5.0dip"
+                            android:background="@drawable/edit_search"
+                            android:gravity="center_vertical"
+                            android:paddingLeft="10.0dip"
+                            android:paddingRight="10.0dip"
+                            android:singleLine="true"
+                            android:textColor="@color/edit_bg"
+                            android:textSize="@dimen/text_size" />
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="fill_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_margin="5.0dip"
+                        android:orientation="horizontal" >
+
+                        <TextView
+                            android:layout_width="90.0dip"
+                            android:layout_height="wrap_content"
+                            android:drawableRight="@drawable/star"
+                            android:gravity="center_vertical"
+                            android:text="手  机  号"
+                            android:textColor="@color/black"
+                            android:textSize="@dimen/text_size" />
+
+                        <EditText
+                            android:id="@+id/etPhoneP"
+                            android:layout_width="fill_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="5.0dip"
+                            android:background="@drawable/edit_search"
+                            android:gravity="center_vertical"
+                            android:inputType="number"
+                            android:paddingLeft="10.0dip"
+                            android:paddingRight="10.0dip"
+                            android:singleLine="true"
+                            android:textColor="@color/edit_bg"
+                            android:textSize="@dimen/text_size" />
+                    </LinearLayout>
+                    <LinearLayout
+                        android:layout_width="fill_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_margin="5.0dip"
+                        android:orientation="horizontal" >
+
+                        <TextView
+                            android:layout_width="90.0dip"
+                            android:layout_height="wrap_content"
+                            android:gravity="center_vertical"
+                            android:text="邮      箱"
+                            android:textColor="@color/black"
+                            android:textSize="@dimen/text_size" />
+
+                        <EditText
+                            android:id="@+id/etEmail"
+                            android:layout_width="fill_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="5.0dip"
+                            android:background="@drawable/edit_search"
+                            android:gravity="center_vertical"
+                            android:inputType="textEmailAddress"
+                            android:paddingLeft="10.0dip"
+                            android:paddingRight="10.0dip"
+                            android:singleLine="true"
+                            android:textColor="@color/edit_bg"
+                            android:textSize="@dimen/text_size" />
+                    </LinearLayout>
+                    <LinearLayout
+                        android:orientation="horizontal"
+                        android:id="@+id/upload_img2"
+                        android:layout_width="fill_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_margin="5.0dip"
+                        android:onClick="onClick">
+                        <TextView
+                            android:textSize="@dimen/text_size"
+                            android:textColor="@color/black"
+                            android:paddingRight="3.0dip"
+                            android:layout_width="80.0dip"
+                            android:layout_height="wrap_content"
+                            android:text="上传封面图片" />
+                        <ImageView
+                            android:id="@+id/iv_identity"
+                            android:background="@drawable/default_title"
+                            android:layout_width="50.0dip"
+                            android:layout_height="50.0dip"
+                            android:layout_marginLeft="5.0dip"
+                            android:scaleType="centerCrop"
+                            android:onClick="onClick" />
+                        <ImageView
+                            android:id="@+id/iv_camera2"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="-15.0dip"
+                            android:layout_marginTop="35.0dip"
+                            android:src="@drawable/camera" />
+                    </LinearLayout>
+                    <Button
+                        android:id="@+id/btn_next"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_margin="10dp"
+                        android:background="@drawable/shape_btn_selector"
+                        android:onClick="onClick"
+                        android:text="下一步"
+                        android:textColor="@color/white" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/layouttwo"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="10dp"
+                    android:background="@drawable/shape_border_top"
+                    android:orientation="vertical"
+                    android:visibility="gone" >
+
+                    <TextView
+                        android:layout_width="fill_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginBottom="10dip"
+                        android:layout_marginLeft="10dip"
+                        android:layout_marginTop="10dip"
+                        android:drawableLeft="@drawable/icon2"
+                        android:gravity="left"
+                        android:text="  第二步:附加信息"
+                        android:textColor="@color/orange" />
+
+                    <View
+                        android:layout_width="match_parent"
+                        android:layout_height="1px"
+                        android:layout_alignParentTop="true"
+                        android:background="@color/cutting_line" />
+
+
+
+                    <LinearLayout
+                        android:layout_width="fill_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_margin="5.0dip"
+                        android:orientation="horizontal"
+                        android:visibility="gone">
+
+                        <TextView
+                            android:layout_width="90.0dip"
+                            android:layout_height="wrap_content"
+
+                            android:gravity="center_vertical"
+                            android:text="绑定银行卡"
+                            android:textColor="@color/black"
+                            android:textSize="14sp" />
+
+                        <TextView
+                            android:id="@+id/tvBank"
+                            android:layout_width="fill_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="5.0dip"
+                            android:background="@drawable/edit_search"
+                            android:clickable="true"
+                            android:drawableRight="@drawable/arrow_right"
+                            android:gravity="center_vertical"
+                            android:hint="请绑定银行卡"
+                            android:onClick="onClick"
+                            android:paddingLeft="10.0dip"
+                            android:paddingRight="10.0dip"
+                            android:singleLine="true"
+                            android:textColor="@color/edit_bg"
+                            android:textSize="@dimen/text_size" />
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="fill_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_margin="5.0dip"
+                        android:orientation="horizontal" >
+
+                        <TextView
+                            android:layout_width="90.0dip"
+                            android:layout_height="wrap_content"
+                            android:gravity="center_vertical"
+                            android:text="绑定类型"
+                            android:textColor="@color/black"
+                            android:textSize="@dimen/text_size" />
+
+                        <TextView
+                            android:id="@+id/tvCardType"
+                            android:layout_width="fill_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="5.0dip"
+                            android:background="@drawable/edit_search"
+                            android:clickable="true"
+                            android:drawableRight="@drawable/arrow_right"
+                            android:gravity="center_vertical"
+                            android:hint="@string/hint_tx"
+                            android:onClick="onClick"
+                            android:paddingLeft="10.0dip"
+                            android:paddingRight="10.0dip"
+                            android:singleLine="true"
+                            android:textColor="@color/edit_bg"
+                            android:textSize="@dimen/text_size" />
+                    </LinearLayout>
+                    <LinearLayout
+                        android:layout_width="fill_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_margin="5.0dip"
+                        android:orientation="horizontal" >
+
+                        <TextView
+                            android:layout_width="90.0dip"
+                            android:layout_height="wrap_content"
+
+                            android:gravity="center_vertical"
+                            android:text="银行卡号"
+                            android:textColor="@color/black"
+                            android:textSize="@dimen/text_size" />
+
+                        <EditText
+                            android:id="@+id/etCardNum"
+                            android:layout_width="fill_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="5.0dip"
+                            android:background="@drawable/edit_search"
+                            android:gravity="center_vertical"
+                            android:paddingLeft="10.0dip"
+                            android:paddingRight="10.0dip"
+                            android:singleLine="true"
+                            android:hint="请输入银行卡号"
+                            android:textColor="@color/edit_bg"
+                            android:textSize="@dimen/text_size" />
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:id="@+id/sfzlayout"
+                        android:layout_width="fill_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_margin="5.0dip"
+                        android:orientation="horizontal"
+                        >
+
+                        <TextView
+                            android:layout_width="90.0dip"
+                            android:layout_height="wrap_content"
+
+                            android:gravity="center_vertical"
+                            android:text="身份证号"
+                            android:textColor="@color/black"
+                            android:textSize="@dimen/text_size" />
+
+                        <EditText
+                            android:id="@+id/etIdentityCard"
+                            android:layout_width="fill_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="5.0dip"
+                            android:background="@drawable/edit_search"
+                            android:gravity="center_vertical"
+                            android:paddingLeft="10.0dip"
+                            android:paddingRight="10.0dip"
+                            android:singleLine="true"
+                            android:textColor="@color/edit_bg"
+                            android:textSize="@dimen/text_size" />
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="fill_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_margin="5.0dip"
+                        android:orientation="horizontal" >
+
+                        <TextView
+                            android:layout_width="90.0dip"
+                            android:layout_height="wrap_content"
+                            android:drawableRight="@drawable/star"
+                            android:gravity="center_vertical"
+                            android:text="真实姓名"
+                            android:textColor="@color/black"
+                            android:textSize="@dimen/text_size" />
+
+                        <EditText
+                            android:id="@+id/etCardName"
+                            android:layout_width="fill_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="5.0dip"
+                            android:background="@drawable/edit_search"
+                            android:gravity="center_vertical"
+                            android:inputType="text"
+                            android:paddingLeft="10.0dip"
+                            android:paddingRight="10.0dip"
+                            android:singleLine="true"
+                            android:textColor="@color/edit_bg"
+                            android:textSize="@dimen/text_size" />
+                    </LinearLayout>
+                    <LinearLayout
+                        android:id="@+id/sfzpiclayout"
+                        android:layout_width="fill_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_margin="5.0dip"
+                        android:orientation="vertical"
+                        >
+
+                        <TextView
+                            android:layout_width="fill_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginBottom="10.0dip"
+                            android:gravity="center_vertical"
+                            android:text="上传身份证正反面："
+                            android:textColor="@color/black"
+                            android:textSize="@dimen/text_size" />
+
+                        <LinearLayout
+                            android:id="@+id/upload_img"
+                            android:layout_width="fill_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_margin="5.0dip"
+                            android:onClick="onClick"
+                            android:orientation="horizontal" >
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:drawableRight="@drawable/star"
+                                android:text="正面："
+                                android:textColor="@color/black"
+                                android:textSize="@dimen/text_size" />
+
+                            <ImageView
+                                android:id="@+id/iv_zidentity"
+                                android:layout_width="100dp"
+                                android:layout_height="60dp"
+                                android:background="@drawable/ic_sfzz"
+                                android:onClick="onClick"
+                                android:scaleType="centerCrop" />
+
+                            <ImageView
+                                android:id="@+id/iv_camera"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginLeft="-15.0dip"
+                                android:layout_marginTop="35.0dip"
+                                android:src="@drawable/camera"
+                                android:onClick="onClick"/>
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginLeft="2dip"
+                                android:drawableRight="@drawable/star"
+                                android:text="反面："
+                                android:textColor="@color/black"
+                                android:textSize="@dimen/text_size" />
+
+                            <ImageView
+                                android:id="@+id/iv_fidentity"
+                                android:layout_width="100dip"
+                                android:layout_height="60.0dip"
+                                android:background="@drawable/ic_sfzf"
+                                android:onClick="onClick"
+                                android:scaleType="centerCrop" />
+
+                            <ImageView
+                                android:id="@+id/iv_fcamera"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginLeft="-15.0dip"
+                                android:layout_marginTop="35.0dip"
+                                android:src="@drawable/camera"
+                                android:onClick="onClick"/>
+                        </LinearLayout>
+                    </LinearLayout>
+
+
+                    <LinearLayout
+                        android:layout_width="fill_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center_horizontal" >
+
+                        <TextView
+                            android:id="@+id/tv_stateP"
+                            android:layout_width="fill_parent"
+                            android:layout_height="wrap_content"
+                            android:gravity="center_horizontal"
+                            android:text="此处显示认证状态"
+                            android:textColor="@color/gray" />
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="fill_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:layout_marginBottom="30.0dip"
+                        android:layout_marginTop="10.0dip"
+                        android:orientation="vertical" >
+
+                        <Button
+                            android:id="@+id/btn_submitP"
+                            android:layout_width="200.0dip"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center_horizontal"
+                            android:background="@drawable/shape_btn_selector"
+                            android:onClick="onClick"
+                            android:text="认证猪场"
+                            android:textColor="@color/white"
+                            android:textSize="18.0sp"
+                            android:visibility="visible" />
+
+                        <Button
+                            android:id="@+id/btn_modifyP"
+                            android:layout_width="200.0dip"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center_horizontal"
+                            android:background="@drawable/shape_btn_selector"
+                            android:onClick="onClick"
+                            android:text="修改"
+                            android:textColor="@color/white"
+                            android:textSize="18.0sp"
+                            android:visibility="gone" />
+                    </LinearLayout>
+
+                    <Button
+                        android:id="@+id/btn_goback"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_margin="10dp"
+                        android:background="@color/gray"
+                        android:text="返回上一步"
+                        android:textColor="@color/white" />
+                </LinearLayout>
+            </LinearLayout>
+        </RelativeLayout>
+    </ScrollView>
+
+</LinearLayout>

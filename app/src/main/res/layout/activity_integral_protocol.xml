@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:materialdesign="http://schemas.android.com/apk/res-auto"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:background="@color/bg_title_white"
+    android:clipToPadding="true"
+    android:fitsSystemWindows="true" >
+
+    <ImageView
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:scaleType="fitXY"
+        android:src="@drawable/integral_policy" />
+
+    <LinearLayout
+        android:id="@+id/def_head_back"
+        android:layout_width="wrap_content"
+        android:layout_height="50dp"
+        android:layout_gravity="top|left"
+        android:gravity="center_vertical"
+        >
+        <com.gc.materialdesign.views.ButtonIcon
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginRight="2dp"
+            android:background="@color/click_ripple_view"
+            materialdesign:iconDrawable="@drawable/ic_back_black"
+            android:onClick="back"/>
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/ll_close"
+        android:layout_width="wrap_content"
+        android:layout_height="50dp"
+        android:layout_gravity="right|top"
+        android:layout_marginRight="12dp"
+        android:gravity="center_vertical"
+        android:orientation="horizontal"
+        android:visibility="gone" >
+
+        <ImageView
+            android:layout_width="25dp"
+            android:layout_height="25dp"
+            android:layout_marginRight="2dp"
+            android:src="@drawable/icon_quxiao_unfocused" />
+    </LinearLayout>
+
+</FrameLayout>

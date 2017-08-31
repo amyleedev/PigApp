@@ -1,0 +1,222 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/bg_title_white"
+    android:clipToPadding="true"
+    android:fitsSystemWindows="true"
+    android:orientation="vertical" >
+
+    <include layout="@layout/view_def_head" />
+
+    <RelativeLayout
+        android:layout_width="fill_parent"
+        android:id="@+id/searchRl"
+        android:layout_height="@dimen/info_list_item_height"
+        android:visibility="gone">
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1px"
+            android:layout_alignParentBottom="true"
+            android:background="@color/cutting_line" />
+
+        <Button
+            android:id="@+id/btn_search"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:background="@null"
+            android:gravity="center"
+            android:padding="10.0dip"
+            android:text="搜索"
+            android:textColor="@color/red"
+            android:textSize="16.0sp" />
+
+        <EditText
+            android:id="@+id/et_search"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:layout_marginLeft="5.0dip"
+            android:layout_marginRight="5.0dip"
+            android:layout_toLeftOf="@+id/btn_search"
+            android:background="@drawable/search_edit_style"
+            android:drawableLeft="@drawable/search_new"
+            android:drawablePadding="5.0dip"
+            android:hint="请输入开户行关键字"
+            android:inputType="text"
+            android:paddingBottom="5.0dip"
+            android:paddingLeft="13.0dip"
+            android:paddingRight="13.0dip"
+            android:paddingTop="5.0dip"
+            android:selectAllOnFocus="true"
+            android:singleLine="true"
+            android:textColor="@color/black"
+            android:imeOptions="actionSearch"
+            android:textSize="14.0sp" />
+
+        <ImageButton
+            android:id="@+id/ib_cancel"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_marginRight="15.0dip"
+            android:layout_toLeftOf="@+id/btn_search"
+            android:background="@color/white"
+            android:padding="5.0dip"
+            android:src="@drawable/cancel_new"
+            android:visibility="gone" />
+    </RelativeLayout>
+
+    <LinearLayout
+        android:id="@+id/my_set_adresschoose_1"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:background="#ffffff"
+        android:visibility="visible" >
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/yy_myset_shouhuo01" >
+
+            <TextView
+                android:id="@+id/my_set_adresschoose_textview_1"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginLeft="10dp"
+                android:gravity="center_vertical"
+                android:text="请选择  银行卡类型"
+                android:textColor="#f86604"
+                android:textSize="20sp" />
+        </LinearLayout>
+
+        <ListView
+            android:id="@+id/my_set_adresschoose_listview_1"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:cacheColorHint="@null"
+            android:divider="@drawable/button_line"
+            android:overScrollMode="never"
+            android:background="#ffffff"
+            android:scrollbars="none" >
+        </ListView>
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/my_set_adresschoose_2"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:background="#ffffff"
+        android:visibility="gone" >
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/yy_myset_shouhuo01" >
+
+            <TextView
+                android:id="@+id/my_set_adresschoose_textview_2"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginLeft="10dp"
+                android:gravity="center_vertical"
+                android:text="请选择  省份"
+                android:textColor="#f86604"
+                android:textSize="20sp" />
+        </LinearLayout>
+
+        <ListView
+            android:id="@+id/my_set_adresschoose_listview_2"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:cacheColorHint="@null"
+            android:divider="@drawable/button_line"
+            android:overScrollMode="never"
+            android:scrollbars="none" 
+            android:background="#ffffff">
+        </ListView>
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/my_set_adresschoose_3"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:visibility="gone"
+        android:background="#ffffff">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/yy_myset_shouhuo01" >
+
+            <TextView
+                android:id="@+id/my_set_adresschoose_textview_3"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginLeft="10dp"
+                android:gravity="center_vertical"
+                android:text="请选择  城区"
+                android:textColor="#f86604"
+                android:textSize="20sp" />
+        </LinearLayout>
+
+        <ListView
+            android:id="@+id/my_set_adresschoose_listview_3"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:cacheColorHint="@null"
+            android:divider="@drawable/button_line"
+            android:overScrollMode="never"
+            android:scrollbars="none" 
+            android:background="#ffffff">
+        </ListView>
+    </LinearLayout>
+    <LinearLayout
+        android:id="@+id/my_set_adresschoose_4"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:visibility="gone"
+        android:background="#ffffff">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/yy_myset_shouhuo01" >
+
+            <TextView
+                android:id="@+id/my_set_adresschoose_textview_4"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginLeft="10dp"
+                android:gravity="center_vertical"
+                android:text="请选择  开户行"
+                android:textColor="#f86604"
+                android:textSize="20sp" />
+        </LinearLayout>
+
+        <com.szmy.pigapp.widget.MySwipeRefreshLayout
+            android:id="@+id/srl_vehicle"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:visibility="visible" >
+
+            <ListView
+                android:id="@+id/info_framgment_xlistview"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:cacheColorHint="@null"
+                android:divider="@drawable/button_line"
+                android:overScrollMode="never"
+                android:scrollbars="none"
+                android:background="#ffffff" />
+        </com.szmy.pigapp.widget.MySwipeRefreshLayout>
+    </LinearLayout>
+
+</LinearLayout>

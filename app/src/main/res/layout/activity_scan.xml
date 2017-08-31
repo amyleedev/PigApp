@@ -1,0 +1,249 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:materialdesign="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/ll_main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/bg_title_white"
+    android:clipToPadding="true"
+    android:fitsSystemWindows="true"
+    android:orientation="vertical">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="50dp">
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1px"
+            android:layout_alignParentBottom="true"
+            android:background="@color/cutting_line" />
+
+        <LinearLayout
+            android:id="@+id/def_head_back"
+            android:layout_width="wrap_content"
+            android:layout_height="50dp"
+            android:layout_gravity="top|left"
+            android:gravity="center_vertical">
+
+            <com.gc.materialdesign.views.ButtonIcon
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginRight="2dp"
+                android:background="@color/click_ripple_view"
+                android:onClick="back"
+                materialdesign:iconDrawable="@drawable/ic_back_black" />
+        </LinearLayout>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:text="网上执法"
+            android:textColor="@color/text_title_gray"
+            android:textSize="20sp" />
+    </RelativeLayout>
+
+    <LinearLayout
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:background="@color/white"
+        android:orientation="vertical">
+
+        <LinearLayout
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/white"
+            android:orientation="horizontal">
+
+            <TextView
+                android:id="@+id/tv_tel"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_margin="10dip"
+                android:text=""
+                android:textColor="@color/text_title" />
+            <TextView
+                android:id="@+id/tv_telphone"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_margin="10dip"
+                android:text=""
+                android:textColor="@color/text_title" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/white"
+            android:orientation="horizontal">
+
+
+            <LinearLayout
+                android:id="@+id/ll_ydzf"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_margin="10dip"
+                android:layout_weight="1"
+                android:background="@color/white"
+                android:gravity="center_horizontal"
+                android:onClick="onClick"
+                android:orientation="vertical"
+                android:visibility="visible">
+
+                <ImageView
+                    android:layout_width="50dp"
+                    android:layout_height="50dp"
+                    android:layout_margin="10dp"
+                    android:layout_marginLeft="20dip"
+                    android:scaleType="fitCenter"
+                    android:src="@drawable/retrospect" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="移动执法"
+                    android:textColor="@color/text_title" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/ll_fodder_scan"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_margin="10dip"
+                android:layout_weight="1"
+                android:background="@color/white"
+                android:gravity="center_horizontal"
+                android:onClick="onClick"
+                android:orientation="vertical">
+
+                <ImageView
+                    android:layout_width="50dp"
+                    android:layout_height="50dp"
+                    android:layout_margin="10dp"
+                    android:layout_marginLeft="20dip"
+                    android:scaleType="fitCenter"
+                    android:src="@drawable/ic_fodder" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="饲料溯源"
+                    android:textColor="@color/text_title" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/ll_veterinary_drug_scan"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_margin="10dip"
+                android:layout_weight="1"
+                android:background="@color/white"
+                android:gravity="center_horizontal"
+                android:onClick="onClick"
+                android:orientation="vertical">
+
+                <ImageView
+                    android:layout_width="50dp"
+                    android:layout_height="50dp"
+                    android:layout_margin="10dp"
+                    android:layout_marginLeft="20dip"
+                    android:scaleType="fitCenter"
+                    android:src="@drawable/ic_veterinary_drug" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="兽药溯源"
+                    android:textColor="@color/text_title" />
+            </LinearLayout>
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/white"
+            android:orientation="horizontal">
+
+            <LinearLayout
+                android:id="@+id/ll_animal_products"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_margin="10dip"
+                android:layout_weight="1"
+                android:background="@color/white"
+                android:gravity="center_horizontal"
+                android:onClick="onClick"
+                android:orientation="vertical">
+
+                <ImageView
+                    android:layout_width="50dp"
+                    android:layout_height="50dp"
+                    android:layout_margin="10dp"
+                    android:layout_marginLeft="20dip"
+                    android:scaleType="fitCenter"
+                    android:src="@drawable/animal_products" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="畜产品溯源（限平顶山、济源）"
+                    android:textColor="@color/text_title" />
+            </LinearLayout>
+
+
+            <LinearLayout
+                android:id="@+id/ll_vaccine_scan"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_margin="10dip"
+                android:layout_weight="1"
+                android:background="@color/white"
+                android:gravity="center_horizontal"
+                android:onClick="onClick"
+                android:orientation="vertical">
+
+                <ImageView
+                    android:layout_width="50dp"
+                    android:layout_height="50dp"
+                    android:layout_margin="10dp"
+                    android:layout_marginLeft="20dip"
+                    android:scaleType="fitCenter"
+                    android:src="@drawable/ic_vaccine" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="疫苗溯源"
+                    android:textColor="@color/text_title" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/ll_other_scan"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_margin="10dip"
+                android:layout_weight="1"
+                android:background="@color/white"
+                android:gravity="center_horizontal"
+                android:onClick="onClick"
+                android:orientation="vertical">
+
+                <ImageView
+                    android:layout_width="50dp"
+                    android:layout_height="50dp"
+                    android:layout_margin="10dp"
+                    android:layout_marginLeft="20dip"
+                    android:scaleType="fitCenter"
+                    android:src="@drawable/retrospect" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="其它投入品溯源"
+                    android:textColor="@color/text_title" />
+            </LinearLayout>
+        </LinearLayout>
+
+    </LinearLayout>
+
+</LinearLayout>

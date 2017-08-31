@@ -1,0 +1,203 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/bg_title_white"
+    android:clipToPadding="true"
+    android:fitsSystemWindows="true"
+    android:orientation="vertical"
+    tools:context="${relativePackage}.${activityClass}" >
+
+    <include layout="@layout/view_def_head" />
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="10dp"
+        android:layout_marginTop="20dp" >
+
+        <TextView
+            android:id="@+id/name"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:ellipsize="end"
+            android:singleLine="true"
+            android:text="真实姓名："
+            android:textColor="#ff000000"
+            android:textSize="16sp" />
+
+        <TextView
+            android:id="@+id/more_name"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_toRightOf="@+id/name"
+            android:ellipsize="end"
+            android:singleLine="true"
+            android:text="马学义"
+            android:textColor="#ffaaaaaa"
+            android:textSize="16sp" />
+
+        <TextView
+            android:id="@+id/business"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/name"
+            android:layout_marginTop="10dp"
+            android:ellipsize="end"
+            android:singleLine="true"
+            android:text="所属行业："
+            android:textColor="#ff000000"
+            android:textSize="16sp" />
+
+        <TextView
+            android:id="@+id/more_business"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/name"
+            android:layout_marginTop="10dp"
+            android:layout_toRightOf="@+id/business"
+            android:ellipsize="end"
+            android:singleLine="true"
+            android:text="经纪人/中介"
+            android:textColor="#ffaaaaaa"
+            android:textSize="16sp" />
+
+        <TextView
+            android:id="@+id/phone"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/business"
+            android:layout_marginTop="10dp"
+            android:ellipsize="end"
+            android:singleLine="true"
+            android:text="手机号码："
+            android:textColor="#ff000000"
+            android:textSize="16sp" />
+
+        <TextView
+            android:id="@+id/more_phone"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/business"
+            android:layout_marginTop="10dp"
+            android:layout_toRightOf="@+id/phone"
+            android:ellipsize="end"
+            android:singleLine="true"
+            android:text="123456789"
+            android:textColor="#ffaaaaaa"
+            android:textSize="16sp" />
+
+        <TextView
+            android:id="@+id/qq"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/phone"
+            android:layout_marginTop="10dp"
+            android:ellipsize="end"
+            android:singleLine="true"
+            android:text="Q   Q号码："
+            android:textColor="#ff000000"
+            android:textSize="16sp" />
+
+        <TextView
+            android:id="@+id/more_qq"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/phone"
+            android:layout_marginTop="10dp"
+            android:layout_toRightOf="@+id/qq"
+            android:ellipsize="end"
+            android:singleLine="true"
+            android:text="852741963"
+            android:textColor="#ffaaaaaa"
+            android:textSize="16sp" />
+
+        <TextView
+            android:id="@+id/address"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/qq"
+            android:layout_marginTop="10dp"
+            android:ellipsize="end"
+            android:singleLine="true"
+            android:text="收猪地区："
+            android:textColor="#ff000000"
+            android:textSize="16sp" />
+
+        <TextView
+            android:id="@+id/more_address"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/qq"
+            android:layout_marginTop="10dp"
+            android:layout_toRightOf="@+id/address"
+            android:ellipsize="end"
+            android:singleLine="true"
+            android:text="河南省 郑州市"
+            android:textColor="#ffaaaaaa"
+            android:textSize="16sp" />
+
+        <TextView
+            android:id="@+id/companyName"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/address"
+            android:layout_marginTop="10dp"
+            android:ellipsize="end"
+            android:singleLine="true"
+            android:text="企业名称："
+            android:textColor="#ff000000"
+            android:textSize="16sp" />
+
+        <TextView
+            android:id="@+id/more_companyName"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/address"
+            android:layout_marginTop="10dp"
+            android:layout_toRightOf="@+id/companyName"
+            android:ellipsize="end"
+            android:singleLine="true"
+            android:text="青岛金王合作社"
+            android:textColor="#ffaaaaaa"
+            android:textSize="16sp" />
+
+        <ImageView
+            android:id="@+id/more_imageview"
+            android:layout_width="90dp"
+            android:layout_height="90dp"
+            android:layout_marginLeft="130dp"
+            android:layout_marginRight="10dp"
+            android:layout_toRightOf="@+id/more_name"
+            android:src="@drawable/photo" />
+    </RelativeLayout>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1px"
+        android:layout_below="@+id/companyName"
+        android:layout_marginBottom="15dp"
+        android:layout_marginTop="10dp"
+        android:background="@color/cutting_line" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="10dp"
+        android:ellipsize="end"
+        android:singleLine="true"
+        android:text="业务介绍"
+        android:textColor="#ffff5511"
+        android:textSize="16sp" />
+
+    <TextView
+        android:id="@+id/more_intro"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="10dp"
+        android:layout_marginTop="10dp"
+        android:text="赛的煎熬时间大家圣诞节哦亲望京东个就去我家 爱睡觉都个甲嗖打击哦啊是京东个骄傲搜ID急哦自己去问"
+        android:textColor="#ff000000"
+        android:textSize="16sp" />
+
+</LinearLayout>

@@ -1,0 +1,104 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/bg_title_white"
+    android:clipToPadding="true"
+    android:fitsSystemWindows="true"
+    android:orientation="vertical" >
+
+    <!-- tab上方的显示区域 -->
+
+    <FrameLayout
+        android:id="@+id/realtabcontent"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:background="@color/bg" >
+    </FrameLayout>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1px"
+        android:background="@color/cutting_line" />
+
+    <!-- 底下的四个tab -->
+
+    <RadioGroup
+        android:id="@+id/radioGroup1"
+        android:layout_width="match_parent"
+        android:layout_height="48dp"
+        android:background="@color/white"
+        android:gravity="center_vertical"
+        android:orientation="horizontal" >
+
+        <RadioButton
+            android:id="@+id/radio0"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:background="@color/transparent"
+            android:button="@null"
+            android:checked="true"
+            android:drawableTop="@drawable/selector_navigation_home"
+            android:gravity="center"
+            android:text="首页"
+            android:textColor="@drawable/text_selector"
+            android:textSize="11sp" />
+
+        <RadioButton
+            android:id="@+id/radio1"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:background="@color/transparent"
+            android:button="@null"
+            android:drawableTop="@drawable/selector_navigation_fabu"
+            android:gravity="center"
+            android:text="我的发布"
+            android:textColor="@drawable/text_selector"
+            android:textSize="11sp" />
+
+        <RadioButton
+            android:id="@+id/radio4"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:background="@color/transparent"
+            android:button="@null"
+            android:drawableTop="@drawable/selector_navigation_msg"
+            android:gravity="center"
+            android:text="社区"
+            android:textColor="@drawable/text_selector"
+            android:textSize="11sp"
+            android:visibility="gone" />
+
+        <RadioButton
+            android:id="@+id/radio2"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:background="@color/transparent"
+            android:button="@null"
+            android:drawableTop="@drawable/selector_navigation_shop"
+            android:gravity="center"
+            android:text="牧易商城"
+            android:textColor="@drawable/text_selector"
+            android:textSize="11sp"
+            android:visibility="gone" />
+
+        <RadioButton
+            android:id="@+id/radio3"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:background="@color/transparent"
+            android:button="@null"
+            android:drawableTop="@drawable/selector_navigation_my"
+            android:gravity="center"
+            android:text="我的"
+            android:textColor="@drawable/text_selector"
+            android:textSize="11sp" />
+    </RadioGroup>
+
+</LinearLayout>

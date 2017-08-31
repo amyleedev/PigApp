@@ -1,0 +1,185 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:materialdesign="http://schemas.android.com/apk/res-auto"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:background="@color/bg_title_white"
+    android:clipToPadding="true"
+    android:fitsSystemWindows="true"
+    android:orientation="vertical" >
+
+    <RelativeLayout
+        android:id="@+id/titlelayout"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:background="@color/bg_title_white" >
+
+        <LinearLayout
+            android:id="@+id/def_head_back"
+            android:layout_width="wrap_content"
+            android:layout_height="50dp"
+            android:layout_gravity="top|left"
+            android:gravity="center_vertical"
+            >
+            <com.gc.materialdesign.views.ButtonIcon
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginRight="2dp"
+                android:background="@color/click_ripple_view"
+                materialdesign:iconDrawable="@drawable/ic_back_black"
+                android:onClick="back"/>
+        </LinearLayout>
+
+        <TextView
+            android:id="@+id/def_head_tv"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:text="附近猪源"
+            android:textColor="#ffffff"
+            android:textSize="20sp" />
+
+        <LinearLayout
+            android:id="@+id/ll_filtrate"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:layout_marginRight="12dp"
+            android:gravity="center"
+            android:orientation="vertical" >
+
+            <ImageView
+                android:layout_width="25dp"
+                android:layout_height="25dp"
+                android:src="@drawable/ic_filtrate" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="2dp"
+                android:text="筛选"
+                android:textColor="@color/white"
+                android:textSize="10sp" />
+        </LinearLayout>
+    </RelativeLayout>
+    <FrameLayout
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:layout_below="@+id/titlelayout"
+        android:layout_above="@+id/bottom">
+
+        <com.baidu.mapapi.map.MapView
+            android:id="@+id/bmapView"
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="#88000000"
+            android:orientation="vertical" >
+            <RadioGroup
+                android:id="@+id/radioGroup1"
+                android:layout_width="match_parent"
+                android:layout_height="30dp"
+                android:orientation="horizontal"
+                android:gravity="center"
+                android:layout_marginTop="5dp"
+                android:layout_margin="5dp">
+                <RadioButton
+                    android:id="@+id/allorderbtn"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:background="@null"
+                    android:textColor="@drawable/selector_yellow_maporderstatus"
+                    android:text="全部"
+                    android:button="@drawable/select_yellow_check"
+                    android:textSize="15sp"
+                    android:gravity="center"
+                    android:checked="true"/>
+                <RadioButton
+                    android:id="@+id/twobtn"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:background="@null"
+                    android:textColor="@drawable/selector_green_maporderstatus"
+                    android:text="待收购"
+                    android:button="@drawable/select_green_check"
+                    android:textSize="15sp"
+                    android:gravity="center" />
+                <RadioButton
+                    android:id="@+id/threebtn"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:background="@null"
+                    android:textColor="@drawable/selector_maporderstatus"
+                    android:text="待出售"
+                    android:button="@drawable/select_red_check"
+                    android:textSize="15sp"
+                    android:gravity="center" />
+                <RadioButton
+                    android:id="@+id/fourbtn"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:background="@null"
+                    android:textColor="@drawable/selector_blue_maporderstatus"
+                    android:text="已成交"
+                    android:button="@drawable/select_blue_check"
+                    android:textSize="15sp"
+                    android:gravity="center" />
+            </RadioGroup>
+            <TextView
+                android:id="@+id/tiptv"
+                android:layout_width="match_parent"
+                android:layout_height="25dp"
+                android:gravity="center"
+                android:text="红色:未成交出售    绿色:未成交收购  蓝色:已成交"
+                android:textColor="@color/white"
+                android:visibility="gone"/>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:orientation="horizontal" >
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:padding="3dp"
+                    android:text="当前地区："
+                    android:textColor="@color/white"
+                    android:textSize="14dp" />
+
+                <TextView
+                    android:id="@+id/tv_location"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:padding="3dp"
+                    android:text=""
+                    android:textColor="@color/white"
+                    android:textSize="14dp" />
+            </LinearLayout>
+        </LinearLayout>
+
+    </FrameLayout>
+    <LinearLayout
+        android:id="@+id/bottom"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="#88000000"
+        android:orientation="vertical"
+        android:layout_alignParentBottom="true">
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="25dp"
+            android:gravity="center"
+            android:text="红色:未成交出售    绿色:未成交收购  蓝色:已成交"
+            android:textColor="@color/white" />
+    </LinearLayout>
+</RelativeLayout>

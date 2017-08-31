@@ -1,0 +1,85 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="@dimen/info_list_item_height2"
+    android:gravity="center_vertical"
+    android:orientation="horizontal" >
+
+    <ImageView
+        android:id="@+id/imagehead"
+        android:layout_width="@dimen/sliding_head_height"
+        android:layout_height="@dimen/sliding_head_height"
+        android:layout_margin="10dp"
+        android:src="@null"
+        android:scaleType="centerCrop"
+         />
+
+    <LinearLayout
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="10dp"
+        android:gravity="center_vertical"
+        android:orientation="vertical" >
+
+        <LinearLayout
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:gravity="center_vertical"
+            android:orientation="horizontal"
+            android:layout_marginBottom="3dp" >
+
+            <TextView
+                android:id="@+id/info_list_name_text"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:ellipsize="end"
+                android:singleLine="true"
+                android:text="name"
+                android:textSize="17sp" />
+
+        
+        </LinearLayout>
+        
+         <RelativeLayout
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:gravity="center_vertical"
+            android:orientation="horizontal" 
+            android:layout_marginTop="3dp"
+            android:layout_marginBottom="3dp"
+            >
+
+            <TextView
+                android:id="@+id/info_oldprice_text"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:ellipsize="end"
+                android:singleLine="true"
+                android:text="100"
+                android:drawableLeft="@drawable/rmb1"
+                android:textColor="@color/gray"
+                android:textSize="12sp"
+                android:layout_alignParentLeft="true"
+                 />
+            
+           
+
+          <TextView 
+                android:id="@+id/info_nowprice_text"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:ellipsize="end"
+                android:singleLine="true"
+                android:text="100"
+                android:drawableLeft="@drawable/rmb2"
+                android:textColor="@color/menu_bg"
+                android:textSize="15sp"
+                android:layout_marginRight="30dip"
+                android:layout_alignParentRight="true"
+                 />
+        </RelativeLayout>
+    </LinearLayout>
+
+</LinearLayout>

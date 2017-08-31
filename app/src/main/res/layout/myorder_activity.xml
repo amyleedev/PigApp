@@ -1,0 +1,144 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/bg_title_white"
+    android:clipToPadding="true"
+    android:fitsSystemWindows="true"
+    android:orientation="vertical" >
+
+    <include layout="@layout/view_def_head" />
+
+  <RadioGroup
+		android:id="@+id/radioGroup1"
+		android:layout_width="match_parent"
+		android:layout_height="50dp"
+		android:orientation="horizontal"
+		android:background="@color/bg"
+		android:gravity="center_vertical">
+
+
+        <RadioButton
+            android:id="@+id/allorderbtn"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:background="@null"
+            android:textColor="@drawable/selector_orderstatus"
+            android:text="全  部"
+            android:button="@null"
+            android:textSize="15sp" 
+             android:gravity="center"
+             android:checked="true"/>
+
+        <TextView
+            android:layout_width="1dp"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="5dp"
+            android:layout_weight="0"
+            android:background="@drawable/img_line" />
+      <RadioButton
+          android:id="@+id/daifahuobtn"
+          android:layout_width="wrap_content"
+          android:layout_height="wrap_content"
+          android:layout_weight="1"
+          android:background="@null"
+          android:textColor="@drawable/selector_orderstatus"
+          android:text="待确认"
+          android:button="@null"
+          android:textSize="15sp"
+          android:gravity="center"
+          />
+      <TextView
+          android:layout_width="1dp"
+          android:layout_height="wrap_content"
+          android:layout_marginLeft="5dp"
+          android:layout_weight="0"
+          android:background="@drawable/img_line" />
+        <RadioButton
+            android:id="@+id/obligationbtn"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:background="@null"
+            android:textColor="@drawable/selector_orderstatus"
+            android:text="待付款"
+            android:button="@null"
+            android:textSize="15sp"
+             android:gravity="center" />
+
+      <TextView
+          android:layout_width="1dp"
+          android:layout_height="wrap_content"
+          android:layout_marginLeft="5dp"
+          android:layout_weight="0"
+          android:background="@drawable/img_line" />
+
+
+        <RadioButton
+            android:id="@+id/yichengjiao"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:background="@null"
+            android:textColor="@drawable/selector_orderstatus"
+            android:text="已成交"
+            android:button="@null"
+            android:textSize="15sp" 
+            android:gravity="center"/>
+
+        <TextView
+            android:layout_width="1dp"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="5dp"
+            android:layout_weight="0"
+            android:background="@drawable/img_line"
+            android:visibility="gone" />
+
+        <RadioButton
+            android:id="@+id/daishouhuobtn"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:background="@null"
+            android:textColor="@drawable/selector_orderstatus"
+            android:text="待收货"
+            android:button="@null"
+            android:textSize="15sp"
+            android:gravity="center"
+            android:visibility="gone" />
+    </RadioGroup>
+
+    <include
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        layout="@layout/loading" />
+
+    <include
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        layout="@layout/load_failure"
+        android:visibility="gone" />
+
+    <com.szmy.pigapp.widget.MySwipeRefreshLayout
+        android:id="@+id/srl_myorder"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:visibility="gone" >
+
+        <ListView
+            android:id="@+id/lstv_myorder"
+            android:layout_width="match_parent"
+            android:layout_height="fill_parent"
+            android:background="@color/bg"
+            android:cacheColorHint="#00000000"
+            android:drawSelectorOnTop="false"
+            android:fastScrollEnabled="true"
+            android:focusable="false"
+            android:footerDividersEnabled="false"
+            android:listSelector="@drawable/sliding_list_item_bg"
+            android:scrollbars="none" />
+    </com.szmy.pigapp.widget.MySwipeRefreshLayout>
+
+
+</LinearLayout>

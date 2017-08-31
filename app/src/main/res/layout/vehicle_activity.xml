@@ -1,0 +1,105 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:segmentedgroup="http://schemas.android.com/apk/res-auto"
+    xmlns:materialdesign="http://schemas.android.com/apk/res-auto"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:background="@color/bg_title_white"
+    android:clipToPadding="true"
+    android:fitsSystemWindows="true"
+    android:orientation="vertical" >
+
+    <RelativeLayout
+        android:id="@+id/toplayout"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:background="@color/bg_title_white" >
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1px"
+            android:layout_alignParentBottom="true"
+            android:background="@color/cutting_line" />
+
+        <LinearLayout
+            android:id="@+id/def_head_back"
+            android:layout_width="wrap_content"
+            android:layout_height="50dp"
+            android:layout_gravity="top|left"
+            android:gravity="center_vertical"
+            >
+            <com.gc.materialdesign.views.ButtonIcon
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginRight="2dp"
+                android:background="@color/click_ripple_view"
+                materialdesign:iconDrawable="@drawable/ic_back_black"
+                android:onClick="back"/>
+        </LinearLayout>
+
+        <com.szmy.pigapp.widget.SegmentedGroup
+            android:id="@+id/radio_group"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:layout_margin="10dp"
+            android:orientation="horizontal"
+            segmentedgroup:sc_border_width="1dp"
+            segmentedgroup:sc_checked_text_color="@color/white"
+            segmentedgroup:sc_corner_radius="10dp"
+            segmentedgroup:sc_tint_color="@color/red" >
+
+            <RadioButton
+                android:id="@+id/radio_button_001"
+                style="@style/RadioButton"
+                android:layout_width="70dp"
+                android:layout_height="wrap_content"
+                android:checked="true"
+                android:text="车辆" />
+
+            <RadioButton
+                android:id="@+id/radio_button_002"
+                style="@style/RadioButton"
+                android:layout_width="70dp"
+                android:layout_height="wrap_content"
+                android:text="企业" />
+        </com.szmy.pigapp.widget.SegmentedGroup>
+
+        <TextView
+            android:id="@+id/Ibtn_protocol"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:layout_marginRight="12dp"
+            android:onClick="onClick"
+            android:text="协议"
+            android:textColor="@color/red"
+            android:textSize="16sp" />
+
+        <TextView
+            android:id="@+id/Ibtn_nearby"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_marginRight="10dp"
+            android:layout_toLeftOf="@id/Ibtn_protocol"
+            android:onClick="onClick"
+            android:text="地图"
+            android:textColor="@color/red"
+            android:textSize="16sp" />
+    </RelativeLayout>
+
+    <LinearLayout
+        android:id="@+id/lv_fragment_container"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:layout_below="@+id/toplayout"
+        android:background="@color/bg"
+        android:focusable="true"
+        android:focusableInTouchMode="true"
+        android:orientation="vertical"
+        android:visibility="visible" >
+    </LinearLayout>
+
+</LinearLayout>

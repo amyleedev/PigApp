@@ -1,0 +1,158 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string name="app_name">猪贸通</string>
+    <string name="msg_load_ing">努力加载中</string>
+    <string name="cd">图片描述</string>
+    <string name="def_title">标题名称</string>
+    <string name="pig_sell">生猪出售</string>
+    <string name="pig_buy">生猪收购</string>
+    <string name="my_sell">我的出售</string>
+    <string name="my_buy">我的收购</string>
+    <string name="my_sell_order">出售订单</string>
+    <string name="my_buy_order">收购订单</string>
+    <string name="xlistview_header_hint_normal">下拉刷新</string>
+    <string name="xlistview_header_hint_ready">松开刷新数据</string>
+    <string name="xlistview_header_hint_loading">正在加载...</string>
+    <string name="xlistview_header_last_time">上次更新时间：</string>
+    <string name="xlistview_footer_hint_normal">查看更多</string>
+    <string name="xlistview_footer_hint_ready">松开载入更多</string>
+    <string name="login_tx">登\t\t录</string>
+    <string name="title_value_tx">标\t\t题：</string>
+    <string name="maose_tv">毛\t\t色：</string>
+    <string name="trading_value_tx">价\t\t格：</string>
+    <string name="chulan_shijian">出栏时间：</string>
+    <string name="delivery_type">配送方式：</string>
+    <string name="pigtype_tx">生猪品种：</string>
+    <string name="count_tx">数\t\t量：</string>
+    <string name="shengshi_tx">省\t\t市：</string>
+    <string name="pinzhong_tx">品\t\t种：</string>
+    <string name="address_tx">地\t\t址：</string>
+    <string name="remark_tx">备\t\t注：</string>
+    <string name="weight_tx">估\t\t重：</string>
+    <string name="profit_tx">利\t\t润：</string>
+    <string name="submit_tx">提\t\t交</string>
+    <string name="peisong_tx">配送方式：</string>
+    <string name="hello_world">Hello world!</string>
+    <string name="menu_settings">Settings</string>
+    <string name="title_activity_user_info">UserInfoActivity</string>
+    <string name="confirm">确 定</string>
+    <string name="hint_tx">请选择</string>
+    <string name="qq">Ｑ　　Ｑ</string>
+    <string name="spin_prompt"> 请选择角色 </string>
+
+    <string-array name="map_filtrate">
+        <item>查看未成交出售信息</item>
+        <item>查看未成交收购信息</item>
+        <item>查看已成交信息</item>
+    </string-array>
+    <string-array name="pig_color">
+        <item>白色</item>
+        <item>黑色 </item>
+        <item>花色</item>
+        <item>其它 </item>
+    </string-array>
+    <string-array name="roles">
+        <item> 请选择角色 </item>
+        <item> 猪场 </item>
+        <item> 屠宰场 </item>
+        <item> 经纪人 </item>
+        <item> 物流公司 </item>
+        <item> 自然人</item>
+    </string-array>
+    <string-array name="pigtype">
+        <item> 小规模养殖 </item>
+        <item> 中规模养殖 </item>
+        <item> 大规模养殖 </item>
+        <item> 集团养殖 </item>
+    </string-array>
+    <string-array name="bank_names">
+        <item>中国农业银行 </item>
+        <item>兴业银行 </item>
+        <item>交通银行</item>
+        <item>中国银行 </item>
+        <item>中国邮政储蓄银行 </item>
+        <item>中国工商银行 </item>
+        <item>中国建设银行 </item>
+        <item>中信银行</item>
+        <item>中国民生银行</item>
+        <item>中原银行</item>
+        <item>招商银行</item>
+        <item>平安银行</item>
+        <item>广发银行 </item>
+        <item>浦发银行 </item>
+        <item>华夏银行</item>
+        <item>支付宝 </item>
+        <item>理财通</item>
+        <item>百度钱包 </item>
+    </string-array>
+    <string-array name="bank_urls">
+        <item>http://www.abchina.com/cn/wydl/grwydl/default.htm</item>
+        <item>http://3g.cib.com.cn/home/00000.html</item>
+        <item>https://wap.95559.com.cn/mbankView531/index.jsp</item>
+        <item>https://ebsnew.boc.cn/boc15/login.html</item>
+        <item>http://www.psbc.com/portal/zh_CN/index.html</item>
+        <item>http://www.icbc.com.cn/icbc/</item>
+        <item>https://ibsbjstar.ccb.com.cn/app/V5/CN/STY1/login.jsp?UDC_CUSTOMER_ID=&amp;UDC_CUSTOMER_NAME=&amp;UDC_COOKIE=25ed41dc7ef72a40dTQNanGOQqM8Vr8nd3ky1450677117088rmi5W1xTn3INVR73sR0mca6e1ae3d73ba4bf3f480e438433c3d6&amp;UDC_SESSION_ID=QamBfw7yXIMc6eo83eb05784ddb-20151221135209</item>
+        <item>https://i.bank.ecitic.com/perbank6/signIn.do</item>
+        <item>https://nper.cmbc.com.cn/pweb/static/login.html</item>
+        <item>https://pibs.zyebank.com/pweb/prelogin.do?_locale=zh_CN&amp;LoginType=R</item>
+        <item>https://pbsz.ebank.cmbchina.com/CmbBank_GenShell/UI/GenShellPC/Login/Login.aspx</item>
+        <item>https://bank.pingan.com.cn/ibp/bank/index.html#home/home/index</item>
+        <item>https://ebanks.cgbchina.com.cn/perbank/</item>
+        <item>https://ebank.spdb.com.cn/per/gb/otplogin.jsp</item>
+        <item>https://sbank.hxb.com.cn/easybanking/jsp/login/login.jsp</item>
+        <item>https://auth.alipay.com/login/index.htm?goto=https%3A%2F%2Fmy.alipay.com%2Fportal%2Fi.htm</item>
+        <item>http://qian.qq.com/web/v2/login.shtml?stat_data=fm_116_seo_zzseo1</item>
+        <item>https://www.baifubao.com/?PPZQ</item>
+    </string-array>
+    <!-- 自定义组件 -->
+    <string name="pull_to_refresh">下拉可以刷新</string>
+    <string name="release_to_refresh">松开可以刷新</string>
+    <string name="lastUpdateTime">最近更新：%s</string>
+    <string name="load_full">已加载全部</string>
+    <string name="no_data">暂无数据</string>
+    <string name="more">加载中</string>
+    <string name="d">图片描述</string>
+    <string name="again_exit">再按一次退出</string>
+    <string name="title_activity_pig_farm">PigFarmActivity</string>
+    <string name="action_settings">Settings</string>
+    <string name="title_activity_search_condition">SearchConditionActivity</string>
+    <string name="title_activity_scan">ScanActivity</string>
+    <string name="shouyao">兽药</string>
+    <string name="siliao">饲料</string>
+    <string name="chuqin">畜禽交易</string>
+    <string name="shengwu">生物制品</string>
+    <string name="qixie">器械设备</string>
+    <string name="fuwu">服务产品</string>
+    <string name="wsy">外三元</string>
+    <string name="nsy">内三元</string>
+    <string name="tzz">土杂猪</string>
+    <string name="ym">玉米</string>
+    <string name="dp">豆粕</string>
+    <string name="scan_text">将二维码放入框内, 即可自动扫描</string>
+    
+    <string name="app_key">23289513</string>
+
+    <string-array name="cardtype">
+        <item> 银行卡</item>
+        <item> 支付宝 </item>
+        <item> 微信支付 </item>
+    </string-array>
+    <string-array name="zhengjiantype">
+        <item> 组织机构代码</item>
+        <item> 营业执照 </item>
+        <item> 组织代码(附属机构) </item>
+        <item> 其他证件类型 </item>
+    </string-array>
+
+    <string name="xieshang">价格协商</string>
+
+    <string name="title_activity_weather">WeatherActivity</string>
+    <string name="dummy_button">Dummy Button</string>
+    <string name="dummy_content">DUMMY\nCONTENT</string>
+    <string name="insert_card">插入卡</string>
+    <string name="down_fail">下载失败</string>
+    <string name="is_downing">正在下载</string>
+    <string name="down_sucess">下载成功</string>
+</resources>

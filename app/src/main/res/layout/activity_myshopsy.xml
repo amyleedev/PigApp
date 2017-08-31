@@ -1,0 +1,204 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:materialdesign="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/bg_gray"
+    android:clipToPadding="true"
+    android:fitsSystemWindows="true"
+    android:orientation="vertical" >
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:background="@color/bg_title_white" >
+
+        <LinearLayout
+            android:id="@+id/def_head_back"
+            android:layout_width="wrap_content"
+            android:layout_height="50dp"
+            android:layout_gravity="top|left"
+            android:gravity="center_vertical"
+            >
+            <com.gc.materialdesign.views.ButtonIcon
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginRight="2dp"
+                android:background="@color/click_ripple_view"
+                materialdesign:iconDrawable="@drawable/ic_back_black"
+                android:onClick="back"/>
+        </LinearLayout>
+
+        <TextView
+            android:id="@+id/def_head_tv"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:text="我的店铺"
+            android:textColor="@color/text_title_gray"
+            android:textSize="20sp" />
+
+        <TextView
+            android:id="@+id/help_btn"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:layout_marginRight="12dp"
+            android:gravity="center"
+            android:text="积分政策"
+            android:textColor="@color/red"
+            android:textSize="16sp" />
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1px"
+            android:layout_alignParentBottom="true"
+            android:background="@color/cutting_line" />
+    </RelativeLayout>
+    <LinearLayout
+        android:id="@+id/layout1"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:clipToPadding="true"
+        android:fitsSystemWindows="true"
+        android:visibility="visible">
+        <FrameLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@color/white"
+            android:orientation="vertical" >
+
+            <include
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                layout="@layout/loading"
+
+                />
+
+            <include
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                layout="@layout/load_failure"
+                android:visibility="gone" />
+
+            <android.support.v4.widget.SwipeRefreshLayout
+                android:id="@+id/srl_data"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:visibility="gone" >
+
+                <ListView
+                    android:id="@+id/lv"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:fastScrollEnabled="true"
+                    android:focusable="false"
+                    android:footerDividersEnabled="false"
+                    android:scrollbars="none" />
+            </android.support.v4.widget.SwipeRefreshLayout>
+
+            <FrameLayout
+                android:id="@+id/fl_hover2"
+                android:layout_width="match_parent"
+                android:layout_height="40dp" >
+            </FrameLayout>
+        </FrameLayout>
+    </LinearLayout>
+<LinearLayout
+    android:id="@+id/layout2"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:visibility="gone"
+    >
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical"
+            android:gravity="center">
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:gravity="center"
+                android:layout_margin="40dp">
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:src="@drawable/ic_zanwudingdan"
+                    />
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="您的店铺暂无收益"
+                    android:textColor="@color/text_title_gray"
+                    android:layout_marginTop="10dp"
+                    android:textSize="15sp"/>
+            </LinearLayout>
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="35dp"
+                android:gravity="center"
+                android:layout_marginLeft="10dp"
+                android:layout_marginRight="10dp"
+                >
+                <TextView
+                    android:id="@+id/line1"
+                    android:layout_width="wrap_content"
+                    android:layout_height="1px"
+                    android:background="@color/cutting_line"
+                    android:layout_weight="1"
+                    />
+                <LinearLayout
+                    android:id="@+id/content2"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:gravity="center"
+                    android:layout_weight="1"
+                    >
+                    <ImageView
+                        android:layout_width="28dp"
+                        android:layout_height="28dp"
+                        android:src="@drawable/ic_wntj"
+                        />
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="为你推荐"
+                        android:layout_marginLeft="10dp"
+                        android:textSize="15sp"
+                        />
+                </LinearLayout>
+                <TextView
+                    android:id="@+id/line2"
+                    android:layout_width="wrap_content"
+                    android:layout_height="1px"
+                    android:background="@color/cutting_line"
+                    android:layout_weight="1"
+                    />
+            </LinearLayout>
+
+
+            <com.szmy.pigapp.widget.MyshopGridView
+                android:id="@+id/gridview"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:background="@null"
+                android:numColumns="2"
+                android:gravity="center"
+                android:horizontalSpacing="5dip"
+                android:verticalSpacing="5dp"
+                android:layout_marginLeft="3dp"
+                android:layout_marginRight="3dp"
+                android:layout_marginBottom="10dp"
+                />
+        </LinearLayout>
+
+    </ScrollView>
+</LinearLayout>
+
+
+</LinearLayout>

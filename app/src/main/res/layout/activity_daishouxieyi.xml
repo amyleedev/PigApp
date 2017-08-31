@@ -1,0 +1,384 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:materialdesign="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/bg_title_white"
+    android:clipToPadding="true"
+    android:fitsSystemWindows="true"
+    android:orientation="vertical" >
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="50dp" >
+
+        <LinearLayout
+            android:id="@+id/def_head_back"
+            android:layout_width="wrap_content"
+            android:layout_height="50dp"
+            android:layout_gravity="top|left"
+            android:gravity="center_vertical"
+            >
+            <com.gc.materialdesign.views.ButtonIcon
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginRight="2dp"
+                android:background="@color/click_ripple_view"
+                materialdesign:iconDrawable="@drawable/ic_back_black"
+                android:onClick="back"/>
+        </LinearLayout>
+
+        <TextView
+            android:id="@+id/def_head_tv"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:text="代收协议签约"
+            android:textColor="@color/text_title_gray"
+            android:textSize="20sp" />
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1px"
+            android:layout_alignParentBottom="true"
+            android:background="@color/cutting_line" />
+    </RelativeLayout>
+
+    <ScrollView
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:background="@color/bg"
+        android:onClick="onClick"
+        android:scrollbars="none" >
+
+        <LinearLayout
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="10.0dip"
+            android:layout_marginRight="10.0dip"
+            android:layout_marginTop="10.0dip"
+            android:onClick="onClick"
+            android:orientation="vertical" >
+
+
+            <LinearLayout
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="5.0dip"
+                android:orientation="horizontal" >
+
+                <TextView
+                    android:layout_width="100.0dip"
+                    android:layout_height="wrap_content"
+                    android:drawableRight="@drawable/star"
+                    android:gravity="center_vertical"
+                    android:text="付款卡号"
+                    android:textColor="@color/black"
+                    android:textSize="@dimen/text_size" />
+
+                <EditText
+                    android:id="@+id/etCardNum"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="5.0dip"
+                    android:background="@drawable/edit_search"
+                    android:gravity="center_vertical"
+                    android:paddingLeft="10.0dip"
+                    android:paddingRight="10.0dip"
+                    android:singleLine="true"
+                    android:text=""
+                    android:textColor="@color/edit_bg"
+                    android:textSize="@dimen/text_size" />
+            </LinearLayout>
+            <LinearLayout
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="5.0dip"
+                android:orientation="horizontal" >
+
+                <TextView
+                    android:layout_width="100.0dip"
+                    android:layout_height="wrap_content"
+                    android:drawableRight="@drawable/star"
+                    android:gravity="center_vertical"
+                    android:text="付款账户名"
+                    android:textColor="@color/black"
+                    android:textSize="@dimen/text_size" />
+
+                <EditText
+                    android:id="@+id/etCardName"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="5.0dip"
+                    android:background="@drawable/edit_search"
+                    android:gravity="center_vertical"
+                    android:inputType="text"
+                    android:paddingLeft="10.0dip"
+                    android:paddingRight="10.0dip"
+                    android:singleLine="true"
+                    android:text=""
+                    android:textColor="@color/edit_bg"
+                    android:textSize="@dimen/text_size" />
+            </LinearLayout>
+            <LinearLayout
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="5.0dip"
+                android:orientation="horizontal" >
+
+                <TextView
+                    android:layout_width="100.0dip"
+                    android:layout_height="wrap_content"
+                    android:drawableRight="@drawable/star"
+                    android:gravity="center_vertical"
+                    android:text="银行卡类型"
+                    android:textColor="@color/black"
+                    android:textSize="@dimen/text_size" />
+
+                <TextView
+                    android:id="@+id/tvKaihuhang"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="5.0dip"
+                    android:background="@drawable/edit_search"
+                    android:clickable="true"
+                    android:drawableRight="@drawable/arrow_right"
+                    android:gravity="center_vertical"
+                    android:hint="@string/hint_tx"
+                    android:text=""
+                    android:onClick="onClick"
+                    android:paddingLeft="10.0dip"
+                    android:paddingRight="10.0dip"
+                    android:singleLine="true"
+                    android:textColor="@color/edit_bg"
+                    android:textSize="@dimen/text_size" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="5.0dip"
+                android:orientation="horizontal" >
+
+                <TextView
+                    android:layout_width="100.0dip"
+                    android:layout_height="wrap_content"
+                    android:drawableRight="@drawable/star"
+                    android:gravity="center_vertical"
+                    android:text="预留手机号"
+                    android:textColor="@color/black"
+                    android:textSize="@dimen/text_size" />
+
+                <EditText
+                    android:id="@+id/etPhone"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="5.0dip"
+                    android:background="@drawable/edit_search"
+                    android:gravity="center_vertical"
+                    android:inputType="text"
+                    android:paddingLeft="10.0dip"
+                    android:paddingRight="10.0dip"
+                    android:singleLine="true"
+                    android:text=""
+                    android:textColor="@color/edit_bg"
+                    android:textSize="@dimen/text_size" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/sfzlayout"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="5.0dip"
+                android:orientation="horizontal"
+                >
+
+                <TextView
+                    android:layout_width="100.0dip"
+                    android:layout_height="wrap_content"
+                    android:drawableRight="@drawable/star"
+                    android:gravity="center_vertical"
+                    android:text="身份证号"
+                    android:textColor="@color/black"
+                    android:textSize="@dimen/text_size" />
+
+                <EditText
+                    android:id="@+id/etIdentityCard"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="5.0dip"
+                    android:background="@drawable/edit_search"
+                    android:gravity="center_vertical"
+                    android:paddingLeft="10.0dip"
+                    android:paddingRight="10.0dip"
+                    android:singleLine="true"
+                    android:text=""
+                    android:textColor="@color/edit_bg"
+                    android:textSize="@dimen/text_size" />
+            </LinearLayout>
+            <LinearLayout
+                android:id="@+id/dbkkxelayout"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="5.0dip"
+                android:orientation="horizontal"
+                android:visibility="gone"
+                >
+
+                <TextView
+                    android:layout_width="100.0dip"
+                    android:layout_height="wrap_content"
+                    android:drawableRight="@drawable/star"
+                    android:gravity="center_vertical"
+                    android:text="单笔扣款限额"
+                    android:textColor="@color/black"
+                    android:textSize="@dimen/text_size" />
+
+                <EditText
+                    android:id="@+id/etdbkkxe"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="5.0dip"
+                    android:background="@drawable/edit_search"
+                    android:gravity="center_vertical"
+                    android:paddingLeft="10.0dip"
+                    android:paddingRight="10.0dip"
+                    android:singleLine="true"
+                    android:text=""
+                    android:inputType="number"
+                    android:textColor="@color/edit_bg"
+                    android:textSize="@dimen/text_size" />
+            </LinearLayout>
+            <LinearLayout
+                android:id="@+id/mtxelayout"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="5.0dip"
+                android:orientation="horizontal"
+                android:visibility="gone"
+                >
+
+                <TextView
+                    android:layout_width="100.0dip"
+                    android:layout_height="wrap_content"
+                    android:drawableRight="@drawable/star"
+                    android:gravity="center_vertical"
+                    android:text="每天扣款限额"
+                    android:textColor="@color/black"
+                    android:textSize="@dimen/text_size" />
+
+                <EditText
+                    android:id="@+id/etrljkkxe"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="5.0dip"
+                    android:background="@drawable/edit_search"
+                    android:gravity="center_vertical"
+                    android:paddingLeft="10.0dip"
+                    android:paddingRight="10.0dip"
+                    android:singleLine="true"
+                    android:inputType="number"
+                    android:text=""
+                    android:textColor="@color/edit_bg"
+                    android:textSize="@dimen/text_size" />
+            </LinearLayout>
+            <LinearLayout
+                android:id="@+id/zkkxelayout"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="5.0dip"
+                android:orientation="horizontal"
+                android:visibility="gone"
+                >
+
+                <TextView
+                    android:layout_width="100.0dip"
+                    android:layout_height="wrap_content"
+                    android:drawableRight="@drawable/star"
+                    android:gravity="center_vertical"
+                    android:text="总扣款限额"
+                    android:textColor="@color/black"
+                    android:textSize="@dimen/text_size" />
+
+                <EditText
+                    android:id="@+id/etzkkxe"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="5.0dip"
+                    android:background="@drawable/edit_search"
+                    android:gravity="center_vertical"
+                    android:paddingLeft="10.0dip"
+                    android:paddingRight="10.0dip"
+                    android:singleLine="true"
+                    android:inputType="number"
+                    android:text=""
+                    android:textColor="@color/edit_bg"
+                    android:textSize="@dimen/text_size" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="5.0dip"
+                android:orientation="horizontal" >
+
+                <TextView
+                    android:layout_width="100.0dip"
+                    android:layout_height="wrap_content"
+                    android:drawableRight="@drawable/star"
+                    android:gravity="center_vertical"
+                    android:text="短信验证码"
+                    android:textColor="@color/black"
+                    android:textSize="@dimen/text_size" />
+                <EditText
+                    android:id="@+id/etMsgCode"
+                    android:layout_width="120dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="5.0dip"
+                    android:background="@drawable/edit_search"
+                    android:gravity="center_vertical"
+                    android:inputType="text"
+                    android:paddingLeft="10.0dip"
+                    android:paddingRight="10.0dip"
+                    android:singleLine="true"
+                    android:textColor="@color/edit_bg"
+                    android:textSize="@dimen/text_size" />
+                <Button
+                    android:id="@+id/mBtnYanzhengma"
+                    android:layout_width="100dp"
+                    android:layout_height="40dp"
+                    android:text="获取验证码"
+                    android:background="@color/blue"
+                    android:textSize="12sp"
+                    android:gravity="center"
+                    android:textColor="@color/white"
+                    android:layout_marginLeft="5dp"/>
+            </LinearLayout>
+
+
+
+            <LinearLayout
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_marginBottom="30.0dip"
+                android:layout_marginTop="10.0dip"
+                android:orientation="vertical" >
+
+                <Button
+                    android:id="@+id/btn_submit"
+                    android:layout_width="200.0dip"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_horizontal"
+                    android:background="@drawable/shape_btn_selector"
+                    android:onClick="onClick"
+                    android:text="提  交"
+                    android:textColor="@color/white"
+                    android:textSize="18.0sp"
+                    android:visibility="visible" />
+            </LinearLayout>
+
+        </LinearLayout>
+    </ScrollView>
+
+</LinearLayout>

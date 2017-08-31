@@ -1,0 +1,242 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:materialdesign="http://schemas.android.com/apk/res-auto"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:background="@color/white"
+    android:clipToPadding="true"
+    android:fitsSystemWindows="true"
+  >
+
+    <LinearLayout
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:background="@color/bg"
+        android:orientation="vertical"
+        android:paddingBottom="10.0dip" >
+
+        <RelativeLayout
+            android:id="@+id/rl_title"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:visibility="visible" >
+            <LinearLayout
+                android:id="@+id/def_head_back"
+                android:layout_width="wrap_content"
+                android:layout_height="50dp"
+                android:layout_gravity="top|left"
+                android:gravity="center_vertical"
+                >
+                <com.gc.materialdesign.views.ButtonIcon
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginRight="2dp"
+                    android:background="@color/click_ripple_view"
+                    materialdesign:iconDrawable="@drawable/ic_back_black"
+                    android:onClick="back"/>
+            </LinearLayout>
+
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerInParent="true"
+                android:text="登录"
+                android:textColor="@color/text_title"
+                android:textSize="20sp" />
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="150dp" >
+
+            <ImageView
+                android:layout_width="80dp"
+                android:layout_height="80dp"
+                android:layout_centerInParent="true"
+                android:scaleType="fitXY"
+                android:src="@drawable/ic_launcher" />
+        </RelativeLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:gravity="center_vertical"
+            android:orientation="horizontal"
+            android:paddingLeft="15dp"
+            android:paddingRight="15dp" >
+
+            <ImageView
+                android:layout_width="25dp"
+                android:layout_height="25dp"
+                android:src="@drawable/ic_username" />
+
+            <com.szmy.pigapp.widget.ClearEditText
+                android:id="@+id/et_username"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginLeft="15dp"
+                android:background="@null"
+                android:drawablePadding="5dp"
+                android:drawableRight="@drawable/input_delete"
+                android:hint="请输入用户名"
+                android:imeOptions="actionNext"
+                android:singleLine="true"
+                android:textSize="15sp" />
+        </LinearLayout>
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:layout_marginLeft="15dp"
+            android:layout_marginRight="15dp"
+            android:background="#e2e2e2" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:gravity="center_vertical"
+            android:orientation="horizontal"
+            android:paddingLeft="15dp"
+            android:paddingRight="15dp" >
+
+            <ImageView
+                android:layout_width="25dp"
+                android:layout_height="25dp"
+                android:src="@drawable/ic_password" />
+
+            <com.szmy.pigapp.widget.ClearEditText
+                android:id="@+id/et_password"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginLeft="15dp"
+                android:background="@null"
+                android:drawablePadding="5dp"
+                android:drawableRight="@drawable/input_delete"
+                android:hint="请输入密码"
+                android:imeOptions="actionDone"
+                android:password="true"
+                android:singleLine="true"
+                android:textSize="15sp" />
+        </LinearLayout>
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:layout_marginLeft="15dp"
+            android:layout_marginRight="15dp"
+            android:background="#e2e2e2" />
+
+        <com.gc.materialdesign.views.ButtonRectangle
+            android:id="@+id/btn_login"
+            android:layout_width="fill_parent"
+            android:layout_height="45dp"
+            android:layout_marginLeft="12.0dip"
+            android:layout_marginRight="12.0dip"
+            android:layout_marginTop="15dp"
+            android:background="@color/red"
+            android:singleLine="true"
+            android:text="登录"
+            android:textColor="#ffffffff"
+             />
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="40.0dip"
+            android:layout_marginLeft="15dip"
+            android:layout_marginRight="15dip"
+            android:layout_marginTop="15.0dip" >
+
+            <com.gc.materialdesign.views.RippleTextView2
+                android:id="@+id/textView2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:gravity="center"
+                android:text="注册"
+                android:textColor="@color/register"
+                android:textSize="16sp" />
+
+            <com.gc.materialdesign.views.RippleTextView2
+                android:id="@+id/tv_forget_password"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:text="忘记密码"
+                android:textColor="@color/register"
+                android:textSize="16sp"
+                />
+        </RelativeLayout>
+    </LinearLayout>
+    <LinearLayout
+        android:id="@+id/editlayout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/bg"
+        android:orientation="horizontal"
+       android:layout_above="@+id/text"
+        android:layout_marginBottom="40dp"
+        android:visibility="gone">
+
+        <LinearLayout
+            android:id="@+id/qq_login_btn"
+            android:layout_width="0dp"
+            android:layout_height="fill_parent"
+            android:gravity="center"
+            android:layout_weight="1"
+            android:orientation="vertical"
+            >
+
+            <ImageView
+                android:id="@+id/imageView1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@drawable/qq_login" />
+
+            <TextView
+                android:id="@+id/textView1"
+                android:layout_marginTop="10dp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="QQ登录"
+                android:textColor="@color/gray"
+                android:textSize="13sp"/>
+        </LinearLayout>
+        <LinearLayout
+            android:id="@+id/wx_login_btn"
+            android:layout_width="0dp"
+            android:layout_height="fill_parent"
+            android:gravity="center"
+            android:layout_weight="1"
+            android:orientation="vertical"
+            >
+
+            <ImageView
+                android:id="@+id/imageView2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@drawable/wx_login" />
+
+            <TextView
+                android:id="@+id/wxbtn"
+                android:layout_marginTop="10dp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="微信登录"
+                android:textColor="@color/gray"
+                android:textSize="13sp"/>
+        </LinearLayout>
+
+    </LinearLayout>
+    <TextView
+        android:id="@+id/text"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_marginBottom="15.0dip"
+        android:gravity="center"
+        android:text="河南神州牧易电子商务有限公司"
+        android:textColor="@color/gray"
+        android:textSize="16sp" />
+
+</RelativeLayout>

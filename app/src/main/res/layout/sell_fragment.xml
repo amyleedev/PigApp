@@ -1,0 +1,42 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+     >
+    
+    <LinearLayout 
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:visibility="gone">
+       
+         <Button
+             android:id="@+id/seachbtn"
+             android:layout_width="wrap_content"
+             android:layout_height="wrap_content"
+             android:background="@null"
+           android:textSize="15sp"
+             android:text="区  域"
+             android:drawableRight="@drawable/down"
+             android:layout_marginLeft="18dp"
+             />      
+             <TextView 
+                 android:layout_width="1dp"
+                 android:layout_height="wrap_content"
+                 android:text="|"
+                 android:layout_marginLeft="5dp"/>
+    </LinearLayout>
+ 
+  
+
+   <com.szmy.pigapp.widget.XListView
+       android:id="@+id/info_framgment_xlistview"
+       android:listSelector="@drawable/sliding_list_item_bg"
+       android:layout_width="fill_parent"
+       android:layout_height="fill_parent" 
+       android:cacheColorHint="#00000000"
+       android:drawSelectorOnTop="false"
+        >
+   </com.szmy.pigapp.widget.XListView>
+</LinearLayout>

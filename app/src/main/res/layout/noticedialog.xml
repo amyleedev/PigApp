@@ -1,0 +1,118 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/dialog_rootView"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#55000000"
+    android:padding="32dp"
+     android:clipToPadding="true"
+    android:fitsSystemWindows="true"
+     >
+
+    <RelativeLayout
+        android:id="@+id/contentDialog"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true"
+        android:background="@drawable/dialog_background"
+        android:paddingTop="24dp"
+        android:paddingBottom="24dp">
+<RelativeLayout
+    android:id="@+id/ll_title"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:gravity="center_vertical"
+    android:paddingLeft="10dp"
+    >
+    <TextView
+        android:id="@+id/tip"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text=" 未读消息"
+        android:textSize="15sp"
+        android:textColor="@color/text_title_gray"
+        android:drawableLeft="@drawable/ic_notice"
+        android:layout_alignParentLeft="true"
+        android:layout_centerVertical="true"/>
+    <com.gc.materialdesign.views.ButtonFlat
+        android:id="@+id/button_close"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="关闭"
+        android:background="@color/red"
+        android:layout_alignParentRight="true"/>
+
+</RelativeLayout>
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:background="@color/gray_line_color"
+            android:layout_below="@id/ll_title"
+            android:id="@+id/view_line"
+            android:layout_marginBottom="10dp"/>
+        <TextView
+            android:id="@+id/title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Title"
+            android:layout_below="@id/view_line"
+            android:textSize="18sp"
+            android:textColor="#000"
+            android:paddingLeft="24dp"
+            android:paddingRight="24dp"/>
+
+        <ScrollView
+            android:id="@+id/message_scrollView"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/title"
+            android:paddingBottom="50dp"
+            android:paddingRight="24dp"
+            android:paddingLeft="24dp"
+            android:paddingTop="6dp"
+            android:scrollbarSize="2dp"
+            android:scrollbarThumbVertical="@color/thumbColor" >
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="vertical" >
+
+                <TextView
+                    android:id="@+id/message"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="magna aliqua. Ut enimad minimfs dsdfsf"
+                    android:textColor="@color/text_title"
+                    android:textSize="16sp"
+                    android:textIsSelectable="true"/>
+
+            </LinearLayout>
+        </ScrollView>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignBottom="@id/message_scrollView"
+            android:layout_marginTop="24dp"
+            android:gravity="right"
+            android:orientation="horizontal" >
+
+            <com.gc.materialdesign.views.ButtonFlat
+                android:id="@+id/button_cancel"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="立即查看"
+                android:background="@color/black"
+                 />
+
+            <com.gc.materialdesign.views.ButtonFlat
+                android:id="@+id/button_accept"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="下一条"
+                android:background="@color/red" />
+        </LinearLayout>
+    </RelativeLayout>
+
+</RelativeLayout>

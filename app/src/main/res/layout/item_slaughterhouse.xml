@@ -1,0 +1,103 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical" 
+    android:layout_marginTop="3dp">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="horizontal" >
+
+        <ImageView
+            android:id="@+id/imageview_slaughterhouse"
+            android:layout_width="70dp"
+            android:layout_height="70dp"
+            android:scaleType="fitXY"
+            android:src="@drawable/default_title" 
+            android:layout_marginBottom="10dp" 
+            android:layout_marginTop="10dp"
+            android:layout_marginLeft="14dp"/>
+
+        
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginLeft="10dp"
+            android:layout_marginTop="7dp" >
+
+            <TextView
+                android:id="@+id/slaughterhouse_name"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:ellipsize="end"
+                android:singleLine="true"
+                android:text="王先生"
+                android:textColor="#ff000000"
+                android:textSize="16sp" />
+
+            <TextView
+                android:id="@+id/slaughterhouse_address"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="30dp"
+                android:layout_marginTop="4dp"
+                android:layout_below="@+id/slaughterhouse_name"
+                android:layout_toRightOf="@+id/slaughterhouse_business"
+                android:ellipsize="end"
+                android:singleLine="true"
+                android:text="河南省 郑州市"
+                android:textColor="#ffaaaaaa"
+                android:textSize="14sp" />
+
+            
+            <TextView
+                android:id="@+id/slaughterhouse_business"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/slaughterhouse_name"
+                android:layout_marginTop="4dp"
+                android:ellipsize="end"
+                android:singleLine="true"
+                android:text="养猪个体户"
+                android:textColor="#ffff5511"
+                android:textSize="14sp" />
+
+            <TextView
+                android:id="@+id/slaughterhouse_intro"
+                android:layout_width="160dp"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/slaughterhouse_business"
+                 android:layout_marginTop="4dp"
+                android:layout_marginRight="8dp"
+                
+                android:ellipsize="end"
+                android:singleLine="true"
+                android:text="收猪要求收猪要求收猪要求收猪要求收猪要求收猪要求收猪要求收猪要求收猪要求收猪要求收猪要求收猪要求收猪要求收猪要求收猪要求 "
+                android:textColor="#ffaaaaaa"
+                android:textSize="14sp" />
+            
+             <TextView
+                android:id="@+id/slaughterhouse_distance"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="4dp"
+                android:layout_marginRight="10dp"
+                android:layout_alignParentRight="true"
+                android:layout_below="@+id/slaughterhouse_business"
+                android:text="945km "
+                android:textColor="#ffaaaaaa"
+                android:textSize="14sp" />
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1px"
+                android:background="@color/cutting_line" 
+                android:layout_below="@+id/slaughterhouse_intro"
+                android:layout_marginTop="14dp"
+                android:layout_marginRight="3dp"/>
+        </RelativeLayout>
+    </LinearLayout>
+
+</LinearLayout>

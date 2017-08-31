@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:background="@color/bg_title_white"
+    android:clipToPadding="true"
+    android:fitsSystemWindows="true"
+    android:orientation="vertical" >
+
+    <include layout="@layout/view_def_head" />
+
+    <TextView
+        android:id="@+id/tv_protocol_content"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:background="@color/white"
+        android:padding="5dp"
+        android:scrollbars="vertical"
+        android:singleLine="false"
+        android:text="生猪运输协议
+                                                 
+\n合同编号：         
+\n甲方：河南神州牧易电子商务有限公司                 
+\n联系人:___________
+\n乙方：____________________________                 
+\n联系人:___________
+\n丙方：___________                               
+\n联系人:___________          
+\n签订时间: _______年______月______日 
+\n签订地点:________
+ 
+     \n经甲、乙、丙三方友好协商，以自愿、平等互利为原则，乙方负责甲方生猪调运，提供80-160头运输车辆，运费根据公里数、季节有所不同，按以下情况协商解决。
+     仔猪：30～60斤的能装300～400头
+ 
+     \n整车运输生猪80-160头。
+     \n运费：500公里以内7-10元/公里      放空费  300元
+     \n运费：500公里以外6-9元/公里    放空费700-1000元
+     \n运输途中死亡一头扣运费300元，死亡3头以上（不含3头）按均价赔偿。
+     \n所有参运车辆必须参加货物保险或新鲜活货物保险，所有承运的生猪都必须经过检疫，保证健康、安全、合格，否则死亡概不负责。
+     \n运输车辆装好猪后必须按货主要求时间到达（除不可抗拒的自然灾害）否则运宰车辆应赔偿误宰费1000-1500元，若遇交通事故或堵车应第一时间通知货主，做好应对准备。    
+     \n凡是装猪的地方必须保证车辆能够畅通，否则车辆有权拒绝装猪，损失由对方负责。
+\n补充条款：_____________________________________________
+\n其他事宜双方协商解决。
+\n甲方代表：______________________      
+\n联系方式：______________________   
+\n单位地址：______________________    
+\n账号：__________________________     
+\n户名：__________________________    
+\n开户行：_______________________    
+\n乙方代表：______________________
+\n联系方式：______________________
+\n单位地址：______________________
+\n账号：__________________________
+\n户名：__________________________ 
+\n开户行：________________________
+ 
+ 
+ 
+ 
+ 
+ 
+\n甲方（盖章）：河南神州牧易电子商务有限公司   
+\n乙方（盖章）：_________________________
+ 
+ 
+\n   年   月   日"
+        android:textColor="@color/text_title" />
+
+</LinearLayout>

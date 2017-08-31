@@ -1,0 +1,195 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical" >
+<include layout="@layout/view_def_head" android:id="@+id/top"
+    android:visibility="gone"/>
+    <EditText
+        android:id="@+id/et_to_search"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="5.0dip"
+        android:background="@drawable/search_edit_style"
+        android:clickable="true"
+        android:drawableLeft="@drawable/search_new"
+        android:drawablePadding="5.0dip"
+        android:focusable="true"
+        android:hint="输入用户名关键字查询"
+        android:inputType="text"
+        android:paddingBottom="5.0dip"
+        android:paddingTop="5.0dip"
+        android:selectAllOnFocus="true"
+        android:textColor="@color/black"
+        android:textColorHint="@color/gray"
+        android:textSize="15.0sp"
+        android:imeOptions="actionSearch"/>
+
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="40dp"
+        android:background="@color/bg_main" >
+
+        <LinearLayout
+            android:id="@+id/ll_choose"
+            android:layout_width="match_parent"
+            android:layout_height="40dp"
+            android:background="@color/white"
+            android:orientation="vertical" >
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1px"
+                android:layout_gravity="top"
+                android:background="#E5E5E5" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_weight="1"
+                android:orientation="horizontal" >
+
+                <LinearLayout
+                    android:id="@+id/ll_buy"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:gravity="center" >
+
+                    <ImageView
+                        android:id="@+id/img_buy"
+                        android:layout_width="20dp"
+                        android:layout_height="20dp"
+                        android:src="@drawable/ic_pigtypeg" />
+
+                    <TextView
+                        android:id="@+id/tv_buy"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:padding="3dp"
+                        android:text="生猪类别"
+                        android:textColor="@color/text_details"
+                        android:textSize="12sp" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/ll_sell"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:gravity="center" >
+
+                    <ImageView
+                        android:id="@+id/img_sell"
+                        android:layout_width="20dp"
+                        android:layout_height="20dp"
+                        android:src="@drawable/ic_priceuserg" />
+
+                    <TextView
+                        android:id="@+id/tv_sell"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:padding="3dp"
+                        android:text="角色分类"
+                        android:textColor="@color/text_details"
+                        android:textSize="12sp" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/ll_address"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:gravity="center"
+                    >
+
+                    <ImageView
+                        android:id="@+id/img_address"
+                        android:layout_width="20dp"
+                        android:layout_height="20dp"
+                        android:src="@drawable/order_address" />
+
+                    <TextView
+                        android:id="@+id/tv_address"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:padding="3dp"
+                        android:text="区域"
+                        android:textColor="@color/text_details"
+                        android:textSize="12sp" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/ll_bolting"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:gravity="center"
+                    >
+
+                    <ImageView
+                        android:id="@+id/img_bolting"
+                        android:layout_width="20dp"
+                        android:layout_height="20dp"
+                        android:src="@drawable/order_bolting" />
+
+                    <TextView
+                        android:id="@+id/tv_bolting"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:padding="3dp"
+                        android:text="报价类型"
+                        android:textColor="@color/text_details"
+                        android:textSize="12sp" />
+                </LinearLayout>
+            </LinearLayout>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1px"
+                android:layout_gravity="bottom"
+                android:background="#E5E5E5" />
+        </LinearLayout>
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1px"
+            android:layout_gravity="bottom"
+            android:background="#E5E5E5" />
+    </FrameLayout>
+
+    <LinearLayout
+        android:id="@+id/contentlayout"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/bg_main"
+        android:orientation="vertical" >
+
+        <include
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            layout="@layout/loading" />
+
+        <include
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            layout="@layout/load_failure"
+            android:visibility="gone" />
+
+        <com.szmy.pigapp.widget.MySwipeRefreshLayout
+            android:id="@+id/srl_data"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:visibility="gone" >
+
+            <ListView
+                android:id="@+id/lv"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:fastScrollEnabled="true"
+                android:focusable="false"
+                android:footerDividersEnabled="false"
+                android:scrollbars="none" />
+        </com.szmy.pigapp.widget.MySwipeRefreshLayout>
+    </LinearLayout>
+
+</LinearLayout>

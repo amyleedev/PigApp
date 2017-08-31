@@ -1,0 +1,198 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical" >
+
+    <RelativeLayout
+        android:id="@+id/layout1"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:background="@color/bg_title_white" >
+
+        <TextView
+            android:id="@+id/def_head_fenlei"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="12dp"
+            android:gravity="center"
+            android:text="分类"
+            android:textColor="@color/red"
+            android:textSize="16sp" />
+
+        <TextView
+            android:id="@+id/def_head_tv"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:text="@string/def_title"
+            android:textColor="@color/text_title_gray"
+            android:textSize="20sp" />
+
+        <TextView
+            android:id="@+id/add_btn"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:layout_marginRight="12dp"
+            android:gravity="center"
+            android:text="搜索"
+            android:textColor="@color/red"
+            android:textSize="16sp" />
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1px"
+            android:layout_alignParentBottom="true"
+            android:background="@color/cutting_line" />
+    </RelativeLayout>
+
+    <LinearLayout
+        android:id="@+id/layout2"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/layout1"
+        android:gravity="center_horizontal"
+        android:orientation="horizontal"
+        android:visibility="gone" >
+
+        <Button
+            android:id="@+id/seachCatalogsbtn"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:background="@null"
+            android:drawableRight="@drawable/downdark"
+            android:text="分  类"
+            android:textSize="15sp" />
+
+        <TextView
+            android:layout_width="1dp"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="5dp"
+            android:layout_weight="0"
+            android:background="@drawable/img_line"
+            android:visibility="invisible" />
+
+        <Button
+            android:id="@+id/seachremenbtn"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:background="@null"
+            android:drawableRight="@drawable/downdark"
+            android:text="热  门"
+            android:textSize="15sp"
+            android:visibility="invisible" />
+
+        <TextView
+            android:layout_width="1dp"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="5dp"
+            android:layout_weight="0"
+            android:background="@drawable/img_line"
+            android:visibility="invisible" />
+
+        <Button
+            android:id="@+id/seachjiagebtn"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:background="@null"
+            android:drawableRight="@drawable/downdark"
+            android:text="价  格"
+            android:textSize="15sp"
+            android:visibility="invisible" />
+
+        <TextView
+            android:layout_width="1dp"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="5dp"
+            android:layout_weight="0"
+            android:background="@drawable/img_line"
+            android:visibility="invisible" />
+
+        <Button
+            android:id="@+id/seachzuixinbtn"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:background="@null"
+            android:drawableRight="@drawable/downdark"
+            android:text="最  新"
+            android:textSize="15sp"
+            android:visibility="invisible" />
+    </LinearLayout>
+
+    <com.szmy.pigapp.widget.AutoListView
+        android:id="@+id/lstv"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/layout2" />
+
+    <FrameLayout
+        android:id="@+id/fl_search"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:background="#55000000"
+        android:clickable="true"
+        android:visibility="gone" >
+
+        <RelativeLayout
+            android:layout_width="fill_parent"
+            android:layout_height="@dimen/info_list_item_height"
+            android:background="@color/menu_bg" >
+
+            <Button
+                android:id="@+id/btn_search"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:layout_centerVertical="true"
+                android:background="@color/menu_bg"
+                android:gravity="center"
+                android:padding="10.0dip"
+                android:text="取消"
+                android:textColor="@color/white"
+                android:textSize="16.0sp" />
+
+            <EditText
+                android:id="@+id/et_search"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_centerInParent="true"
+                android:layout_marginLeft="5.0dip"
+                android:layout_marginRight="5.0dip"
+                android:layout_toLeftOf="@+id/btn_search"
+                android:background="@drawable/search_edit_style"
+                android:drawableLeft="@drawable/search_new"
+                android:drawablePadding="5.0dip"
+                android:focusable="true"
+                android:hint="输入商品关键字查询"
+                android:inputType="text"
+                android:paddingBottom="5.0dip"
+                android:paddingLeft="13.0dip"
+                android:paddingRight="13.0dip"
+                android:paddingTop="5.0dip"
+                android:selectAllOnFocus="true"
+                android:singleLine="true"
+                android:textColor="@color/black"
+                android:textSize="16.0sp" />
+
+            <ImageButton
+                android:id="@+id/ib_cancel"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_marginRight="15.0dip"
+                android:layout_toLeftOf="@+id/btn_search"
+                android:background="@color/white"
+                android:padding="5.0dip"
+                android:src="@drawable/cancel_new"
+                android:visibility="gone" />
+        </RelativeLayout>
+    </FrameLayout>
+
+</RelativeLayout>

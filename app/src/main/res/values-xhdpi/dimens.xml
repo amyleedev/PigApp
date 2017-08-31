@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <dimen name="main_title">20sp</dimen>
+    <dimen name="main_details">11sp</dimen>
+    <dimen name="main_type">11sp</dimen>
+    <dimen name="action_bar_padding">80dp</dimen>
+</resources>

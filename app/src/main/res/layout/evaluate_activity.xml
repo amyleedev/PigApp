@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical" 
+    android:background="@color/bg_title_white"
+    android:clipToPadding="true"
+    android:fitsSystemWindows="true">
+
+    <include layout="@layout/view_def_head" />
+<LinearLayout 
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:orientation="vertical"
+    android:background="@color/bg">
+    <LinearLayout
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="5.0dip"
+        android:orientation="horizontal" 
+        android:gravity="center_vertical">
+
+        <TextView
+            android:layout_width="90.0dip"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="5.0dip"
+            android:text="等级评分"
+            android:textColor="@color/black"
+            android:textSize="@dimen/text_size" />
+
+        <RatingBar
+            android:id="@+id/app_ratingbar"
+            style="@style/MyRatingBar"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:numStars="5" 
+            />
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="5.0dip"
+        android:orientation="horizontal" >
+
+        <EditText
+            android:id="@+id/ecaluate_et"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="5.0dip"
+            android:background="@drawable/edit_search"
+            android:gravity="left|top"
+            android:hint="商品评价"
+            android:minLines="4"
+            android:paddingLeft="10.0dip"
+            android:paddingRight="10.0dip"
+            android:textColor="@color/edit_bg"
+            android:textSize="@dimen/text_size" />
+    </LinearLayout>
+
+    
+    <Button
+            android:id="@+id/btn_submit"
+            android:layout_width="fill_parent"
+            android:layout_height="45dp"
+            android:layout_marginLeft="12.0dip"
+            android:layout_marginRight="12.0dip"
+            android:layout_marginTop="15dp"
+            android:background="@drawable/shape_btn_selector"
+            android:singleLine="true"
+            android:text="提交评价"
+            android:textColor="#ffffffff"
+            android:textSize="16sp" />
+</LinearLayout>
+    
+</LinearLayout>

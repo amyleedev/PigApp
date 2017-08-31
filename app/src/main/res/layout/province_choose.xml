@@ -1,0 +1,128 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical" >
+    
+
+                  <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginBottom="10dp"
+                        android:layout_marginLeft="10dp"
+                        android:layout_marginRight="10dp"
+                        android:orientation="vertical" >
+
+                        <RelativeLayout 
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="10dp"
+                            android:layout_gravity="center_vertical"
+                            >
+                            <TextView 
+                                android:id="@+id/shengfentx"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="省份："
+                                android:layout_alignParentLeft="true"/>
+                            <Spinner 
+                                android:layout_width="100dp"
+                                android:layout_height="wrap_content"
+                                android:id="@+id/province_spinner"
+                                android:layout_toRightOf="@+id/shengfentx"/>
+                            <Button
+            					android:id="@+id/ok_btn"
+            					android:layout_width="wrap_content"
+            					android:layout_height="wrap_content"
+            					android:background="@drawable/shape_btn_selector"
+            					android:text="搜   索"
+            					android:textSize="18sp"
+            					android:layout_alignParentRight="true"
+            					android:textColor="@color/white" />
+                        </RelativeLayout>
+ 						<RelativeLayout 
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="10dp"
+                            android:layout_gravity="center_vertical"
+                            >
+                            <TextView 
+                                android:id="@+id/citytx"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="城市："
+                                android:layout_alignParentLeft="true"/>
+                            <Spinner 
+                                android:layout_width="100dp"
+                                android:layout_height="wrap_content"
+                                android:id="@+id/city_spinner"
+                                android:layout_toRightOf="@+id/citytx"/>
+                            <Button
+            					android:id="@+id/ok_btn2"
+            					android:layout_width="wrap_content"
+            					android:layout_height="wrap_content"
+            					android:background="@drawable/shape_btn_selector"
+            					android:text="搜   索"
+            					android:textSize="18sp"
+            					android:layout_alignParentRight="true"
+            					android:textColor="@color/white" />
+                        </RelativeLayout>
+                         <RelativeLayout 
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="10dp"
+                            android:layout_gravity="center_vertical"
+                            >
+                            <TextView 
+                                android:id="@+id/quxiantx"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="区县："
+                                android:layout_alignParentLeft="true"/>
+                            <Spinner 
+                                android:layout_width="100dp"
+                                android:layout_height="wrap_content"
+                                android:id="@+id/county_spinner"
+                                android:layout_toRightOf="@+id/quxiantx"/>
+                            <Button
+            					android:id="@+id/ok_btn3"
+            					android:layout_width="wrap_content"
+            					android:layout_height="wrap_content"
+            					android:background="@drawable/shape_btn_selector"
+            					android:text="搜   索"
+            					android:textSize="18sp"
+            					android:layout_alignParentRight="true"
+            					android:textColor="@color/white" />
+                        </RelativeLayout>
+                      
+                    </LinearLayout> 
+    
+    <EditText 
+        android:id="@+id/seachEt"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:enabled="false"
+        android:visibility="gone"/>
+    <LinearLayout
+        android:layout_width="fill_parent"
+        android:layout_height="42.0dip"
+        android:layout_marginLeft="@dimen/second_right"
+        android:layout_marginRight="@dimen/second_right"
+        android:layout_marginTop="10.0dip"
+        android:layout_marginBottom="10dp"
+        android:gravity="center"
+        android:orientation="horizontal" >
+
+        <Button
+            android:id="@+id/exit_btn"
+            android:layout_width="100dp"
+            android:layout_height="fill_parent"
+            android:background="@drawable/shape_btn_selector"
+            android:text="取  消"
+           android:visibility="gone"
+            android:textColor="@color/white" >
+        </Button>
+       
+    </LinearLayout>
+    
+</LinearLayout>

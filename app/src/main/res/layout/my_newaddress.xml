@@ -1,0 +1,236 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/bg_title_white"
+    android:clipToPadding="true"
+    android:fitsSystemWindows="true"
+    android:orientation="vertical" >
+
+    <include layout="@layout/view_def_head" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical" >
+
+        <LinearLayout
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="10.0dip"
+            android:orientation="horizontal" >
+
+            <TextView
+                android:layout_width="90.0dip"
+                android:layout_height="wrap_content"
+                android:drawableRight="@drawable/star"
+                android:gravity="center_vertical"
+                android:text="收货人"
+                android:textColor="@color/text_details"
+                android:textSize="@dimen/text_size" />
+
+            <EditText
+                android:id="@+id/et_name"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="5.0dip"
+                android:background="@drawable/edit_search"
+                android:gravity="center_vertical"
+                android:paddingLeft="10.0dip"
+                android:paddingRight="10.0dip"
+                android:singleLine="true"
+                android:textColor="@color/edit_bg"
+                android:textSize="@dimen/text_size" />
+        </LinearLayout>
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1px"
+            android:layout_marginLeft="8dp"
+            android:layout_marginRight="8dp"
+            android:background="@color/umeng_fb_gray" />
+
+        <LinearLayout
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="10.0dip"
+            android:orientation="horizontal" >
+
+            <TextView
+                android:layout_width="90.0dip"
+                android:layout_height="wrap_content"
+                android:drawableRight="@drawable/star"
+                android:gravity="center_vertical"
+                android:text="联系电话"
+                android:textColor="@color/text_details"
+                android:textSize="@dimen/text_size" />
+
+            <EditText
+                android:id="@+id/et_mobile"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="5.0dip"
+                android:background="@drawable/edit_search"
+                android:digits="0123456789"
+                android:gravity="center_vertical"
+                android:maxLength="11"
+                android:paddingLeft="10.0dip"
+                android:paddingRight="10.0dip"
+                android:singleLine="true"
+                android:textColor="@color/edit_bg"
+                android:textSize="@dimen/text_size"
+               android:inputType="number"/>
+        </LinearLayout>
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1px"
+            android:layout_marginLeft="8dp"
+            android:layout_marginRight="8dp"
+            android:background="@color/umeng_fb_gray" />
+
+        <LinearLayout
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="10.0dip"
+            android:orientation="horizontal" >
+
+            <TextView
+                android:layout_width="90.0dip"
+                android:layout_height="wrap_content"
+                android:drawableRight="@drawable/star"
+                android:gravity="center_vertical"
+                android:text="所在地区"
+                android:textColor="@color/text_details"
+                android:textSize="@dimen/text_size" />
+
+            <TextView
+                android:id="@+id/et_area"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="5.0dip"
+                android:background="@drawable/edit_search"
+                android:clickable="true"
+                android:drawableRight="@drawable/arrow_right"
+                android:gravity="center_vertical"
+                android:hint="请选择"
+                android:paddingLeft="10.0dip"
+                android:paddingRight="10.0dip"
+                android:singleLine="true"
+                android:textColor="@color/edit_bg"
+                android:textSize="@dimen/text_size" />
+        </LinearLayout>
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1px"
+            android:layout_marginLeft="8dp"
+            android:layout_marginRight="8dp"
+            android:background="@color/umeng_fb_gray" />
+
+        <LinearLayout
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="10.0dip"
+            android:orientation="horizontal" >
+
+            <TextView
+                android:layout_width="90.0dip"
+                android:layout_height="wrap_content"
+                android:drawableRight="@drawable/star"
+                android:gravity="center_vertical"
+                android:text="邮    编"
+                android:textColor="@color/text_details"
+                android:textSize="@dimen/text_size" />
+
+            <EditText
+                android:id="@+id/et_youbian"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="5.0dip"
+                android:background="@drawable/edit_search"
+                android:digits="0123456789"
+                android:gravity="center_vertical"
+                android:maxLength="6"
+                android:paddingLeft="10.0dip"
+                android:paddingRight="10.0dip"
+                android:singleLine="true"
+                android:textColor="@color/edit_bg"
+                android:textSize="@dimen/text_size"
+                android:inputType="number"/>
+        </LinearLayout>
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1px"
+            android:layout_marginLeft="8dp"
+            android:layout_marginRight="8dp"
+            android:background="@color/umeng_fb_gray" />
+
+        <LinearLayout
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="10.0dip"
+            android:orientation="horizontal" >
+
+            <EditText
+                android:id="@+id/et_address"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:background="@drawable/edit_search"
+                android:gravity="top|left"
+                android:hint="请填写详细地址，不少于5个字"
+                android:minLines="3"
+                android:paddingLeft="10.0dip"
+                android:paddingRight="10.0dip"
+                android:textColor="@color/edit_bg"
+                android:textSize="@dimen/text_size"
+                android:textStyle="normal" />
+        </LinearLayout>
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:background="@color/white" >
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentLeft="true"
+                android:layout_centerVertical="true"
+                android:layout_marginLeft="10dp"
+                android:text="设置默认地址"
+                android:textColor="@color/text_details"
+                android:textSize="15sp" />
+
+            <ToggleButton
+                android:id="@+id/tb_default"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:layout_gravity="center_horizontal"
+                android:background="@android:color/transparent"
+                android:button="@drawable/ios7_btn"
+                android:checked="true"
+                android:text=""
+                android:textOff=""
+                android:textOn="" />
+        </RelativeLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent" >
+
+            <Button
+                android:id="@+id/my_set_buyaddress_address_btn"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="bottom"
+                android:background="@color/red"
+                android:text="提交收货信息"
+                android:textColor="#ffffff"
+                android:textSize="20sp" />
+        </LinearLayout>
+    </LinearLayout>
+
+</LinearLayout>

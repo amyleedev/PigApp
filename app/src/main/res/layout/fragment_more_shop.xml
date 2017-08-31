@@ -1,0 +1,935 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:ripple="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/main"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:background="@color/bg_title_white"
+    android:clipToPadding="true"
+    android:fitsSystemWindows="true"
+    android:orientation="vertical">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:background="@color/bg_title_white"
+        android:visibility="gone">
+
+        <TextView
+            android:id="@+id/backstage"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentLeft="true"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="10dp"
+            android:gravity="center"
+            android:text="后台\n管理"
+            android:textColor="@color/red"
+            android:visibility="gone" />
+
+        <TextView
+            android:id="@+id/def_head_tv"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:text="@string/def_title"
+            android:textColor="@color/text_title_gray"
+            android:textSize="20sp" />
+
+        <TextView
+            android:id="@+id/tv_menu"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:layout_marginRight="12dp"
+            android:gravity="center"
+            android:textColor="@color/red"
+            android:textSize="16sp" />
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1px"
+            android:layout_alignParentBottom="true"
+            android:background="@color/cutting_line" />
+    </RelativeLayout>
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/bg_main_gray"
+        android:orientation="vertical">
+
+        <LinearLayout
+            android:id="@+id/linearLayout1"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:focusable="true"
+            android:focusableInTouchMode="true"
+            android:gravity="top"
+            android:orientation="vertical"
+            android:paddingBottom="20dp">
+
+            <RelativeLayout
+                android:id="@+id/userinfo_layout"
+                android:layout_width="match_parent"
+                android:layout_height="120dp"
+                android:background="@drawable/bg_mine"
+                android:gravity="center_vertical"
+                android:orientation="horizontal"
+                android:layout_gravity="center">
+
+                <ImageView
+                    android:id="@+id/head_img"
+                    android:layout_width="80dp"
+                    android:layout_height="80dp"
+                    android:layout_alignParentLeft="true"
+                    android:layout_marginLeft="15dp"
+                    android:background="@drawable/bg_coner"
+                    android:contentDescription="@string/cd"
+                    android:padding="2dp"
+                    android:scaleType="centerCrop"
+                    android:layout_centerVertical="true"
+                    />
+
+                <TextView
+                    android:id="@+id/username"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:layout_toLeftOf="@+id/more_btn2"
+                    android:layout_toRightOf="@+id/head_img"
+                    android:text="点击登录"
+                    android:layout_marginLeft="30dp"
+                    android:textColor="@color/white"
+                    android:textSize="18sp" />
+
+                <ImageButton
+                    android:id="@+id/more_btn2"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:layout_alignParentRight="true"
+                    android:background="@null"
+                    android:contentDescription="@string/cd"
+                    android:scaleType="centerInside"
+                    android:src="@drawable/info_more" />
+            </RelativeLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@color/white"
+                android:orientation="horizontal"
+                android:paddingBottom="5dp"
+                android:paddingTop="5dp">
+
+                <com.gc.materialdesign.views.RippleLayout
+                    android:id="@+id/ll_sign"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:background="@drawable/bg_price"
+                    android:gravity="center"
+                    android:orientation="vertical"
+                    ripple:alphaFactor="0.7"
+                    ripple:hover="true"
+                    ripple:rippleViewColor="@color/click_ripple_view">
+
+                    <ImageView
+                        android:layout_width="25dp"
+                        android:layout_height="25dp"
+                        android:src="@drawable/everyday_sign" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="5dp"
+                        android:text="每日签到"
+                        android:textColor="@color/text_details"
+                        android:textSize="13sp" />
+                </com.gc.materialdesign.views.RippleLayout>
+
+                <View
+                    android:layout_width="1px"
+                    android:layout_height="fill_parent"
+                    android:background="@color/gray" />
+
+                <com.gc.materialdesign.views.RippleLayout
+                    android:id="@+id/mypoint_layout"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:background="@drawable/bg_price"
+                    android:gravity="center"
+                    android:orientation="vertical"
+                    ripple:alphaFactor="0.7"
+                    ripple:hover="true"
+                    ripple:rippleViewColor="@color/click_ripple_view">
+
+                    <ImageView
+                        android:layout_width="25dp"
+                        android:layout_height="25dp"
+                        android:src="@drawable/point" />
+
+                    <TextView
+                        android:id="@+id/mypoint_tv"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="5dp"
+                        android:text="账户余额"
+                        android:textColor="@color/text_details"
+                        android:textSize="13sp" />
+                </com.gc.materialdesign.views.RippleLayout>
+
+                <View
+                    android:layout_width="1px"
+                    android:layout_height="fill_parent"
+                    android:background="@color/gray" />
+
+                <com.gc.materialdesign.views.RippleLayout
+                    android:id="@+id/mytuijian_layout"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:background="@drawable/bg_price"
+                    android:gravity="center"
+                    android:orientation="vertical"
+                    ripple:alphaFactor="0.7"
+                    ripple:hover="true"
+                    ripple:rippleViewColor="@color/click_ripple_view">
+
+                    <ImageView
+                        android:layout_width="25dp"
+                        android:layout_height="25dp"
+                        android:src="@drawable/mengyou" />
+
+                    <TextView
+                        android:id="@+id/mytuijian_tv"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="5dp"
+                        android:text="我的盟友"
+                        android:textColor="@color/text_details"
+                        android:textSize="13sp" />
+                </com.gc.materialdesign.views.RippleLayout>
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/layout1"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+                <com.gc.materialdesign.views.RippleLayout
+                    android:id="@+id/mywuliu_layout"
+                    android:layout_width="match_parent"
+                    android:layout_height="50dp"
+                    android:layout_marginTop="20dp"
+                    android:background="@color/white"
+                    android:orientation="horizontal">
+
+                    <ImageView
+                        android:layout_width="25dp"
+                        android:layout_height="25dp"
+                        android:layout_gravity="center_vertical"
+                        android:layout_marginLeft="15dp"
+                        android:src="@drawable/logistics" />
+
+                    <TextView
+                        android:id="@+id/mywuliu_tv"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center_vertical"
+                        android:layout_marginLeft="10dp"
+                        android:text="我发布的物流"
+                        android:textColor="@color/text_title"
+                        android:textSize="15sp" />
+                </com.gc.materialdesign.views.RippleLayout>
+
+                <View
+                    android:layout_width="fill_parent"
+                    android:layout_height="1px"
+                    android:background="@color/gray" />
+
+                <com.gc.materialdesign.views.RippleLayout
+                    android:id="@+id/mywuliuorder_layout"
+                    android:layout_width="match_parent"
+                    android:layout_height="50dp"
+                    android:background="@color/white"
+                    android:orientation="horizontal"
+                    ripple:alphaFactor="0.7"
+                    ripple:hover="true"
+                    ripple:rippleViewColor="@color/click_ripple_view">
+
+                    <ImageView
+                        android:layout_width="25dp"
+                        android:layout_height="25dp"
+                        android:layout_gravity="center_vertical"
+                        android:layout_marginLeft="15dp"
+                        android:src="@drawable/wuliu" />
+
+                    <TextView
+                        android:id="@+id/mywuliuorder_tv"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center_vertical"
+                        android:layout_marginLeft="10dp"
+                        android:text="我的物流订单"
+                        android:textColor="@color/text_title"
+                        android:textSize="15sp" />
+                </com.gc.materialdesign.views.RippleLayout>
+
+                <View
+                    android:layout_width="fill_parent"
+                    android:layout_height="1px"
+                    android:background="@color/gray" />
+
+                <com.gc.materialdesign.views.RippleLayout
+                    android:id="@+id/myorder_layout"
+                    android:layout_width="match_parent"
+                    android:layout_height="50dp"
+                    android:background="@color/white"
+                    android:orientation="horizontal"
+                    ripple:alphaFactor="0.7"
+                    ripple:hover="true"
+                    ripple:rippleViewColor="@color/click_ripple_view">
+
+                    <ImageView
+                        android:layout_width="25dp"
+                        android:layout_height="25dp"
+                        android:layout_gravity="center_vertical"
+                        android:layout_marginLeft="15dp"
+                        android:src="@drawable/my_pig_order" />
+
+                    <TextView
+                        android:id="@+id/myorder_tv"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center_vertical"
+                        android:layout_marginLeft="10dp"
+                        android:text="我的生猪交易订单"
+                        android:textColor="@color/text_title"
+                        android:textSize="15sp" />
+                </com.gc.materialdesign.views.RippleLayout>
+
+                <View
+                    android:layout_width="fill_parent"
+                    android:layout_height="1px"
+                    android:background="@color/gray" />
+
+                <com.gc.materialdesign.views.RippleLayout
+                    android:id="@+id/myshop_layout"
+                    android:layout_width="match_parent"
+                    android:layout_height="50dp"
+                    android:background="@color/white"
+                    android:orientation="horizontal"
+                    ripple:alphaFactor="0.7"
+                    ripple:hover="true"
+                    ripple:rippleViewColor="@color/click_ripple_view">
+
+                    <ImageView
+                        android:layout_width="25dp"
+                        android:layout_height="25dp"
+                        android:layout_gravity="center_vertical"
+                        android:layout_marginLeft="15dp"
+                        android:src="@drawable/shoporder" />
+
+                    <TextView
+                        android:id="@+id/myshop_tv"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center_vertical"
+                        android:layout_marginLeft="10dp"
+                        android:text="我的牧易商城订单"
+                        android:textColor="@color/text_title"
+                        android:textSize="15sp" />
+                </com.gc.materialdesign.views.RippleLayout>
+                <View
+                    android:layout_width="fill_parent"
+                    android:layout_height="1px"
+                    android:background="@color/gray" />
+                <com.gc.materialdesign.views.RippleLayout
+                    android:id="@+id/ll_myfxs"
+                    android:layout_width="match_parent"
+                    android:layout_height="50dp"
+                    android:background="@color/white"
+                    android:orientation="horizontal"
+                    ripple:alphaFactor="0.7"
+                    ripple:hover="true"
+                    ripple:rippleViewColor="@color/click_ripple_view"
+                    android:visibility="gone"
+                    >
+
+                    <ImageView
+                        android:layout_width="25dp"
+                        android:layout_height="25dp"
+                        android:layout_gravity="center_vertical"
+                        android:layout_marginLeft="15dp"
+                        android:src="@drawable/ic_fxstc" />
+
+                    <TextView
+                        android:id="@+id/srytc_tv"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center_vertical"
+                        android:layout_marginLeft="10dp"
+                        android:text="分销提成"
+                        android:textColor="@color/text_title"
+                        android:textSize="15sp" />
+                </com.gc.materialdesign.views.RippleLayout>
+                <View
+                    android:layout_width="fill_parent"
+                    android:layout_height="1px"
+                    android:background="@color/gray" />
+
+                <com.gc.materialdesign.views.RippleLayout
+                    android:id="@+id/mycareuser_layout"
+                    android:layout_width="match_parent"
+                    android:layout_height="50dp"
+                    android:background="@color/white"
+                    android:orientation="horizontal"
+                    ripple:alphaFactor="0.7"
+                    ripple:hover="true"
+                    ripple:rippleViewColor="@color/click_ripple_view">
+
+                    <ImageView
+                        android:layout_width="25dp"
+                        android:layout_height="25dp"
+                        android:layout_gravity="center_vertical"
+                        android:layout_marginLeft="15dp"
+                        android:src="@drawable/care" />
+
+                    <TextView
+                        android:id="@+id/mycare_tv"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center_vertical"
+                        android:layout_marginLeft="10dp"
+                        android:text="我的关注"
+                        android:textColor="@color/text_title"
+                        android:textSize="15sp" />
+                </com.gc.materialdesign.views.RippleLayout>
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/layout2"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:visibility="gone">
+
+                <com.gc.materialdesign.views.RippleLayout
+                    android:id="@+id/my360order_layout"
+                    android:layout_width="match_parent"
+                    android:layout_height="50dp"
+                    android:layout_marginTop="20dp"
+                    android:background="@color/white"
+                    android:orientation="horizontal">
+
+                    <ImageView
+                        android:layout_width="25dp"
+                        android:layout_height="25dp"
+                        android:layout_gravity="center_vertical"
+                        android:layout_marginLeft="15dp"
+                        android:src="@drawable/shoporder" />
+
+                    <TextView
+                        android:id="@+id/my360order_tv"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center_vertical"
+                        android:layout_marginLeft="10dp"
+                        android:text="我的订单"
+                        android:textColor="@color/text_title"
+                        android:textSize="15sp" />
+                </com.gc.materialdesign.views.RippleLayout>
+                <View
+                    android:layout_width="fill_parent"
+                    android:layout_height="1px"
+                    android:background="@color/gray" />
+
+                <com.gc.materialdesign.views.RippleLayout
+                    android:id="@+id/myaddress_layout"
+                    android:layout_width="match_parent"
+                    android:layout_height="50dp"
+                    android:background="@color/white"
+                    android:orientation="horizontal"
+                    ripple:alphaFactor="0.7"
+                    ripple:hover="true"
+                    ripple:rippleViewColor="@color/click_ripple_view">
+
+                    <ImageView
+                        android:layout_width="25dp"
+                        android:layout_height="25dp"
+                        android:layout_gravity="center_vertical"
+                        android:layout_marginLeft="15dp"
+                        android:src="@drawable/icon_area" />
+
+                    <TextView
+                        android:id="@+id/myaddress_tv"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center_vertical"
+                        android:layout_marginLeft="10dp"
+                        android:text="我的收货地址"
+                        android:textColor="@color/text_title"
+                        android:textSize="15sp" />
+                </com.gc.materialdesign.views.RippleLayout>
+                <View
+                    android:layout_width="fill_parent"
+                    android:layout_height="1px"
+                    android:background="@color/gray" />
+
+                <com.gc.materialdesign.views.RippleLayout
+                    android:id="@+id/myprosc_layout"
+                    android:layout_width="match_parent"
+                    android:layout_height="50dp"
+                    android:background="@color/white"
+                    android:orientation="horizontal"
+                    ripple:alphaFactor="0.7"
+                    ripple:hover="true"
+                    ripple:rippleViewColor="@color/click_ripple_view">
+
+                    <ImageView
+                        android:layout_width="25dp"
+                        android:layout_height="25dp"
+                        android:layout_gravity="center_vertical"
+                        android:layout_marginLeft="15dp"
+                        android:src="@drawable/ic_spsc" />
+
+                    <TextView
+                        android:id="@+id/proshouchang_tv"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center_vertical"
+                        android:layout_marginLeft="10dp"
+                        android:text="商品收藏"
+                        android:textColor="@color/text_title"
+                        android:textSize="15sp" />
+                </com.gc.materialdesign.views.RippleLayout>
+
+                <View
+                    android:layout_width="fill_parent"
+                    android:layout_height="1px"
+                    android:background="@color/gray" />
+
+                <com.gc.materialdesign.views.RippleLayout
+                    android:id="@+id/myshopsc_layout"
+                    android:layout_width="match_parent"
+                    android:layout_height="50dp"
+                    android:background="@color/white"
+                    android:orientation="horizontal"
+                    ripple:alphaFactor="0.7"
+                    ripple:hover="true"
+                    ripple:rippleViewColor="@color/click_ripple_view">
+
+                    <ImageView
+                        android:layout_width="25dp"
+                        android:layout_height="25dp"
+                        android:layout_gravity="center_vertical"
+                        android:layout_marginLeft="15dp"
+                        android:src="@drawable/ic_dpsc" />
+
+                    <TextView
+                        android:id="@+id/myshopsc_tv"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center_vertical"
+                        android:layout_marginLeft="10dp"
+                        android:text="店铺收藏"
+                        android:textColor="@color/text_title"
+                        android:textSize="15sp" />
+                </com.gc.materialdesign.views.RippleLayout>
+
+
+                <View
+                    android:layout_width="fill_parent"
+                    android:layout_height="1px"
+                    android:layout_marginTop="20dp"
+                    android:background="@color/white" />
+
+                <com.gc.materialdesign.views.RippleLayout
+                    android:id="@+id/ll_fxs2"
+                    android:layout_width="match_parent"
+                    android:layout_height="50dp"
+                    android:background="@color/white"
+                    android:orientation="horizontal"
+                    android:visibility="gone"
+                    ripple:alphaFactor="0.7"
+                    ripple:hover="true"
+                    ripple:rippleViewColor="@color/click_ripple_view">
+
+                    <ImageView
+                        android:layout_width="25dp"
+                        android:layout_height="25dp"
+                        android:layout_gravity="center_vertical"
+                        android:layout_marginLeft="15dp"
+                        android:src="@drawable/fenxiaoshang" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center_vertical"
+                        android:layout_marginLeft="10dp"
+                        android:text="分销商资质修改"
+                        android:textColor="@color/text_title"
+                        android:textSize="15sp" />
+                </com.gc.materialdesign.views.RippleLayout>
+
+                <View
+                    android:layout_width="fill_parent"
+                    android:layout_height="1px"
+                    android:background="@color/gray" />
+                <com.gc.materialdesign.views.RippleLayout
+                    android:id="@+id/ruzhu_layout2"
+                    android:layout_width="match_parent"
+                    android:layout_height="50dp"
+                    android:background="@color/white"
+                    android:orientation="horizontal"
+                    ripple:alphaFactor="0.7"
+                    ripple:hover="true"
+                    ripple:rippleViewColor="@color/click_ripple_view">
+
+                    <ImageView
+                        android:layout_width="25dp"
+                        android:layout_height="25dp"
+                        android:layout_gravity="center_vertical"
+                        android:layout_marginLeft="15dp"
+                        android:src="@drawable/home_selected" />
+
+                    <TextView
+                        android:id="@+id/ruzhu_tv2"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center_vertical"
+                        android:layout_marginLeft="10dp"
+                        android:text="我要开店"
+                        android:textColor="@color/text_title"
+                        android:textSize="15sp" />
+                </com.gc.materialdesign.views.RippleLayout>
+
+                <View
+                    android:layout_width="fill_parent"
+                    android:layout_height="1px"
+                    android:background="@color/gray" />
+                <com.gc.materialdesign.views.RippleLayout
+                    android:id="@+id/set_layout2"
+                    android:layout_width="match_parent"
+                    android:layout_height="50dp"
+                    android:background="@color/white"
+                    android:orientation="horizontal"
+                    ripple:alphaFactor="0.7"
+                    ripple:hover="true"
+                    ripple:rippleViewColor="@color/click_ripple_view">
+
+                    <ImageView
+                        android:layout_width="25dp"
+                        android:layout_height="25dp"
+                        android:layout_gravity="center_vertical"
+                        android:layout_marginLeft="15dp"
+                        android:src="@drawable/my_set" />
+
+                    <TextView
+                        android:id="@+id/gongneng_tv2"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center_vertical"
+                        android:layout_marginLeft="10dp"
+                        android:text="功能设置"
+                        android:textColor="@color/text_title"
+                        android:textSize="15sp" />
+                </com.gc.materialdesign.views.RippleLayout>
+
+                <View
+                    android:layout_width="fill_parent"
+                    android:layout_height="1px"
+                    android:background="@color/gray" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/layout3"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+                <View
+                    android:layout_width="fill_parent"
+                    android:layout_height="1px"
+                    android:background="@color/gray"
+                    android:visibility="gone" />
+
+                <LinearLayout
+                    android:id="@+id/myshoporder_layout"
+                    android:layout_width="match_parent"
+                    android:layout_height="50dp"
+                    android:background="@color/white"
+                    android:orientation="horizontal"
+                    android:visibility="gone">
+
+                    <ImageView
+                        android:layout_width="25dp"
+                        android:layout_height="25dp"
+                        android:layout_gravity="center_vertical"
+                        android:layout_marginLeft="15dp"
+                        android:src="@drawable/myorder" />
+
+                    <TextView
+                        android:id="@+id/myshoporder_tv"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center_vertical"
+                        android:layout_marginLeft="10dp"
+                        android:text="我的商城订单"
+                        android:textColor="@color/text_title"
+                        android:textSize="15sp" />
+                </LinearLayout>
+
+                <View
+                    android:layout_width="fill_parent"
+                    android:layout_height="1px"
+                    android:background="@color/gray"
+                    android:visibility="gone" />
+
+                <LinearLayout
+                    android:id="@+id/myshopcollect_layout"
+                    android:layout_width="match_parent"
+                    android:layout_height="50dp"
+                    android:background="@color/white"
+                    android:orientation="horizontal"
+                    android:visibility="gone">
+
+                    <ImageView
+                        android:layout_width="25dp"
+                        android:layout_height="25dp"
+                        android:layout_gravity="center_vertical"
+                        android:layout_marginLeft="15dp"
+                        android:src="@drawable/iconfontshoucang" />
+
+                    <TextView
+                        android:id="@+id/myshopcollect_tv"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center_vertical"
+                        android:layout_marginLeft="10dp"
+                        android:text="我的商品收藏"
+                        android:textColor="@color/text_title"
+                        android:textSize="15sp" />
+                </LinearLayout>
+
+                <com.gc.materialdesign.views.RippleLayout
+                    android:id="@+id/shiminglayout"
+                    android:layout_width="match_parent"
+                    android:layout_height="50dp"
+                    android:layout_marginTop="20dp"
+                    android:background="@color/white"
+                    android:orientation="horizontal"
+                    ripple:alphaFactor="0.7"
+                    ripple:hover="true"
+                    ripple:rippleViewColor="@color/click_ripple_view">
+
+                    <ImageView
+                        android:layout_width="25dp"
+                        android:layout_height="25dp"
+                        android:layout_gravity="center_vertical"
+                        android:layout_marginLeft="15dp"
+                        android:src="@drawable/autonym_approve" />
+
+                    <TextView
+                        android:id="@+id/shiming_tv"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center_vertical"
+                        android:layout_marginLeft="10dp"
+                        android:text="实名认证"
+                        android:textColor="@color/text_title"
+                        android:textSize="15sp" />
+                </com.gc.materialdesign.views.RippleLayout>
+
+                <View
+                    android:layout_width="fill_parent"
+                    android:layout_height="1px"
+                    android:background="@color/gray" />
+
+                <com.gc.materialdesign.views.RippleLayout
+                    android:id="@+id/ll_fxs"
+                    android:layout_width="match_parent"
+                    android:layout_height="50dp"
+                    android:background="@color/white"
+                    android:orientation="horizontal"
+                    android:visibility="gone"
+                    ripple:alphaFactor="0.7"
+                    ripple:hover="true"
+                    ripple:rippleViewColor="@color/click_ripple_view">
+
+                    <ImageView
+                        android:layout_width="25dp"
+                        android:layout_height="25dp"
+                        android:layout_gravity="center_vertical"
+                        android:layout_marginLeft="15dp"
+                        android:src="@drawable/fenxiaoshang" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center_vertical"
+                        android:layout_marginLeft="10dp"
+                        android:text="分销商资质修改"
+                        android:textColor="@color/text_title"
+                        android:textSize="15sp" />
+                </com.gc.materialdesign.views.RippleLayout>
+
+                <View
+                    android:layout_width="fill_parent"
+                    android:layout_height="1px"
+                    android:background="@color/gray" />
+
+                <com.gc.materialdesign.views.RippleLayout
+                    android:id="@+id/ll_statistics"
+                    android:layout_width="match_parent"
+                    android:layout_height="50dp"
+                    android:background="@color/white"
+                    android:orientation="horizontal"
+                    ripple:alphaFactor="0.7"
+                    ripple:hover="true"
+                    ripple:rippleViewColor="@color/click_ripple_view">
+
+                    <ImageView
+                        android:layout_width="25dp"
+                        android:layout_height="25dp"
+                        android:layout_gravity="center_vertical"
+                        android:layout_marginLeft="15dp"
+                        android:src="@drawable/tj" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center_vertical"
+                        android:layout_marginLeft="10dp"
+                        android:text="统计"
+                        android:textColor="@color/text_title"
+                        android:textSize="15sp" />
+                </com.gc.materialdesign.views.RippleLayout>
+
+                <View
+                    android:layout_width="fill_parent"
+                    android:layout_height="1px"
+                    android:background="@color/gray" />
+
+                <com.gc.materialdesign.views.RippleLayout
+                    android:id="@+id/myprice_layout"
+                    android:layout_width="match_parent"
+                    android:layout_height="50dp"
+                    android:background="@color/white"
+                    android:orientation="horizontal"
+                    ripple:alphaFactor="0.7"
+                    ripple:hover="true"
+                    ripple:rippleViewColor="@color/click_ripple_view">
+
+                    <ImageView
+                        android:layout_width="25dp"
+                        android:layout_height="25dp"
+                        android:layout_gravity="center_vertical"
+                        android:layout_marginLeft="15dp"
+                        android:src="@drawable/offer" />
+
+                    <TextView
+                        android:id="@+id/mypigprice_tv"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center_vertical"
+                        android:layout_marginLeft="10dp"
+                        android:text="我要报价"
+                        android:textColor="@color/text_title"
+                        android:textSize="15sp" />
+                </com.gc.materialdesign.views.RippleLayout>
+
+                <View
+                    android:layout_width="fill_parent"
+                    android:layout_height="1px"
+                    android:background="@color/gray" />
+
+                <com.gc.materialdesign.views.RippleLayout
+                    android:id="@+id/erweimalayout"
+                    android:layout_width="match_parent"
+                    android:layout_height="50dp"
+                    android:background="@color/white"
+                    android:orientation="horizontal"
+                    ripple:alphaFactor="0.7"
+                    ripple:hover="true"
+                    ripple:rippleViewColor="@color/click_ripple_view">
+
+                    <ImageView
+                        android:layout_width="25dp"
+                        android:layout_height="25dp"
+                        android:layout_gravity="center_vertical"
+                        android:layout_marginLeft="15dp"
+                        android:src="@drawable/my_share" />
+
+                    <TextView
+                        android:id="@+id/erweima_tv"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center_vertical"
+                        android:layout_marginLeft="10dp"
+                        android:text="推荐享豪礼"
+                        android:textColor="@color/text_title"
+                        android:textSize="15sp" />
+                </com.gc.materialdesign.views.RippleLayout>
+
+                <View
+                    android:layout_width="fill_parent"
+                    android:layout_height="1px"
+                    android:background="@color/gray" />
+
+                <LinearLayout
+                    android:id="@+id/testlayout"
+                    android:layout_width="match_parent"
+                    android:layout_height="50dp"
+                    android:background="@color/white"
+                    android:orientation="horizontal"
+                    android:visibility="gone">
+
+                    <TextView
+                        android:id="@+id/test_tv"
+                        style="@style/tv_other"
+                        android:layout_width="wrap_content"
+                        android:layout_height="fill_parent"
+                        android:drawableLeft="@drawable/renzheng"
+                        android:gravity="center"
+                        android:text=" 修改ip"
+                        android:textColor="@color/gray" />
+                </LinearLayout>
+
+                <com.gc.materialdesign.views.RippleLayout
+                    android:id="@+id/set_layout"
+                    android:layout_width="match_parent"
+                    android:layout_height="50dp"
+                    android:background="@color/white"
+                    android:gravity="center_vertical"
+                    ripple:alphaFactor="0.7"
+                    ripple:hover="true"
+                    ripple:rippleViewColor="@color/click_ripple_view">
+
+                    <ImageView
+                        android:layout_width="25dp"
+                        android:layout_height="25dp"
+                        android:layout_gravity="center_vertical"
+                        android:layout_marginLeft="15dp"
+                        android:src="@drawable/my_set" />
+
+                    <TextView
+                        android:id="@+id/gongneng_tv"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center_vertical"
+                        android:layout_marginLeft="10dp"
+                        android:text="功能设置"
+                        android:textColor="@color/text_title"
+                        android:textSize="15sp" />
+                </com.gc.materialdesign.views.RippleLayout>
+            </LinearLayout>
+
+        </LinearLayout>
+    </ScrollView>
+
+</LinearLayout>

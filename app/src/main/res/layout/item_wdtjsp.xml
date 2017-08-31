@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@color/white"
+    android:orientation="vertical"
+    android:gravity="center_horizontal"
+    >
+<ImageView
+    android:id="@+id/imageview"
+    android:layout_width="150dp"
+    android:layout_height="150dp"
+    android:src="@drawable/default_title"
+    android:layout_margin="8dp"/>
+    <TextView
+        android:id="@+id/name"
+        android:layout_width="170dp"
+        android:layout_height="wrap_content"
+        android:text="木和教槽的的啊料"
+        android:textColor="@color/text_title_gray"
+        android:layout_marginLeft="5dp"
+        android:layout_marginRight="5dp"
+        android:minLines="2"
+        android:maxLines="2"
+        android:ellipsize="end"/>
+    <RelativeLayout
+        android:layout_width="170dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="5dp"
+        >
+        <TextView
+            android:id="@+id/price"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="150.00"
+            android:textColor="@color/red"
+            android:drawableLeft="@drawable/rmb4"
+            android:layout_alignParentLeft="true"
+            android:textSize="15sp"/>
+        <TextView
+            android:id="@+id/num"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="已售 0"
+            android:textColor="@color/gray"
+            android:layout_alignParentRight="true"/>
+    </RelativeLayout>
+</LinearLayout>

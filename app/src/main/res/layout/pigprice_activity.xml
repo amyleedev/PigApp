@@ -1,0 +1,95 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:orientation="vertical"
+   android:background="@color/bg_title_white"
+    android:clipToPadding="true"
+    android:fitsSystemWindows="true" >
+
+  
+
+    <!-- 标题 -->
+
+    <LinearLayout
+        android:layout_width="fill_parent"
+        android:layout_height="45dip"
+        android:orientation="horizontal"
+        android:background="@color/light_gray" 
+        android:gravity="center">
+ 		<TextView
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:text="日期" 
+            android:layout_weight="1"
+            android:textSize="14sp"
+            android:textStyle="bold"
+            android:textColor="@color/black"/>
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:text="地区" 
+            android:layout_weight="1"
+            android:textSize="14sp"
+            android:textStyle="bold"
+            android:textColor="@color/black"/>
+
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:text="价格" 
+            android:layout_weight="2"
+            android:textSize="14sp"
+            android:textStyle="bold"
+            android:textColor="@color/black"/>
+
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:text="来源"
+            android:layout_weight="2"
+            android:textSize="14sp"
+            android:textStyle="bold" 
+            android:textColor="@color/black"/>
+    </LinearLayout>
+    <!-- ListView控件 -->
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/bg_main"
+        android:orientation="vertical" >
+
+        <include
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            layout="@layout/loading" />
+
+        <include
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            layout="@layout/load_failure"
+            android:visibility="gone" />
+
+        <com.szmy.pigapp.widget.MySwipeRefreshLayout
+            android:id="@+id/srl_data"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:visibility="gone" >
+
+            <ListView
+                android:id="@+id/lv"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:fastScrollEnabled="true"
+                android:focusable="false"
+                android:footerDividersEnabled="false"
+                android:scrollbars="none" />
+        </com.szmy.pigapp.widget.MySwipeRefreshLayout>
+    </LinearLayout>
+
+</LinearLayout>

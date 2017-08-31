@@ -1,0 +1,171 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:materialdesign="http://schemas.android.com/apk/res-auto"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:background="@color/bg_title_white"
+    android:clipToPadding="true"
+    android:fitsSystemWindows="true" >
+
+    <RelativeLayout
+        android:id="@+id/toplayout"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:background="@color/red"
+        android:visibility="gone" >
+
+        <LinearLayout
+            android:id="@+id/def_head_back"
+            android:layout_width="wrap_content"
+            android:layout_height="50dp"
+            android:layout_gravity="top|left"
+            android:gravity="center_vertical"
+            >
+            <com.gc.materialdesign.views.ButtonIcon
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginRight="2dp"
+                android:background="@color/click_ripple_view"
+                materialdesign:iconDrawable="@drawable/ic_back_black"
+                android:onClick="back"/>
+        </LinearLayout>
+
+        <RadioGroup
+            android:id="@+id/radio_group"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:gravity="center"
+            android:orientation="horizontal" >
+
+            <RadioButton
+                android:id="@+id/radio_button_001"
+                android:layout_width="71dp"
+                android:layout_height="25dip"
+                android:background="@drawable/select_radiobutton_left"
+                android:button="@null"
+                android:gravity="center"
+                android:text="车辆"
+                android:textColor="@drawable/text_selector" />
+
+            <RadioButton
+                android:id="@+id/radio_button_002"
+                android:layout_width="71dp"
+                android:layout_height="25dip"
+                android:background="@drawable/select_radiobutton_left"
+                android:button="@null"
+                android:checked="true"
+                android:gravity="center"
+                android:text="企业"
+                android:textColor="@drawable/text_selector" />
+        </RadioGroup>
+    </RelativeLayout>
+
+    <LinearLayout
+        android:id="@+id/companylayout"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:layout_below="@+id/toplayout"
+        android:background="@color/bg"
+        android:focusable="true"
+        android:focusableInTouchMode="true"
+        android:orientation="vertical"
+        android:visibility="visible" >
+
+        <FrameLayout
+            android:id="@+id/fl_search"
+            android:layout_width="fill_parent"
+            android:layout_height="50dp"
+            android:clickable="true" >
+
+            <RelativeLayout
+                android:layout_width="fill_parent"
+                android:layout_height="@dimen/info_list_item_height"
+                android:background="@color/bg" >
+
+                <Button
+                    android:id="@+id/btn_search"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentRight="true"
+                    android:layout_centerVertical="true"
+                    android:background="@null"
+                    android:gravity="center"
+                    android:padding="10.0dip"
+                    android:text="查询"
+                    android:textColor="@color/black"
+                    android:textSize="16.0sp" />
+
+                <EditText
+                    android:id="@+id/et_search"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_centerInParent="true"
+                    android:layout_marginLeft="5.0dip"
+                    android:layout_marginRight="5.0dip"
+                    android:layout_toLeftOf="@+id/btn_search"
+                    android:background="@drawable/search_edit_style"
+                    android:drawableLeft="@drawable/search_new"
+                    android:drawablePadding="5.0dip"
+                    android:focusable="true"
+                    android:hint="输入企业名称查询"
+                    android:inputType="text"
+                    android:paddingBottom="5.0dip"
+                    android:paddingLeft="13.0dip"
+                    android:paddingRight="13.0dip"
+                    android:paddingTop="5.0dip"
+                    android:selectAllOnFocus="true"
+                    android:singleLine="true"
+                    android:textColor="@color/black"
+                    android:textSize="16.0sp" />
+
+                <ImageButton
+                    android:id="@+id/ib_cancel"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:layout_marginRight="15.0dip"
+                    android:layout_toLeftOf="@+id/btn_search"
+                    android:background="@color/white"
+                    android:padding="5.0dip"
+                    android:src="@drawable/cancel_new"
+                    android:visibility="gone" />
+            </RelativeLayout>
+        </FrameLayout>
+
+        <View
+            android:layout_width="fill_parent"
+            android:layout_height="1.0dip"
+            android:background="@color/line_title" />
+
+        <include
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        layout="@layout/loading" />
+
+    <include
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        layout="@layout/load_failure"
+        android:visibility="gone" />
+         <com.szmy.pigapp.widget.MySwipeRefreshLayout
+        android:id="@+id/srl_fragment"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:visibility="gone" >
+        <ListView
+            android:id="@+id/comlstv"
+            android:background="@color/bg"
+            android:cacheColorHint="#00000000"
+            android:drawSelectorOnTop="false"
+            android:fastScrollEnabled="true"
+            android:focusable="false"
+            android:footerDividersEnabled="false"
+            android:listSelector="@drawable/sliding_list_item_bg"
+            android:scrollbars="none"
+            android:layout_width="match_parent"
+            android:layout_height="fill_parent" />
+        </com.szmy.pigapp.widget.MySwipeRefreshLayout>
+    </LinearLayout>
+
+</RelativeLayout>

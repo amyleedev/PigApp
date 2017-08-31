@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical" xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <RelativeLayout
+        android:layout_width="fill_parent"
+        android:layout_height="50dp"
+        android:background="@color/red" >
+
+        <ImageView
+            android:id="@+id/image"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentLeft="true"
+            android:layout_centerVertical="true"
+            android:background="@drawable/pig" 
+            android:visibility="gone"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_toRightOf="@id/image"
+            android:text="@string/app_name"
+            android:textColor="@color/white"
+            android:textSize="15sp" 
+            android:visibility="gone"/>
+        
+         <Button
+             android:id="@+id/seachbtn"
+             android:layout_width="wrap_content"
+             android:layout_height="wrap_content"
+             android:background="@null"
+             android:textSize="15sp"
+             android:text="区  域"
+             android:textColor="@color/white"
+             android:drawableRight="@drawable/down"
+             android:layout_marginLeft="18dp"
+             android:layout_alignParentLeft="true"
+             />  
+
+        <Button
+            android:id="@+id/login_btn"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:background="@drawable/def_selector"
+            android:text="登     录 "
+            android:textColor="@color/white"
+            android:textSize="15sp" />
+    </RelativeLayout>
+
+    <com.szmy.pigapp.widget.PagerSlidingTabStrip
+        android:id="@+id/viewpager_strip"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/online_hot_pagertab_height"
+        android:layout_marginBottom="2dip"
+        android:textSize="@dimen/hot_header_Text" 
+        />
+
+    <android.support.v4.view.ViewPager
+        android:id="@+id/viewPager"
+        android:layout_width="match_parent"
+        android:layout_height="0dip"
+        android:layout_weight="1" />
+
+</LinearLayout>

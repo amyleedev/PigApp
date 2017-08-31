@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical" >
+
+    <com.szmy.pigapp.widget.NodeProgressBar
+        android:id="@+id/ssl"
+        android:layout_width="match_parent"
+        android:layout_height="50dip"
+        android:layout_margin="15dip" />
+
+    <SeekBar
+        android:id="@+id/progress"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:max="100" >
+    </SeekBar>
+
+       <RatingBar
+          
+                android:layout_marginTop="35dp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="10dp"
+                android:id="@+id/ratingbarId"
+                android:rating="0"
+                android:stepSize="0.5"
+                android:numStars="4"
+                />
+
+</LinearLayout>

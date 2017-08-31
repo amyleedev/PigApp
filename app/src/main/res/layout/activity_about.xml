@@ -1,0 +1,105 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    xmlns:materialdesign="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/bg_title_white"
+    android:clipToPadding="true"
+    android:fitsSystemWindows="true"
+    android:orientation="vertical" >
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="50dp" >
+
+        <LinearLayout
+            android:id="@+id/def_head_back"
+            android:layout_width="wrap_content"
+            android:layout_height="50dp"
+            android:layout_gravity="top|left"
+            android:gravity="center_vertical"
+            >
+            <com.gc.materialdesign.views.ButtonIcon
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginRight="2dp"
+                android:background="@color/click_ripple_view"
+                materialdesign:iconDrawable="@drawable/ic_back_black"
+                android:onClick="back"/>
+        </LinearLayout>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:text="关于我们"
+            android:textColor="@color/text_title_gray"
+            android:textSize="20sp" />
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1px"
+            android:layout_alignParentBottom="true"
+            android:background="@color/cutting_line" />
+    </RelativeLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/bg_main_gray"
+        android:orientation="vertical" >
+
+        <ScrollView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" >
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical" >
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_horizontal"
+                    android:layout_margin="10dp"
+                    android:gravity="center_vertical"
+                    android:text="        河南神州牧易电子商务有限公司是在河南省畜牧局、鹤壁市人民政府 等单位 的大力支持下，由北京农信通集团 和河南省畜牧投资担保股份有限 公司共同出资 组建的专业性电子商务公司。公司立足河南、面向全国，志 在打造全 球领先的畜 牧业电子商务和综合服务平台，为畜牧业的发展注入 新的生机与活力。公司运营 中心设在九省通衢的郑 州市，在鹤壁市建有大 型服务基地，并将在全国各省设立 分支机构。 "
+                    android:textColor="@color/text_title"
+                    android:textSize="15sp" />
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_horizontal"
+                    android:layout_margin="10dp"
+                    android:gravity="center_vertical"
+                    android:text="         公司适应市场变化，顺应时代潮流，以互联网、电子商务、物联网、 互联网 金融等手段服务全国养殖及畜牧生 产资料企业。神州牧易致力于在 新的时代，以 互联网思维和电子商务提升畜牧业的核心竞争能力，促进中 国乃至全 球畜牧业的 现代化发展;为使畜牧业达到高效、安全、环保、低耗 的目标，向人类提供更多、 更优质的畜产品，增加 农民收入而不懈努力。 "
+                    android:textColor="@color/text_title"
+                    android:textSize="15sp" />
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_horizontal"
+                    android:layout_margin="10dp"
+                    android:gravity="center_vertical"
+                    android:text="服务热线：0371-89912731  0392-2266556"
+                    android:textColor="@color/text_title"
+                    android:textSize="15sp" />
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_horizontal"
+                    android:layout_margin="10dp"
+                    android:gravity="center_vertical"
+                    android:text="电商体验基地：中国（鹤壁）农业硅谷产业园"
+                    android:textColor="@color/text_title"
+                    android:textSize="15sp" />
+            </LinearLayout>
+        </ScrollView>
+    </LinearLayout>
+
+</LinearLayout>

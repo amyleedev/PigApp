@@ -1,0 +1,271 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+	xmlns:android="http://schemas.android.com/apk/res/android"
+	android:layout_width="fill_parent"
+	android:layout_height="fill_parent"
+	android:orientation="vertical"
+	android:clipToPadding="true"
+    android:fitsSystemWindows="true"
+    
+    android:background="@color/bg_title_white">
+
+	<include layout="@layout/view_def_head" />
+
+	<ScrollView
+		android:layout_width="match_parent"
+		android:layout_height="match_parent"
+		android:background="@color/bg"
+		android:orientation="vertical">
+
+		<RelativeLayout
+			android:layout_width="match_parent"
+			android:layout_height="514dp"
+			android:gravity="top">
+
+			<LinearLayout
+				android:id="@+id/linearLayout1"
+				android:layout_width="match_parent"
+				android:layout_height="wrap_content"
+				android:layout_centerHorizontal="true"
+				android:layout_marginBottom="20dp"
+				android:layout_marginTop="20dp"
+				android:focusable="true"
+				android:focusableInTouchMode="true"
+				android:gravity="top"
+				android:orientation="vertical">
+
+				<LinearLayout
+					android:layout_width="match_parent"
+					android:layout_height="wrap_content"
+					android:layout_margin="10dp"
+					android:background="@drawable/shape_border_top"
+					android:gravity="center"
+					android:orientation="vertical">
+
+					<TextView
+						android:id="@+id/company_tv"
+						android:layout_width="match_parent"
+						android:layout_height="wrap_content"
+						android:layout_marginLeft="10dp"
+						android:text=""
+						android:textSize="15sp" />
+
+					<RelativeLayout
+						android:layout_width="match_parent"
+						android:layout_height="wrap_content"
+						android:layout_margin="10dp">
+
+						<TextView
+							android:id="@+id/tv_time"
+							style="@style/tv_style"
+							android:layout_width="wrap_content"
+							android:layout_height="wrap_content"
+							android:layout_alignParentLeft="true"
+							android:layout_gravity="center_vertical"
+							android:text=""
+							android:textSize="12sp" />
+
+
+
+					</RelativeLayout>
+
+					<View
+						android:layout_width="fill_parent"
+						android:layout_height="0.1dp"
+						android:background="@color/line_title" />
+
+					<LinearLayout
+						android:layout_width="match_parent"
+						android:layout_height="wrap_content"
+						android:layout_margin="10dp"
+						android:orientation="horizontal">
+
+						<TextView
+							style="@style/tv_other2"
+							android:layout_gravity="center_vertical"
+							android:text="车型：" />
+
+						<TextView
+							android:id="@+id/tv_type"
+							android:layout_width="match_parent"
+							android:layout_height="50dp"
+							android:gravity="right|center_vertical"
+							android:singleLine="true"
+							android:text=""
+							android:textColor="@color/black">
+						</TextView>
+					</LinearLayout>
+					<LinearLayout
+						android:layout_width="match_parent"
+						android:layout_height="wrap_content"
+						android:layout_marginBottom="10dp"
+						android:layout_marginLeft="10dp"
+						android:layout_marginRight="10dp"
+						android:orientation="horizontal">
+
+						<TextView
+							style="@style/tv_other2"
+							android:layout_gravity="center_vertical"
+							android:text="公司名称：" />
+
+						<TextView
+							android:id="@+id/tv_comname"
+							android:layout_width="match_parent"
+							android:layout_height="50dp"
+						android:gravity="right|center_vertical"
+							android:singleLine="true"
+							android:text=""
+							android:textColor="@color/black">
+						</TextView>
+					</LinearLayout>
+					<LinearLayout
+						android:id="@+id/chulan_layout1"
+						android:layout_width="match_parent"
+						android:layout_height="wrap_content"
+						android:layout_marginBottom="10dp"
+						android:layout_marginLeft="10dp"
+						android:layout_marginRight="10dp"
+						android:orientation="horizontal">
+
+						<TextView
+							style="@style/tv_other2"
+							android:layout_gravity="center_vertical"
+							android:text="数  量：" />
+
+						<TextView
+							android:id="@+id/tv_shuliang"
+							android:layout_width="match_parent"
+							android:layout_height="50dp"
+							android:gravity="right|center_vertical"
+							android:singleLine="true"
+							android:text=""
+							android:textColor="@color/black" />
+					</LinearLayout>
+
+					<LinearLayout
+						android:layout_width="match_parent"
+						android:layout_height="wrap_content"
+						android:layout_marginBottom="10dp"
+						android:layout_marginLeft="10dp"
+						android:layout_marginRight="10dp"
+						android:orientation="horizontal">
+
+						<TextView
+							style="@style/tv_other2"
+							android:layout_gravity="center_vertical"
+							android:text="车辆尺寸：" />
+
+						<TextView
+							android:id="@+id/tv_chicun"
+							android:layout_width="match_parent"
+							android:layout_height="50dp"
+							android:gravity="right|center_vertical"
+							android:singleLine="true"
+							android:text=""
+							android:textColor="@color/black" />
+					</LinearLayout>
+
+					<LinearLayout
+						android:id="@+id/weight_layout1"
+						android:layout_width="match_parent"
+						android:layout_height="wrap_content"
+						android:layout_marginBottom="10dp"
+						android:layout_marginLeft="10dp"
+						android:layout_marginRight="10dp"
+						android:orientation="horizontal">
+
+						<TextView
+							style="@style/tv_other2"
+							android:layout_gravity="center_vertical"
+							android:text="公司地址：" />
+
+						<TextView
+							android:id="@+id/tv_address"
+							android:layout_width="match_parent"
+							android:layout_height="50dp"
+							android:gravity="right|center_vertical"
+							android:singleLine="true"
+							android:text=""
+							android:textColor="@color/black" />
+					</LinearLayout>
+					<LinearLayout
+						android:layout_width="match_parent"
+						android:layout_height="wrap_content"
+						android:layout_marginBottom="10dp"
+						android:layout_marginLeft="10dp"
+						android:layout_marginRight="10dp"
+						android:orientation="horizontal">
+
+						<TextView
+							style="@style/tv_other2"
+							android:layout_gravity="center_vertical"
+							android:text="经营范围：" />
+
+						<TextView
+							android:id="@+id/tv_about"
+							android:layout_width="match_parent"
+							android:layout_height="50dp"
+							android:gravity="right|center_vertical"
+							android:singleLine="true"
+							android:text=""
+							android:textColor="@color/black" />
+					</LinearLayout>
+					<LinearLayout
+						android:layout_width="match_parent"
+						android:layout_height="wrap_content"
+						android:layout_marginBottom="10dp"
+						android:layout_marginLeft="10dp"
+						android:layout_marginRight="10dp"
+						android:orientation="horizontal">
+
+						<TextView
+							style="@style/tv_other2"
+							android:layout_gravity="center_vertical"
+							android:text="@string/remark_tx" />
+
+						<TextView
+							android:id="@+id/tv_remark"
+							android:layout_width="match_parent"
+							android:layout_height="wrap_content"
+							android:gravity="right|center_vertical"
+
+							android:text=" "
+							android:textColor="@color/black" />
+					</LinearLayout>
+				</LinearLayout>
+
+				<com.szmy.pigapp.widget.NoScrollGridView
+					android:id="@+id/diary_activity_new_gridView"
+					android:layout_width="fill_parent"
+					android:layout_height="wrap_content"
+					android:layout_margin="10.0dip"
+					android:background="@drawable/holder_bg_grey"
+					android:columnWidth="100.0dip"
+					android:gravity="fill"
+					android:horizontalSpacing="@dimen/spacing2"
+					android:listSelector="@drawable/grid_view_selector_with_transparent"
+					android:numColumns="auto_fit"
+					android:paddingRight="@dimen/spacing"
+					android:stretchMode="columnWidth" />
+				<RelativeLayout
+					android:layout_width="match_parent"
+					android:layout_height="wrap_content"
+					android:layout_margin="10dp">
+
+					<Button
+						android:id="@+id/phont_btn"
+						android:drawableLeft="@drawable/phone1"
+						android:text="      电话联系"
+						android:layout_width="wrap_content"
+						android:layout_height="wrap_content"
+						android:background="@null">
+					</Button>
+
+				</RelativeLayout>
+			</LinearLayout>
+
+
+		</RelativeLayout>
+	</ScrollView>
+
+</LinearLayout>

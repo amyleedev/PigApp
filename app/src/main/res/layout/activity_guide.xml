@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:nxt="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/bg_title_white" >
+
+    <com.szmy.pigapp.widget.ViewFlow
+        android:id="@+id/vf"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent" />
+
+    <com.szmy.pigapp.widget.CircleFlowIndicator
+        android:id="@+id/cfi"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal|bottom"
+        android:padding="2dip"
+        nxt:activeColor="#DA372A"
+        nxt:activeType="fill"
+        nxt:circleSeparation="20dip"
+        nxt:inactiveColor="#fff"
+        nxt:inactiveType="fill"
+        nxt:radius="4dip" />
+
+</FrameLayout>

@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/bg_title_white"
+    android:clipToPadding="true"
+    android:fitsSystemWindows="true"
+    android:orientation="vertical" >
+
+    <include layout="@layout/view_def_head" />
+
+    <include
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        layout="@layout/loading" />
+
+    <include
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        layout="@layout/load_failure"
+        android:visibility="gone" />
+
+    <com.szmy.pigapp.widget.MySwipeRefreshLayout
+        android:id="@+id/srl_address"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:visibility="visible" >
+
+        <ListView
+            android:id="@+id/info_framgment_xlistview"
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+            android:background="@color/bg"
+            android:cacheColorHint="#00000000"
+            android:divider="#00000000"
+            android:drawSelectorOnTop="false"
+            android:fastScrollEnabled="true"
+            android:focusable="false"
+            android:footerDividersEnabled="false"
+            android:listSelector="@drawable/sliding_list_item_bg"
+            android:scrollbars="none" />
+    </com.szmy.pigapp.widget.MySwipeRefreshLayout>
+
+    <RelativeLayout
+        android:id="@+id/dizhi"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:visibility="gone" >
+
+        <Button
+            android:id="@+id/zhengzaijiazai_text"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:layout_centerVertical="true"
+            android:background="@null"
+            android:drawableTop="@drawable/noaddress"
+            android:scaleType="centerCrop"
+            android:text="暂无收货地址"
+            android:textColor="@color/text_details"
+            android:textSize="13sp" />
+    </RelativeLayout>
+
+    <Button
+        android:id="@+id/add_address_btn"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:background="@color/red"
+        android:text="添加收货地址"
+        android:textColor="@color/white" />
+
+</LinearLayout>

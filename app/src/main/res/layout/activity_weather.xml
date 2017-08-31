@@ -1,0 +1,322 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:ripple="http://schemas.android.com/apk/res-auto"
+    xmlns:materialdesign="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/bg_title_white"
+    android:clipToPadding="true"
+    android:fitsSystemWindows="true"
+    android:orientation="vertical" >
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="50dp" >
+
+        <LinearLayout
+            android:id="@+id/def_head_back"
+            android:layout_width="wrap_content"
+            android:layout_height="50dp"
+            android:layout_gravity="top|left"
+            android:gravity="center_vertical"
+            >
+            <com.gc.materialdesign.views.ButtonIcon
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginRight="2dp"
+                android:background="@color/click_ripple_view"
+                materialdesign:iconDrawable="@drawable/ic_back_black"
+                android:onClick="back"/>
+        </LinearLayout>
+
+        <TextView
+            android:id="@+id/tv_cityname"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:text=""
+            android:textColor="@color/text_title_gray"
+            android:textSize="20sp"
+            android:drawableLeft="@drawable/location_big"/>
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1px"
+            android:layout_alignParentBottom="true"
+            android:background="@color/cutting_line" />
+    </RelativeLayout>
+    <ScrollView
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:background="@color/bg"
+        android:onClick="onClick"
+        android:scrollbars="none" >
+
+        <LinearLayout
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="10.0dip"
+            android:layout_marginRight="10.0dip"
+            android:orientation="vertical" >
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:gravity="center">
+                <TextView
+                    android:id="@+id/tv_todaywendu"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="0°"
+                    android:gravity="center"
+                    android:textSize="100sp"
+                    android:textColor="#CF2A21"
+                    />
+                <TextView
+                    android:id="@+id/tv_todaytype"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="暂无"
+                    android:gravity="center"
+                    android:textSize="20sp"
+                    android:textColor="#CF2A21"
+                    />
+                <TextView
+                    android:id="@+id/tv_todayfengli"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="暂无"
+                    android:gravity="center"
+                    android:textSize="15sp"
+                    android:textColor="#CF2A21"
+                    />
+            </LinearLayout>
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:layout_marginTop="10dp"
+                android:background="#e2e2e2" />
+            <LinearLayout
+                android:id="@+id/mainlayout"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:gravity="center">
+
+            </LinearLayout>
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:orientation="horizontal"
+               >
+
+                <com.gc.materialdesign.views.RippleView
+                    android:id="@+id/ll_price01"
+                    android:layout_width="0dp"
+                    ripple:alphaFactor="0.7"
+                    ripple:hover="true"
+                    ripple:rippleViewColor="@color/click_ripple_view"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="5dp"
+                    android:layout_weight="1"
+                    android:background="@drawable/bg_price"
+                    android:gravity="center"
+                    android:orientation="vertical"
+                    android:padding="5dp">
+
+                    <TextView
+
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:background="@drawable/sun"
+                        android:textColor="#E84135"
+                        android:textSize="22sp" />
+
+                    <TextView
+                        android:id="@+id/tv_price01"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="3dp"
+                        android:text=""
+                        android:textColor="#909090"
+                        android:textSize="12sp" />
+                </com.gc.materialdesign.views.RippleView>
+
+                <com.gc.materialdesign.views.RippleView
+                    android:id="@+id/ll_price02"
+                    android:layout_width="0dp"
+                    ripple:alphaFactor="0.7"
+                    ripple:hover="true"
+                    ripple:rippleViewColor="@color/click_ripple_view"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="5dp"
+                    android:layout_weight="1"
+                    android:background="@drawable/bg_price"
+                    android:gravity="center"
+                    android:orientation="vertical"
+                    android:padding="5dp">
+
+                    <TextView
+
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:background="@drawable/gm"
+                        android:textColor="#E84135"
+                        android:textSize="22sp" />
+
+                    <TextView
+                        android:id="@+id/tv_price02"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="3dp"
+                        android:text=""
+                        android:textColor="#909090"
+                        android:textSize="12sp" />
+                </com.gc.materialdesign.views.RippleView>
+
+                <com.gc.materialdesign.views.RippleView
+                    android:id="@+id/ll_price03"
+                    android:layout_width="0dp"
+                    ripple:alphaFactor="0.7"
+                    ripple:hover="true"
+                    ripple:rippleViewColor="@color/click_ripple_view"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="5dp"
+                    android:layout_weight="1"
+                    android:background="@drawable/bg_price"
+                    android:gravity="center"
+                    android:orientation="vertical"
+                    android:padding="5dp">
+
+                    <TextView
+
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:background="@drawable/car"
+                        android:textColor="#E84135"
+                        android:textSize="22sp" />
+
+                    <TextView
+                        android:id="@+id/tv_price04"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="3dp"
+                        android:text=""
+                        android:textColor="#909090"
+                        android:textSize="12sp" />
+                </com.gc.materialdesign.views.RippleView>
+            </LinearLayout>
+            <com.gc.materialdesign.views.RippleView
+                android:id="@+id/ll_price04"
+                ripple:alphaFactor="0.7"
+                ripple:hover="true"
+                ripple:rippleViewColor="@color/click_ripple_view"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:layout_marginBottom="30dp">
+
+            <com.gc.materialdesign.views.RippleView
+                android:id="@+id/ll_price031"
+                android:layout_width="0dp"
+                ripple:alphaFactor="0.7"
+                ripple:hover="true"
+                ripple:rippleViewColor="@color/click_ripple_view"
+                android:layout_height="wrap_content"
+                android:layout_margin="5dp"
+                android:layout_weight="1"
+                android:background="@drawable/bg_price"
+                android:gravity="center"
+                android:orientation="vertical"
+                android:padding="5dp">
+
+                    <TextView
+
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:background="@drawable/cyzs"
+                        android:textColor="#E84135"
+                        android:textSize="22sp" />
+
+                    <TextView
+                        android:id="@+id/tv_price03"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="3dp"
+                        android:text=""
+                        android:textColor="#909090"
+                        android:textSize="12sp" />
+                </com.gc.materialdesign.views.RippleView>
+
+                <com.gc.materialdesign.views.RippleView
+                    android:id="@+id/ll_price05"
+                    android:layout_width="0dp"
+                    ripple:alphaFactor="0.7"
+                    ripple:hover="true"
+                    ripple:rippleViewColor="@color/click_ripple_view"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="5dp"
+                    android:layout_weight="1"
+                    android:background="@drawable/bg_price"
+                    android:gravity="center"
+                    android:orientation="vertical"
+                    android:padding="5dp">
+
+                    <TextView
+
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:background="@drawable/run"
+                        android:textColor="#E84135"
+                        android:textSize="22sp" />
+
+                    <TextView
+                        android:id="@+id/tv_price05"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="3dp"
+                        android:text=""
+                        android:textColor="#909090"
+                        android:textSize="12sp" />
+                </com.gc.materialdesign.views.RippleView>
+
+                <com.gc.materialdesign.views.RippleView
+                    android:id="@+id/ll_price06"
+                    android:layout_width="0dp"
+                    ripple:alphaFactor="0.7"
+                    ripple:hover="true"
+                    ripple:rippleViewColor="@color/click_ripple_view"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="5dp"
+                    android:layout_weight="1"
+                    android:background="@drawable/bg_price"
+                    android:gravity="center"
+                    android:orientation="vertical"
+                    android:padding="5dp"
+                   >
+
+                    <TextView
+
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:background="@drawable/liangshai"
+                        android:textColor="#E84135"
+                        android:textSize="22sp" />
+
+                    <TextView
+                        android:id="@+id/tv_price06"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="3dp"
+                        android:text=""
+                        android:textColor="#909090"
+                        android:textSize="12sp" />
+                </com.gc.materialdesign.views.RippleView>
+            </com.gc.materialdesign.views.RippleView>
+
+
+
+        </LinearLayout>
+    </ScrollView>
+
+</LinearLayout>

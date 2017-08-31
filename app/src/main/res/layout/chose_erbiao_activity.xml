@@ -1,0 +1,47 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="@color/bg_title_white"
+    android:clipToPadding="true"
+    android:fitsSystemWindows="true">
+   
+<include layout="@layout/view_def_head" />
+    <ExpandableListView
+        android:id="@+id/expandableListView"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="4"
+        android:groupIndicator="@null"  >
+    </ExpandableListView>
+     <RelativeLayout
+        android:id="@+id/bottom"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:background="@color/light_gray"
+        android:orientation="horizontal" >       
+      <GridView android:id="@+id/gridView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:verticalSpacing="10dip"
+            android:horizontalSpacing="5dip"
+            android:gravity="fill"
+            android:numColumns="4" 
+            android:visibility="gone">
+        </GridView>
+        
+
+        <Button
+            android:id="@+id/ok_count"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_marginLeft="100dp"
+            android:background="@color/red"
+            android:text=" 完成(0) "
+            android:textColor="@color/white"
+             />
+    </RelativeLayout>
+</LinearLayout>
